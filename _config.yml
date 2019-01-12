@@ -22,7 +22,7 @@ collections:
     permalink: /log/:year/:month/:day/:title/
   category:
     output: true
-    permalink: /log/category/:name/index.html
+    permalink: /log/category/:path/index.html
 defaults:
   - scope:
       path: ""
