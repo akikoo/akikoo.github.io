@@ -92,33 +92,35 @@
 
 .articles {
   // Equal height items
-  @include respond-to($breakpoint-medium) {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
 
   // Custom responsive grid
   &__item {
-    @include respond-to($breakpoint-medium) {
-      display: flex;
+    flex: 0 0 100%;
+    padding: 8px 15px;
+    display: flex;
+    word-break: break-word;
+  }
+
+  @include respond-to($breakpoint-medium) {
+    &__item {
+      flex: 0 0 50%;
+      padding: 15px;
     }
+  }
 
-    margin-bottom: $gutter;
-
-    @include respond-to($breakpoint-medium) {
-      @include columns(6);
-      margin-bottom: 0;
-    }
-
-    @include respond-to($breakpoint-large) {
-      @include columns(4);
+  @include respond-to($breakpoint-large) {
+    &__item {
+      flex: 0 0 33.3333%;
     }
   }
 
   &--home {
     .articles__item {
       @include respond-to($breakpoint-large) {
-        @include columns(6);
+        flex: 0 0 50%;
       }
     }
   }

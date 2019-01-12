@@ -20,26 +20,33 @@
   padding: 0;
 
   // Equal height items
-  @include respond-to($breakpoint-medium) {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
 
   // Custom responsive grid
   &__item {
-    @include respond-to($breakpoint-medium) {
-      display: flex;
+    flex: 0 0 100%;
+    padding: 8px 15px;
+    display: flex;
+  }
+
+  @include respond-to($breakpoint-small) {
+    &__item {
+      flex: 0 0 50%;
+      padding: 15px;
     }
+  }
 
-    margin-bottom: $gutter;
-
-    @include respond-to($breakpoint-medium) {
-      @include columns(4);
-      margin-bottom: 0;
+  @include respond-to($breakpoint-medium) {
+    &__item {
+      flex: 0 0 33.3333%
     }
+  }
 
-    @include respond-to($breakpoint-large) {
-      @include columns(3);
+  @include respond-to($breakpoint-large) {
+    &__item {
+      flex: 0 0 25%
     }
   }
 
@@ -48,7 +55,7 @@
     position: relative; // For overlay link
     background: $color-white;
 
-    @include respond-to($breakpoint-medium) {
+    @include respond-to($breakpoint-small) {
       display: flex;
       flex-direction: column;
     }
@@ -72,7 +79,7 @@
 
   // Details wrapper
   &__description {
-    @include respond-to($breakpoint-medium) {
+    @include respond-to($breakpoint-small) {
       flex: 1 0 auto;
     }
   }
@@ -83,7 +90,7 @@
     margin: 0 10px 0 0;
     max-width: 45%;
 
-    @include respond-to($breakpoint-medium) {
+    @include respond-to($breakpoint-small) {
       float: none;
       margin: 0;
       max-width: none;
@@ -97,11 +104,11 @@
     padding: 10px 0 0;
     text-transform: uppercase;
 
-    @include respond-to($breakpoint-medium, max) {
+    @include respond-to($breakpoint-small, max) {
       overflow: hidden; // Make sure text doesn't wrap around the image
     }
 
-    @include respond-to($breakpoint-medium) {
+    @include respond-to($breakpoint-small) {
       margin: 0 10px;
       padding: 0;
     }
@@ -118,7 +125,7 @@
     @include padding(0, $base-line-height / 4);
     @include margin(0, $base-line-height / 4);
 
-    @include respond-to($breakpoint-medium) {
+    @include respond-to($breakpoint-small) {
       @include padding(10, $base-line-height / 4);
       @include margin(0, $base-line-height / 4);
     }
@@ -139,7 +146,7 @@
   &__text {
     margin: 0 10px; // Override
 
-    @include respond-to($breakpoint-medium, max) {
+    @include respond-to($breakpoint-small, max) {
       overflow: hidden; // Make sure text doesn't wrap around the image
     }
   }
@@ -151,7 +158,7 @@
     clear: left; // Clear floated image
     color: $color-text-light;
     letter-spacing: .02em;
-    @include respond-to($breakpoint-medium) {
+    @include respond-to($breakpoint-small) {
       padding: relative-size($base-line-height) 10px 10px;
     }
   }
