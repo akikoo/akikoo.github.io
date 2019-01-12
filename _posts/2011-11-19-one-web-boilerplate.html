@@ -1,0 +1,37 @@
+---
+title: One Web Boilerplate
+excerpt: Over the last year or so, I've been thinking more and more about how frontend
+  web development processes should be structured in small and large teams.
+date: '2011-11-19 20:42:51 +0100'
+date_gmt: '2011-11-19 18:42:51 +0100'
+categories:
+- Webdev
+- Open-source
+- One-web
+- Responsive
+- CSS
+- HTML
+tags:
+- oneweb
+- responsive
+---
+<p><a class="img-art" href="https://github.com/akikoo/one-web-boilerplate"><img alt="One Web Boilerplate on GitHub" src="/assets/images/2011/11/one-web-boilerplate.jpg"></a>Over the last year or so, I've been thinking more and more about how frontend web development processes should be structured in small and large teams. Web projects often have tight deadlines so it&rsquo;s important to have a structured approach to writing reusable code and testing modular code snippets in an optimized build environment, before deploying code to a testing or staging server. </p>
+<h2>Modular build framework</h2>
+<p>So, with all that in mind, I've put together a <a class="boilerplate" href="https://github.com/akikoo/one-web-boilerplate">One Web Frontend Boilerplate</a>, a modular framework for building responsive (mobile first) websites with <a href="http://httpd.apache.org/docs/2.2/howto/ssi.html">Apache <abbr title="Server Side Includes">ssi</abbr></a>. It's still a work in progress, but stable enough to be used in real-world projects (it has been used already!). </p>
+<p>It draws code from many other projects, combining best practices and various solutions into a custom frontend build framework. Think of <a href="http://www.alistapart.com/articles/responsive-web-design/">Responsive web design</a>, <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>, <a href="http://html5boilerplate.com/mobile">Mobile Boilerplate</a> and <a href="http://www.stuffandnonsense.co.uk/projects/320andup/">320 and up</a> merged together, with code being written once and run anywhere on your pages with Apache <abbr title="Server Side Includes">ssi</abbr>.</p>
+<h2>Apache Ant build script</h2>
+<p>The project also includes <a href="https://github.com/akikoo/one-web-boilerplate/blob/master/build/build.xml">Ant build script</a> with the following tasks: </p>
+<ul>
+<li>Check JavaScript and CSS code quality, </li>
+<li>Optimize CSS, JavaScript and HTML files, </li>
+<li>Use RegEx to swap the CSS and JavaScript references in HTML header and footer during the build, to link to optimized assets instead of individual ones used during development, </li>
+<li>Merge <abbr title="Server Side Includes">ssi</abbr> into single web pages (changing .shtml file extensions to .html), </li>
+<li>Generate JSDoc documentation, </li>
+<li>Optimize PNG and JPG images (public target, not included in default build), </li>
+<li>Create a new directory where all the optimised assets and markup are placed for deployment.</li>
+</ul>
+<p>More info is available in the project <a href="https://github.com/akikoo/one-web-boilerplate#readme">README file</a>. The framework can easily be plugged into Continuous Integration solutions, such as  <a href="http://jenkins-ci.org">Jenkins</a>, to handle the deployment process after a successful Ant build. </p>
+<p>Check out the <a class="boilerplate" href="https://github.com/akikoo/one-web-boilerplate">One Web Boilerplate on GitHub</a>. And remember to check the Credits section too. I hope you'll find the framework useful in managing your source code and deployment process, while increasing productivity in large and small web teams. </p>
+<p>If you have any thoughts or suggestions on how to make the framework better <a href="/contact">I'd love to hear them</a>.</p>
+<h2>UPDATE 20 November, 2011</h2>
+<p>Included <a href="https://github.com/akikoo/Pattern-Primer">my GitHub fork</a> of Jeremy Keith's <a href="http://adactio.com/journal/5028/">Pattern Primer</a>, to include common markup snippets (or atomic units of content as Jeremy calls them). The idea is to build elements from the content out, outside any layout context and external dependencies. </p>

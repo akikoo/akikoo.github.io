@@ -1,0 +1,29 @@
+---
+title: Style Guide Driven Development with React
+excerpt: "<p>Style guides and pattern libraries are a great collaboration and communication
+  tool in cross-functional teams.</p>"
+date: '2016-07-27 08:28:09 +0200'
+date_gmt: '2016-07-27 06:28:09 +0200'
+categories:
+- Webdev
+- Open-source
+- Responsive
+---
+<h2>Purpose</h2>
+<p>Style guides and pattern libraries are a great collaboration and communication tool in cross-functional teams. These tools have many names and variations (see <a href="http://styleguides.io/">styleguides.io</a>), but in this post I'll just call them style guides. Essentially they break down the user interface into its component parts, and serve as a resource for new designers and developers to locate existing patterns for further use. Decoupling the UI from application data, and splitting the UI into components often results in a more consistent and efficient UI for users.</p>
+<h2>Problems</h2>
+<p>Style guides are often static, with no direct connection with the app templates. As Ian Feather emphasizes in his excellent article, <a href="http://ianfeather.co.uk/a-maintainable-style-guide/">A Maintainable Style Guide</a>, once your style guide falls out of sync with your application it has entirely lost its purpose. So how can we ensure your style guide is relevant and always up-to-date?</p>
+<h2>Main Style Guide types</h2>
+<p>So far, I've worked with the following four main types of style guides:</p>
+<ul>
+<li>Loop through a component directory of styled markup snippets (examples: <a href="https://github.com/adactio/Pattern-Primer">Pattern Primer</a>, <a href="https://github.com/paulrobertlloyd/barebones">Barebones</a>)</li>
+<li>Analyse the CSS and render the style and markup from the Sass/CSS comments (examples: <a href="https://github.com/trulia/hologram">Hologram</a>, <a href="http://warpspire.com/kss/">KSS</a>)</li>
+<li>Maintain a larger, atomic design system (examples: <a href="http://patternlab.io/">Pattern Lab</a>/<a href="http://atomicdesign.bradfrost.com/">Atomic Design</a>, <a href="https://www.lightningdesignsystem.com/">Lightning Design System</a>)</li>
+<li>Consume the same component API for both the app and the style guide (example: <a href="https://rizzo.lonelyplanet.com/">Lonely Planet style guide</a>)</li>
+</ul>
+<p>I prefer the last option: a <strong>living style guide</strong> with the same shared components used everywhere. I've worked with style guides on different tech stacks over the years, but since I nowadays work a lot with React, I've created a simple <a href="https://github.com/akikoo/react-ui-style-guide">Living Style Guide with React</a> on Github.</p>
+<p>I didn't do much styling as I wanted to keep things simple in this project. If you want to read more on how to structure your CSS, see <a href="/log/2016/07/17/architecting-css-for-responsive-large-scale-applications/">Architecting CSS for Responsive Large Scale Applications</a>.</p>
+<h2>Style Guide Driven Development</h2>
+<p>Having a style guide drive your design and development work really helps in establishing a shared vocabulary in the team. It also helps in finding patterns in the UI, saving extra development time as we can consolidate similar components. We want to create atomic design systems, not pages, so having all the components in one place ensures that we can test and iterate over them more easily. When you need new components, build them first in the style guide, consuming the same data than your app does. Then you can mix and match these components to compose pages for production.</p>
+<p>Finally, I don't think style guides can be fully automated. They are part of the workflow, showing the whole organization's commitment to a coherent design system. You'll want to define your components - and the data they consume - one way or the other, and also describe their usage for team members with different roles. This is just one way of doing it. I hope you find it useful - and as usual, feedback is appreciated on how to make it better.</p>
+<p><a href="https://github.com/akikoo/react-ui-style-guide" class="btn btn-action">Living Style Guide with React on Github</a></p>

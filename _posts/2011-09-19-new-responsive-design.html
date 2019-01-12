@@ -1,0 +1,34 @@
+---
+title: New Responsive Design
+excerpt: 'I''ve created a new fluid, <a href="http://www.alistapart.com/articles/responsive-web-design/">responsive</a>,
+  <a href="http://www.lukew.com/ff/entry.asp?933">mobile first</a>/<a href="http://adactio.com/journal/1716/">one
+  web</a> skin for akikoo.org (I''m hesitating to call it a design). Anyway, here
+  it is. '
+date: '2011-09-19 22:32:48 +0200'
+date_gmt: '2011-09-19 20:32:48 +0200'
+categories:
+- Webdev
+- One-web
+- Responsive
+- CSS
+- HTML
+---
+<p>I've created a new fluid, <a href="http://www.alistapart.com/articles/responsive-web-design/">responsive</a>, <a href="http://www.lukew.com/ff/entry.asp?933">mobile first</a>/<a href="http://adactio.com/journal/1716/">one web</a> skin for akikoo.org (I'm hesitating to call it a design). Anyway, here it is. </p>
+<p>My goal was to target smartphones, tablets, netbooks and desktops with the same codebase by responsively enhancing the site with <abbr title="Cascading Style Sheets">CSS3</abbr> Media Queries and some JavaScript. All users get reset, typography and colour declarations. Width and float declarations are added only if larger viewport is detected, using four resolution breakpoints. </p>
+<p>All elements are aligned to a fluid 8-column symmetrical grid structure. All font sizes are defined in ems, according to the traditional typographic scale (8-9-10-11-12-14-16-18-21-24-36 etc.). I've also made an effort to maintain a consistent baseline even if element font size decreases or increases. </p>
+<p>Finally, some extra nice-to-have (but not core) content is lazy loaded with JavaScript. This means that you'll see Platform info, Credits and Elsewhere content only if you have JavaScript enabled and your viewport is larger than 48em/768px.</p>
+<p>What about Internet Explorer? I thought you'd ask that. Internet Explorer lower than 9 get <a href="http://forabeautifulweb.com/">Andy Clarke</a>'s excellent <a href="http://code.google.com/p/universal-ie6-css/">Universal IE6 stylesheet</a>. You see, on this site I can't be bothered to patch dead browsers (at work I do though). Also, if you have JavaScript enabled in IE lower than 9, you'll be prompted to install <a href="http://code.google.com/chrome/chromeframe/">Chrome Frame</a>. Done.</p>
+<p>For icons, I'm using <a href="http://icondock.com/free/vector-social-media-icons">Vector social media icons</a>. I'm using <abbr title="Accessible Rich Internet Applications">ARIA</abbr> landmark roles for styling, referenced with CSS attribute selectors. Another solution I'm using here is <a href="http://www.cssstickyfooter.com">Sticky footer</a>. It works nicely. </p>
+<p>I was also planning for <a href="http://adactio.com/journal/4780/">switching the display of content and navigation based on browser size</a> but that'll have to wait until the next design iteration of this site.</p>
+<p>Here are some of the articles and frameworks published during the last year or so that inspired this redesign:</p>
+<ul>
+<li>Boilerplates: <a href="http://html5boilerplate.com/">HTML5 boilerplate</a>, <a href="http://html5boilerplate.com/mobile/">HTML5 mobile boilerplate</a>, <a href="http://forabeautifulweb.com/blog/about/320_and_up/">320 and Up</a></li>
+<li><abbr title="Cascading Style Sheets">CSS3</abbr> Media Queries: <a href="http://forabeautifulweb.com/blog/about/hardboiled_css3_media_queries/">Hardboiled CSS3 Media Queries</a>, <a href="http://www.blog.highub.com/mobile-2/revisit-hardboiled-css3-media-queries/">Revisit Hardboiled CSS3 Media Queries</a>, <a href="http://css-tricks.com/6731-css-media-queries/">CSS Media Queries & Using Available Space</a>, <a href="http://www.quirksmode.org/blog/archives/2010/08/combining_media.html">Combining media queries and JavaScript</a>, <a href="http://www.slideshare.net/bryanrieger/rethinking-the-mobile-web-by-yiibu">Rethinking the Mobile Web</a>, <a href="http://www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/">CSS Media Query for Mobile is Fool&rsquo;s Gold</a>, <a href="http://www.broken-links.com/2011/02/21/using-media-queries-in-the-real-world/">Using Media Queries in the Real World</a></li>
+<li>Trigger media queries with ems rather than pixels: <a href="http://adactio.com/journal/1700/">Responsive enhancement</a></li>
+<li>Document outlines and semantics: <a href="http://www.456bereastreet.com/archive/201104/html5_document_outline_revisited/">HTML5 document outline revisited</a>, <a href="http://mezzoblue.com/archives/2011/01/31/boilerplate/">Semantic boilerplate</a></li>
+<li>JavaScript should not be relied on for layout: <a href="http://www.nczonline.net/blog/2011/03/22/using-html5-semantic-elements-today/">Using HTML5 semantic elements today</a>, <a href="http://tantek.com/presentations/2010/11/html5-now/">HTML5 Right Here, Right Now</a></li>
+<li>Responsive images: <a href="http://unstoppablerobotninja.com/entry/fluid-images/">Fluid images</a></li>
+<li>Use IDs only for internal links and document fragments, not for styling: <a href="http://oli.jp/2011/ids/">Don&rsquo;t use IDs in CSS selectors?</a></li>
+<li>Microformats: <a href="http://microformats.org/wiki/hatom">hAtom 0.1 microformat</a></li>
+</ul>
+<p>There are still some tweaks to be done but I figured the theme was ready to be put online. This is the fifth version of this site. The previous version was online from November 2009 until September 2011. </p>

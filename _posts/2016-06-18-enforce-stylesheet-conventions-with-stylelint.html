@@ -1,0 +1,12 @@
+---
+title: Enforce stylesheet conventions with Stylelint
+excerpt: CSS linting has been gaining traction lately. I've used <a href="http://csslint.net/">CSSLint</a>
+  the last years in some of my projects.
+date: '2016-06-18 15:48:21 +0200'
+date_gmt: '2016-06-18 13:48:21 +0200'
+categories:
+- Webdev
+- CSS
+---
+<p>CSS linting has been gaining traction lately. I've used <a href="http://csslint.net/">CSSLint</a> the last years in some of my projects. Then, a while ago I found out about <a href="http://stylelint.io/">stylelint</a> and realised it's the best tool for the job, together with <a href="http://postcss.org/">PostCSS</a>. Stylelint is a really good mistake-preventing machine as it helps you enforce consistent conventions. </p>
+<p>I took the time to read the excellent rules documentation and added stylelint setup for Sass files in my <a href="https://github.com/akikoo/webpack-es6-sass-setup">webpack-es6-sass-setup</a>. Configuration includes all the available rules but I've turned off the ones that I don't currently need. I use BEM, so I've added <a href="https://github.com/davidtheclark/stylelint-selector-bem-pattern">stylelint-selector-bem-pattern</a> plugin as well. It's a bit of a challenge to get the regular expression patterns right, so that part needs some tweaking to allow selectors like this: <code>.main-component__status.is-active</code>. Here's my <a href="https://github.com/akikoo/webpack-es6-sass-setup/blob/master/.stylelintrc">.stylelintrc configuration file</a>. Initial configuration for stylelint takes some time but it's totally worth it!</p>

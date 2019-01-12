@@ -1,0 +1,33 @@
+---
+title: Using Ant to decouple mobile first CSS from Media Queries
+excerpt: Often you want to progressively enhance your mobile-first websites, making
+  them responsive, but that obviously requires a fallback plan for legacy IE browsers
+  that don’t support CSS3 Media Queries.
+date: '2011-12-05 21:04:53 +0100'
+date_gmt: '2011-12-05 19:04:53 +0100'
+categories:
+- Webdev
+- One-web
+- Responsive
+- HTML
+---
+<p>Often you want to progressively enhance your mobile-first websites, making them responsive, but that obviously requires a fallback plan for legacy IE browsers that don&rsquo;t support CSS3 Media Queries. You also want to manage the deployment process and follow the <abbr title="Don't Repeat Yourself ">DRY</abbr> principle as much as you can. You could of course use a polyfill but that means introducing a JavaScript dependancy for layout which might not be what you want. Luckily, there are other solutions.</p>
+<p>Nicolas Gallagher recently posted a brilliant article, <a href="http://nicolasgallagher.com/mobile-first-css-sass-and-ie/">Mobile first CSS and getting Sass to help with legacy IE</a>, in which he suggests using a pre-processor to produce two versions of compiled CSS from the same core code. He is basically extending Jeremy Keith's <a href="http://adactio.com/journal/4494/">Windows mobile media queries</a> method. </p>
+<h2>Using Ant as pre-processor</h2>
+<p>Inspired by Nicolas' article, I've adapted the Ant build script that I use in my <a href="https://github.com/akikoo/one-web-boilerplate">One Web Boilerplate</a>, to do the same kind of file pre-processing on the server side when doing a build. This enables you to work on the same stylesheets when developing, and then generate two versions, to serve legacy IE browsers a desktop layout, while more capable browser get the enhanced version with Media Queries. </p>
+<h2>Ant ReplaceRegExp task</h2>
+<p>Before minifying the files, the script inlines all <code>@import</code>-ed styles and then turns Media Queries into comments wherever it sees <code>/*replace*/</code>, like so:  </p>
+<pre><code>
+/*replace*/@media only screen and (min-width: 30em) {/*replace*/
+/*Styles*/
+}/*replace*/
+</code></pre>
+<p>For IE-specific stylesheet, this is changed like below and then minified: </p>
+<pre><code>
+/*@media only screen and (min-width: 30em) {*/
+/*Styles*/
+/*}*/</code></pre>
+<p>Modern browsers get the minified version with Media Queries in place. </p>
+<p>I could have of course used <a href="http://sass-lang.com/">Sass</a>, but since my framework already uses Ant, and since I want to keep it generic, I didn't want to add any other external dependencies to it. Also, I've written earlier about <a href="/log/2010/04/11/building-frontend-code-with-ant/">how Apache Ant can help you building and optimizing frontend code</a> so I know how incredibly useful Ant can be for code deployment. </p>
+<h2>See it on GitHub</h2>
+<p>See the <a href="https://github.com/akikoo/one-web-boilerplate/blob/master/README.md">One Web Boilerplate README on GitHub</a> for info on how it works! Decoupling your layout CSS rules from the actual Media Queries during build time can greatly improve your workflow and help managing your code.</p>

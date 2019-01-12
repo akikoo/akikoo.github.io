@@ -1,0 +1,102 @@
+---
+title: Front-End Workflow with Grunt
+excerpt: "<p>I'm always trying to find new ways of making the front-end development
+  workflow easier, faster, more structured, and more maintainable. As the web environment
+  is becoming more complex, we need to embrace the tools.</p>"
+date: '2013-05-26 15:22:05 +0200'
+date_gmt: '2013-05-26 13:22:05 +0200'
+categories:
+- Webdev
+- Open-source
+- One-web
+- Responsive
+- CSS
+- HTML
+- Accessibility
+---
+<p>I'm always trying to find new ways of making the front-end development workflow easier, faster, more structured, and more maintainable. As the web environment is becoming more complex, we need to embrace the tools and use them to help us create a good architecture that allows us to concentrate on the task at hand.</p>
+<p>Everyone has his or her own coding style and preferred ways of working. The web evolves rapidly so changing our mindsets and constantly adapting to new ways of thinking and working is a must for front-end developers.<br />
+<h2>Frameworks and Boilerplates</h2>
+<p>I've studied dozens of boilerplates and frameworks, from the most popular ones to lesser-known ones, to see how some of the brightest minds in the industry approach common front-end tasks. A lot of research, hard work and talent has been put to these frameworks and I've adopted many ideas, best practices and snippets from them. But while they help a lot, still none of them alone can solve all the issues we encounter in our daily development work because each project has different requirements. Many frameworks have accessibility barriers, or simply try to contain too much and solve too many problems at once, pre-defining every possible component or grid variation. These frameworks are good for prototyping because they offer generic catch-all solutions.</p>
+<p>Then, on the other end of the spectrum, you have simpler boilerplates that only contain the bare minimum, maybe just a few files to get you started, lacking integrated build processes or assets you often need in your own project work. What I'm mostly interested in is finding the <strong>workflow</strong> that doesn't assume too much, but at the same supports the most common development, test and build tasks, and suggests methodologies that help creating modular and maintainable code.</p>
+<h2>My Project Workflow</h2>
+<p>When you start developing for production, you have to think about your actual project requirements. At that point, you probably don't need half of what these ready-made frameworks offer. Instead, you'll want to start clean, reuse and add new code only when you need it.</p>
+<p>Front-end development tasks often include creating, copying and deleting folders and assets, preprocessing code, testing it, linting it, concatenating and minifying it, managing dependencies, generating documentation, and adding timestamp for version handling. You might also want to generate icons and compress your images.</p>
+<p>So I've created a <a href="https://github.com/akikoo/backbone-requirejs-multipage-boilerplate">Grunt-based Front-End Workflow on GitHub</a> where I've also added some boilerplate code. My goal was to establish a minimal base workflow that contains the basic tools, methodologies and assets that I often need when I start a new project. Depending on the project, I can then adapt or extend that framework to support any project requirements.</p>
+<p>From my experience, the base workflow needs the following:</p>
+<ul>
+<li>Modular and decoupled layers of HTML, CSS and JavaScript</li>
+<li>Structured architecture that supports frequent isolated changes (Agile!)</li>
+<li>CSS methodology</li>
+<li>Responsive techniques and oldIE handling</li>
+<li>Image compression and icons handling</li>
+<li>JavaScript dependancy management</li>
+<li>Automated testing in different browsers</li>
+<li>Build process that supports various loading strategies</li>
+<li>Livereload (nice-to-have)</li>
+<li>Fluid grid (nice-to-have, you probably need a grid but it shouldn't be pre-defined)</li>
+</ul>
+<p>With that list, it's obvious that my base development workflow contains more than what the word "base" implies. It's also slightly opinionated as certain tools are included while some others are not. But if you think of it, it has to be a bit opinionated because this is the setup that I like to use. It's work in progress and might and probably will change in the future as new tools and methodologies emerge. But for now, it takes care of the tasks that I regularly need, listed earlier in this post. Core technologies are Ruby, Sass, Compass, Node.js, Grunt, SMACSS, OOCSS, and Karma test runner. The goal is to support code reuse, modularity and Responsive Web Design.</p>
+<p>You can use it for both <abbr title="Single Page Applications">SPA</abbr>s and traditional multi-page setups. In both cases, JavaScript dependencies are managed by RequireJS. A multipage RequireJS setup with Backbone is included as well. With this setup you can concentrate on your code, making the site as accessible and fast as you can, and maybe add other snippets, a style guide and ready-made patterns from your favorite catch-all frameworks if necessary. The emphasis is on the process and workflow that should help you do exactly that. Give it a try!</p>
+<p><a class="btn btn-action" href="https://github.com/akikoo/backbone-requirejs-multipage-boilerplate/zipball/master">Download The Grunt Workflow</a> or <a href="https://github.com/akikoo/backbone-requirejs-multipage-boilerplate">see the source on GitHub</a>.
+<p>Share on <a href="http://twitter.com/share?url=https://www.akikoo.org/log/2013/05/26/front-end-workflow-with-grunt&text=The%20Grunt%20Workflow:%20Dev/Build%20tasks%20on%20Node.js,%20Grunt,%20Sass,%20Compass,%20SMACSS,%20OOCSS,%20RequireJS%20and%20Karma.&via=akikoo">Twitter</a>.</p>
+<h2>Partial Credits & Inspiration List</h2>
+<p>Partial credits & inspiration list of the resources I used to create <a href="https://github.com/akikoo/backbone-requirejs-multipage-boilerplate">my Grunt workflow</a>:</p>
+<h3>Sass and CSS</h3>
+<ul>
+<li><a href="http://sass-lang.com/">Sass</a></li>
+<li><a href="http://compass-style.org/">Compass</a></li>
+<li><a href="http://smacss.com/"><abbr title="Scalable and Modular Architecture for CSS">SMACSS</abbr></a></li>
+<li><a href="http://oocss.org/"><abbr title="Object-Oriented CSS">OOCSS</abbr></a>, <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">Media object</a>, <a href="http://csswizardry.com/2013/05/the-flag-object/">Flag object</a></li>
+<li><a href="http://bem.info/"><abbr title="Block-Element-Modifier">BEM</abbr></a></li>
+<li><a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">About HTML semantics and front-end architecture</a></li>
+<li><a href="http://engineering.appfolio.com/2012/11/16/css-architecture/">CSS Architecture</a></li>
+<li><a href="http://zomigi.com/blog/essential-considerations-for-crafting-quality-media-queries/">Essential considerations for crafting quality media queries</a></li>
+<li><a href="http://oli.jp/2011/ids/">Don&rsquo;t use IDs in CSS selectors?</a></li>
+<li><a href="http://csslint.net/">CSSlint</a></li>
+<li><a href="http://nicolasgallagher.com/mobile-first-css-sass-and-ie/">Mobile first CSS and getting Sass to help with legacy IE</a></li>
+<li><a href="http://jakearchibald.github.io/sass-ie/">Sass IE</a></li>
+<li><a href="https://github.com/davidrapson/scss-toolkit">scss toolkit</a></li>
+</ul>
+<h3>Frameworks and grids</h3>
+<ul>
+<li><a href="http://akikoo.github.com/Fluid-Grid/">Fluid Grid with Sass</a></li>
+<li><a href="http://semantic.gs/">The Semantic Grid</a></li>
+<li><a href="http://viget.com/inspire/building-a-nested-responsive-grid-with-sass-compass">Building a Nested Responsive Grid with Sass & Compass</a></li>
+<li><a href="http://www.netmagazine.com/tutorials/building-modern-grid-system">Building a modern grid system</a></li>
+<li><a href="http://akikoo.github.io/one-web-boilerplate/">One Web Boilerplate</a></li>
+<li><a href="http://html5boilerplate.com">HTML5 Boilerplate</a></li>
+<li><a href="http://csswizardry.com/2011/01/the-real-html5-boilerplate/">The real HTML5 boilerplate</a></li>
+<li><a href="http://html5boilerplate.com/mobile/">HTML5 Mobile Boilerplate</a></li>
+<li><a href="http://forabeautifulweb.com/blog/about/320_and_up/">320AndUp</a>, and more recently, <a href="http://malarkey.github.io/Rock-Hammer/">Rock Hammer</a></li>
+<li><a href="http://foundation.zurb.com/">ZURB Foundation</a></li>
+<li><a href="http://twitter.github.io/bootstrap/">Twitter Bootstrap</a></li>
+</ul>
+<h3>JavaScript and testing</h3>
+<ul>
+<li><a href="http://addyosmani.github.io/backbone-fundamentals/">Developing Backbone.js Applications</a></li>
+<li><a href="https://github.com/tastejs/todomvc/tree/gh-pages/dependency-examples/backbone_require">Backbone.js & RequireJS TodoMVC Example</a></li>
+<li><a href="https://github.com/tbranyen/backbone-boilerplate">Backbone Boilerplate</a></li>
+<li><a href="http://requirejs.org/">RequireJS</a></li>
+<li><a href="https://github.com/akikoo/backbone-requirejs-multipage-boilerplate">Backbone Boilerplate with multipage RequireJS Setup</a></li>
+<li><a href="https://github.com/requirejs/example-multipage-shim">Requirejs multipage-shim example</a></li>
+<li><a href="https://github.com/jrburke/r.js/blob/master/build/example.build.js">RequireJS example.build.js</a></li>
+<li><a href="http://nodejs.org/">Node.js</a></li>
+<li><a href="http://gruntjs.com/">Grunt task runner</a></li>
+<li><a href="http://yeoman.io/">Yeoman</a></li>
+<li><a href="http://bower.io/">Bower</a></li>
+<li><a href="http://jshint.com/">JSHint</a></li>
+<li><a href="http://filamentgroup.com/lab/grunticon/">Grunticon</a></li>
+<li><a href="https://github.com/scottjehl/picturefill">Picturefill</a></li>
+<li><a href="http://karma-runner.github.io/">Karma test runner for JavaScript</a></li>
+<li><a href="https://github.com/kjbekkelund/karma-requirejs">Testing Require.js code with Karma</a></li>
+<li><a href="http://pivotal.github.io/jasmine/">Jasmine</a></li>
+</ul>
+<h3>Accessibility</h3>
+<ul>
+<li><a href="http://test.cita.illinois.edu/aria/"><abbr title="Illinois Center for Information Technology and Web Accessibility">iCITA</abbr>'s <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Examples</a></li>
+<li><a href="http://access.aol.com/dhtml-style-guide-working-group/">The <abbr title="DHTML Style Guide Working Group">DSGWG</abbr> recommendation for keyboard shortcuts to be used in website widgets</a></li>
+<li><a href="https://github.com/filamentgroup/">Filament Group GitHub repository</a></li>
+<li><a href="https://github.com/akikoo/Accessible-Patterns">Accessible Patterns</a></li>
+</ul>
+<p>(Plus many other resources I probably forgot to include here.)</p>

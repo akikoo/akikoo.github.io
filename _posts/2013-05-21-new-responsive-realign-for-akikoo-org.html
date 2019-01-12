@@ -1,0 +1,24 @@
+---
+title: New Responsive Realign for akikoo.org
+excerpt: Every couple of years or so I realign this site. As the site was already
+  Responsive and Mobile First after the previous design in 2011, this time around
+  I wanted to change mostly the typography for cleaner and simpler look and feel.
+date: '2013-05-21 19:44:50 +0200'
+date_gmt: '2013-05-21 17:44:50 +0200'
+categories:
+- Webdev
+- One-web
+- Responsive
+- CSS
+- HTML
+---
+<p>Every couple of years or so I realign this site. As the site was already Responsive and Mobile First after the previous design in 2011, this time around I wanted to change mostly the typography for cleaner and simpler look and feel, and make performance enhancements. A lot of things have changed below the surface as well.</p>
+<h2>The Grid</h2>
+<p>Like the <a href="/log/2011/09/19/new-responsive-design/">previous design (v5)</a>, elements are (mostly) aligned to a fluid 8-column symmetrical grid structure. All font sizes are still defined in ems, according to the traditional typographic scale.</p>
+<h2>Sass and Dev Tools</h2>
+<p>I wrote and restructured most of the styles again, this time using the <a href="http://sass-lang.com/">Sass</a> pre-processor. I used the same Sass setup than in my <a href="http://akikoo.github.io/one-web-boilerplate">One Web Boilerplate</a>. During development I also used various Grunt tasks from my <a href="https://github.com/akikoo/backbone-requirejs-multipage-boilerplate">Backbone-RequireJS Multipage Boilerplate</a> (even if this version of the site doesn't use much JavaScript). Grunt has become an essential part of my workflow.</p>
+<h2>Type</h2>
+<p>The new typeface, <a href="http://www.fontsquirrel.com/fonts/open-sans">Open Sans</a> is embedded as a base64 string. I'm using both Open Sans Light and Open Sans Bold variants.</p>
+<h2>Structural changes</h2>
+<p>I've removed Social icons, Platform, Credits, and Elsewhere modules that were lazy-loaded for bigger viewports in the previous version. I might bring some of them back at a later stage though. Main navigation is now at the end of the page, linked from the top. I'm still tweaking things a bit here and there. I'll probably add some lazy-loaded custom icon fonts too.</p>
+<p>This is the sixth major version of this site. The previous version was online from September 2011 until May 2013.</p>

@@ -1,0 +1,149 @@
+---
+title: Building frontend code with Ant
+excerpt: Recently I've been checking various ways for optimising frontend code. In
+  <a href="http://www.amazon.com/o/ASIN/047022780X/">Professional JavaScript for Web
+  Developers (2nd Edition)</a>, Nicholas C. Zakas speaks about best practices for
+  deploying websites in production (among other good things).
+date: '2010-04-11 17:43:26 +0200'
+date_gmt: '2010-04-11 15:43:26 +0200'
+categories:
+- Webdev
+tags:
+- Webdev
+- Ant
+---
+<p>Recently I've been checking various ways for optimising frontend code. In <a href="http://www.amazon.com/o/ASIN/047022780X/">Professional JavaScript for Web Developers (2nd Edition)</a>, Nicholas C. Zakas speaks about best practices for deploying websites in production (among other good things). Having a solid build process for deployment saves both time and bandwidth, and helps automating repetitive tasks. There are plenty of online resources about the subject, but Julien Lecomte's <a href="http://www.julienlecomte.net/blog/2007/09/16/">Building Web Applications With Apache Ant</a> explains really well what possibilities <a href="http://ant.apache.org/">Ant</a> offers for frontend code build process (see also <a href="http://www.javascriptr.com/2009/07/21/setting-up-a-javascript-build-process/">Setting up a JavaScript Build Process</a>). For more details, see <a href="http://ant.apache.org/manual/index.html">Apache Ant Manual</a>.</p>
+<p>Based on the advice from those articles, I've put together a basic Ant script which concatenates and minifies both JS and CSS files during the build process. This could be used as a base template for frontend production code.</p>
+<p>On this site, I use <a href="http://code.google.com/p/minify/">Minify PHP5 app</a> on the server side to automatically combine and minify multiple CSS and Javascript files every time they change. However, I wanted to define a structured build process that I can customise and reuse for any website I work on.</p>
+<p>Here's what the script does (for details, see comments in the code):</p>
+<ol>
+<li>Delete the directory created by earlier build</li>
+<li>Recreate the directory structure to be used in new build, create timestamp</li>
+<li>Concatenate specified files using Ant concat task</li>
+<li>Minify the file using YUI Compressor (called from the Ant script using <code>apply</code> task) and add '-min' to the file name.</li>
+</ol>
+<p>You need <a href="http://java.sun.com/javase/downloads/index.jsp">JDK</a>, <a href="http://ant.apache.org/">Apache Ant</a> and <a href="http://developer.yahoo.com/yui/compressor/">YUI Compressor</a> to run this. Now, when I set this up on Windows, I got the following error:</p>
+<pre>
+Unable to locate tools.jar. Expected to find it in C:\Program Files\Java\jre6\lib\tools.jar
+</pre>
+<p>If you get that too, just copy tools.jar from earlier Java version and you're done. When everything is set up, go to Ant dir (where the build.xml file lives):</p>
+<pre>
+cd C:\Ant
+</pre>
+<p>Then build the project (by default, it uses build.xml):</p>
+<pre>
+
+ant
+</pre>
+<p>Here's the build.xml I've created:</p>
+
+{% highlight html %}
+<pre>
+<?xml version="1.0" encoding="utf-8"?>
+<project name="myProject" default="prod" basedir=".">
+    <description>JS/CSS production build for myProject</description>
+    <target name="-load.properties"
+        description="Sets global properties for this build">
+        <!--YUI Compressor location-->
+        <property name="yui.dir" value="C:/yui/build/yuicompressor-2.4.2.jar"/>
+        <!--Source JS dir-->
+        <property name="src.js.dir" value="C:/dev/src/myProject/js"/>
+        <!--Source CSS dir-->
+        <property name="src.css.dir" value="C:/dev/src/myProject/css"/>
+        <!--Output dir-->
+        <property name="build.dir" value="build"/>
+    </target>
+
+    <!--Create build dirs-->
+    <target name="-init" depends="-load.properties"
+        description="Creates build directory structure">
+        <!--Create the time stamp-->
+        <tstamp>
+            <format property="TODAY" pattern="EEE, d MMM yyyy HH:mm:ss Z"/>
+        </tstamp>
+        <!--Delete previous build files-->
+        <delete dir="${build.dir}"/>
+        <!--Recreate build dirs-->
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${build.dir}/js"/>
+        <mkdir dir="${build.dir}/css"/>
+        <!--Write build time stamp into a file-->
+        <echo file="${build.dir}/js/tstamp.txt" append="false">Build Date: ${TODAY}</echo>
+        <echo file="${build.dir}/css/tstamp.txt" append="false">Build Date: ${TODAY}</echo>
+    </target>
+
+    <!--Concatenate JS files-->
+    <target name="-js.concatenate" depends="-init" 
+        description="Concatenates specified JavaScript files">
+        <concat destfile="${build.dir}/js/concat.js">
+            <!--List files in correct order in the concatenated file-->
+            <filelist
+                dir="${src.js.dir}"
+                files="first.js, second.js"/>
+        </concat>
+        <echo>Done!</echo>
+    </target>
+
+    <!--Concatenate CSS files-->
+    <target name="-css.concatenate" depends="-init" 
+        description="Concatenates specified CSS files">
+        <concat destfile="${build.dir}/css/concat.css">
+            <!--List files in correct order in the concatenated file-->
+            <filelist
+                dir="${src.css.dir}"
+                files="first.css, second.css"/>
+        </concat>
+        <echo>Done!</echo>
+    </target>
+
+    <!--Minify JS files-->
+    <target name="-js.minify" depends="-js.concatenate" 
+        description="Minifies JavaScript files">
+        <apply executable="java" parallel="false">
+            <fileset 
+                dir="${build.dir}/js" 
+                includes="concat.js"/>
+            <arg line="-jar"/>
+            <arg path="${yui.dir}"/>
+            <srcfile/>
+            <arg line="-o"/>
+            <mapper type="glob" from="*.js" to="${build.dir}/js/*-min.js"/>
+            <targetfile/>
+        </apply>
+        <echo>Done!</echo>
+    </target>
+
+    <!--Minify CSS files-->
+    <target name="-css.minify" depends="-css.concatenate" 
+        description="Minifies CSS files">
+        <apply executable="java" parallel="false">
+            <fileset 
+                dir="${build.dir}/css" 
+                includes="concat.css"/>
+            <arg line="-jar"/>
+            <arg path="${yui.dir}"/>
+            <srcfile/>
+            <arg line="-o"/>
+            <mapper type="glob" from="*.css" to="${build.dir}/css/*-min.css"/>
+            <targetfile/>
+        </apply>
+        <echo>Done!</echo>
+    </target>
+
+    <!--Build-->
+    <target name="prod" 
+        description="Builds files for production"
+        depends="
+            -load.properties, 
+            -init, 
+            -js.concatenate, 
+            -css.concatenate,
+            -js.minify, 
+            -css.minify">
+    </target>
+</project>
+</pre>
+{% endhighlight %}
+
+<p>Obviously, there are lots of other things you can do with Ant. There's really nothing new in this script, but it combines ideas from several articles mentioned above so I thought I'd share it here (<a href="https://github.com/akikoo/ant-build">download build.xml from GitHub</a>). I hope it can be useful for you - I know for me it will! ;)</p>
+<p><strong>Update 28 March, 2011:</strong> uploaded this build.xml file to GitHub.</p>
