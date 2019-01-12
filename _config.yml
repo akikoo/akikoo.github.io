@@ -37,3 +37,5 @@ defaults:
       pagetype: "category"
 sass:
   style: compressed
+plugins:
+  - jekyll-feed
