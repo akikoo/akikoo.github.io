@@ -1,0 +1,177 @@
+---
+layout: single
+title: Styleguide
+permalink: /styleguide/
+---
+
+<p>A guide to the base markup and custom patterns/modules used throughout the site.</p>
+
+<p>According to Atomic Design, these would be <strong>Molecules</strong>. Molecules are groups of
+  Atoms bonded together and are the smallest fundamental units of a compound.
+  These can also be larger constructs: <strong>Organisms</strong>. Organisms are groups of
+  Molecules joined together to form a relatively complex, distinct section of an interface.
+</p>
+
+<!-- See also http://paulrobertlloyd.com/about/styleguide/ -->
+
+<!--****************************************************************************
+1) GRID AND BRANDING
+*****************************************************************************-->
+
+<h2>1. Grid, colors and font stacks</h2>
+
+<p>8 columns by default. Can easily be changed in /scss/_settings.scss. Then go to /scss/components/_layout.scss, to generate new styles. Finally, update markup in /styleguide/grid.html.</p>
+
+<h3>Grid</h3>
+{% include styleguide/grid.html %}
+
+<h3>Colors</h3>
+<div class="module">
+  {% include styleguide/colors.html %}
+</div>
+
+<h3>Font stacks</h3>
+<div class="module">
+  {% include styleguide/fonts.html %}
+</div>
+
+<!--****************************************************************************
+2) SECTIONS
+*****************************************************************************-->
+
+<h2>2. Sections</h2>
+
+<p>Sectioning elements include body, article, section, nav, aside, h1, h2, h3, h4, h5, h6, hgroup, header, footer and address.</p>
+
+<h3>Headings</h3>
+<div class="module">
+  {% include styleguide/sectioning-elements.html %}
+</div>
+
+<!--****************************************************************************
+3) GROUPING CONTENT
+*****************************************************************************-->
+
+<h2>3. Grouping content</h2>
+
+<p>Grouping elements are listed below.</p>
+{% include styleguide/grouping-elements.html %}
+
+<!--****************************************************************************
+4) TEXT-LEVEL SEMANTICS
+*****************************************************************************-->
+
+<h2>4. Text-level semantics</h2>
+
+<h3>Paragraph</h3>
+<div class="module">
+  {% include styleguide/text-elements.html %}
+</div>
+
+<!--****************************************************************************
+5) EMBEDDED CONTENT
+*****************************************************************************-->
+
+<h2>5. Embedded content</h2>
+
+<p>Embedded content elements include img, iframe, embed, object, param, video, audio, source, track, canvas, map, area, svg, and math.</p>
+
+<h3>Embedded image</h3>
+<div class="module">
+  {% include styleguide/embedded-elements.html %}
+</div>
+
+<!--****************************************************************************
+6) TABULAR DATA
+*****************************************************************************-->
+
+<h2>6. Tabular data</h2>
+
+<h3>Table</h3>
+<div class="module">
+  {% include styleguide/tables.html %}
+</div>
+
+<!--****************************************************************************
+7) FORMS
+*****************************************************************************-->
+
+<h2>7. Forms</h2>
+
+<p>Form elements are presented below.</p>
+
+<h3>Form</h3>
+<div class="module">
+  {% include styleguide/form-elements.html %}
+</div>
+
+<!--****************************************************************************
+8) Custom UI elements and modules
+*****************************************************************************-->
+
+<h2>8. Custom UI elements and modules</h2>
+
+<p>Design and mark-up patterns unique to this site.</p>
+
+<p>According to Atomic Design, these would be <strong>Molecules</strong>. Molecules are groups of
+  Atoms bonded together and are the smallest fundamental units of a compound.
+  These can also be larger constructs: <strong>Organisms</strong>. Organisms are groups of
+  Molecules joined together to form a relatively complex, distinct section of an interface.
+</p>
+
+<h3>Post metadata (in collection)</h3>
+<div class="module">
+  {% include post-meta-in-collection.html time=site.time %}
+</div>
+
+<h3>Post metadata (in single post)</h3>
+<div class="module">
+  <div style="background: linear-gradient(45deg, #0ED42E, #00d4ff)">
+    {% include post-meta-in-single.html time=site.time %}
+  </div>
+</div>
+
+<h3>Nav Main</h3>
+<div class="module">
+  {% include navigation.html %}
+</div>
+
+<h3>Nav Archives (all categories)</h3>
+<div class="module">
+  {% include categories-in-collection.html %}
+</div>
+
+<h3>Social</h3>
+<div class="module">
+  {% include navigation-social.html %}
+</div>
+
+<h3>FAQ (intro)</h3>
+<div class="module">
+  {% include aside.html %}
+</div>
+
+<h3>Projects</h3>
+<div class="module">
+  {% include projects.html %}
+</div>
+
+<h3>Contentinfo</h3>
+<div class="module">
+  {% include contentinfo.html %}
+</div>
+
+<h3>Media object (simple)</h3>
+<div class="module">
+  {% include styleguide/mediaobject-simple.html %}
+</div>
+
+<h3>Media object (extra content block on the right)</h3>
+<div class="module">
+  {% include styleguide/mediaobject-rightcontent.html %}
+</div>
+
+<h3>Media object (nested)</h3>
+<div class="module">
+  {% include styleguide/mediaobject-nested.html %}
+</div>

@@ -1,0 +1,29 @@
+/* ==========================================================================
+   @group Contentinfo
+   ========================================================================== */
+
+[role="contentinfo"] {
+  background: $color-white;
+  @include margin($base-line-height, 0);
+}
+
+// Contentinfo paragraph.
+.l-copyright {
+  text-align: center;
+  color: $color-text-dark;
+  margin: 0 $gutter;
+
+  @include respond-to($breakpoint-medium) {
+    margin: 0; // Override default.
+  }
+}
+
+.l-copyright > small {
+  @include size-and-leading(14, 20);
+  display: inline-block;
+  padding: relative-size($base-line-height) 0;
+  border-top: 1px solid $color-border;
+  @include respond-to($breakpoint-medium) {
+    @include size-and-leading(14);
+  }
+}

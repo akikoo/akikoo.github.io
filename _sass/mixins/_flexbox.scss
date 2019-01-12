@@ -1,0 +1,27 @@
+// Flexbox column layout
+@mixin flex-column {
+  display: flex;
+  flex-flow: column nowrap; // Shorthand for flex-direction and flex-wrap properties
+}
+
+%flex-column {
+  @include flex-column;
+}
+
+// Flexbox row layout, block (default)
+@mixin flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center; // Items are centered in the cross-axis by default
+}
+
+// Flexbox row layout, inline
+@mixin flex-row--inline {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center; // Items are centered in the cross-axis by default
+}
+
+%flex-row {
+  @include flex-row;
+}

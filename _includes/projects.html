@@ -1,0 +1,17 @@
+<ul class="l-row projects">
+{% for item in site.data.projects %}
+  <li class="l-cell projects__item">
+    <div class="block-link">
+      <div class="projects__description">
+        <img class="projects__thumbnail" src="/assets/images/portfolio/{{item.image}}" alt="" />
+        <h3 class="projects__heading">
+          <a class="ga-github-project projects__link" href="{{item.url}}">{{item.name}}</a>
+        </h3>
+        <p class="projects__text">{{item.description}}</p>
+      </div>
+      <span class="projects__year"><span class="is-visuallyhidden">Delivered: </span> {{item.year}}</span>
+      <a class="ga-github-project block-link__overlay-link" href="{{item.url}}" aria-hidden="true" tabindex="-1">{{item.name}}</a>
+    </div>
+  </li>
+{% endfor %}
+</ul>

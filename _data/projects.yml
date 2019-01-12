@@ -1,0 +1,60 @@
+- name: Social Digital
+  description: Accessible responsive redesign for non-profit providing digital solutions for people with specific needs
+  image: 2017-social-digital-dk-s.jpg
+  url: https://www.socialdigital.dk/
+  year: 2017 <span class="middot" aria-hidden="true">&middot;</span> Copenhagen
+- name: Bownty
+  description: Deals aggregator for startup curating cool experiences for consumers in 1000+ cities in Europe
+  image: 2017-bownty-com-s.png
+  url: http://bownty.com/
+  year: 2017 <span class="middot" aria-hidden="true">&middot;</span> Copenhagen
+- name: Beagle
+  description: New cloud product for Citrix to help agencies create and reuse more compelling proposals, faster (discontinued)
+  image: 2016-beagle-co-s.png
+  url: http://getbeagle.co/
+  year: 2015 <span class="middot" aria-hidden="true">&middot;</span> Copenhagen
+- name: Podio
+  description: Product features and core improvements for cloud-based work and communication service by Citrix
+  image: 2015-podio-com-s.png
+  url: https://podio.com/
+  year: 2015 <span class="middot" aria-hidden="true">&middot;</span> Copenhagen
+- name: Etihad Airways
+  description: Accessible front-end architecture and user interface for national airline of the United Arab Emirates
+  image: 2011-etihadairways-com-s.jpg
+  url: http://www.etihadairways.com
+  year: 2013 <span class="middot" aria-hidden="true">&middot;</span> Copenhagen
+- name: Kantor Group
+  description: New website platform for management consultancy servicing governments, organisations and corporate clients
+  image: 2010-kantor-group-eu-s.png
+  url: http://kantor-group.eu/
+  year: 2010 <span class="middot" aria-hidden="true">&middot;</span> Brussels
+- name: EN RD
+  description: Front-end architecture for European network for Rural Development, by European Commission\'s DG for Agriculture and Rural Development
+  image: 2009-enrd-ec-europa-eu-s.png
+  url: http://enrd.ec.europa.eu/
+  year: 2010 <span class="middot" aria-hidden="true">&middot;</span> Brussels
+- name: Wallonian region
+  description: Website for the European network for Rural Development in Wallonia, Belgium
+  image: 2009-reseau-pwdr-be-s.jpg
+  url: http://reseau-pwdr.be/
+  year: 2009 <span class="middot" aria-hidden="true">&middot;</span> Brussels
+- name: Euratom Energy Research
+  description: New website for Energy Research Directorate of the European Commission\'s DG for Research and Innovation
+  image: 2009-energy-research-s.png
+  url: http://ec.europa.eu/research/energy/euratom/index_en.cfm
+  year: 2009 <span class="middot" aria-hidden="true">&middot;</span> Brussels
+- name: Belgacom Skynet, Entertainment
+  description: New front-end for one of the leading Belgian web portals for consumers and corporate customers
+  image: 2008-skynet-be-entertainment-s.png
+  url: http://www.skynet.be/fr
+  year: 2008 <span class="middot" aria-hidden="true">&middot;</span> Brussels
+- name: ECA TNA booklet (pdf)
+  description: Booklet design for European Cockpit Association, representing 38 000+ European pilots at EU level, in 37 European states
+  image: 2007-eca-tna-booklet-s.png
+  url: https://www.eurocockpit.be/sites/default/files/2017-04/Transnational%20Representation%20and%20Collective%20Bargaining%20in%20Europe%2C%20ECA%202007.pdf
+  year: 2007 <span class="middot" aria-hidden="true">&middot;</span> Brussels
+- name: Projects on Github
+  description: Some of my open source projects, focusing on accessibility, architecture and workflow
+  image: 2017-github-code-s.png
+  url: https://github.com/akikoo
+  year: Ongoing

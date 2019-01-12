@@ -1,0 +1,28 @@
+/* ==========================================================================
+   @group Article metadata
+   ========================================================================== */
+
+.entry-meta {
+  @include margin(0, $base-line-height / 2);
+  font-weight: $font-weight-bold;
+
+  @include respond-to($breakpoint-medium) {
+    @include size-and-leading(18);
+  }
+
+  &--single {
+    @include margin(0, $base-line-height);
+    color: $color-white;
+  }
+
+  .categories-twitter > a,
+  .categories-twitter > a:hover,
+  .categories-twitter > a:focus {
+    color: $color-white;
+    border-bottom: 2px solid $color-white;
+  }
+}
+
+.middot {
+  margin: 0 3px;
+}

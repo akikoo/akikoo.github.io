@@ -1,0 +1,225 @@
+// ========================================================================== //
+// SCSS mixins for One Web Boilerplate.
+//
+// @author Aki Karkkainen (see inline credits however)
+// @url https://github.com/akikoo/one-web-boilerplate
+// Twitter: http://twitter.com/akikoo
+//
+// Prefix custom functions with x- or another namespace.
+// See https://github.com/necolas/idiomatic-css
+// ========================================================================== //
+
+
+// The micro clearfix
+// ==================
+// Used to contain floats: http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin clearfix() {
+  *zoom: 1; // For IE 6/7 only. Include this rule to trigger hasLayout and contain floats.
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+// Media queries
+// =============
+// Mixin inspired by 
+// http://jakearchibald.github.com/sass-ie/
+// http://alwaystwisted.com/post.php?s=2013-04-01-my-media-query-mixin
+$fix-mqs: false !default;
+@mixin respond-to($breakpoint, $query1: min, $query2: width) {
+
+  // Old-IE gets a mid-screen sized desktop version, with styles up until predefined width ($fix-mqs).
+  @if $fix-mqs {
+    @if $fix-mqs >= $breakpoint {
+      @content;
+    }
+  }
+  // Modern browsers
+  @else {
+    @media only screen and (#{$query1}-#{$query2}: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+
+// Old-IE
+// ======
+// See http://jakearchibald.github.com/sass-ie/
+$old-ie: false !default;
+@mixin old-ie {
+  @if $old-ie {
+    @content;
+  }
+}
+
+// Shadow with double border
+// =========================
+@mixin double-border() {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  &::after {
+    content: '';
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    height: 2px;
+  }
+}
+
+// Set font size in rems (with a pixel fallback) and line-height
+// See https://github.com/csswizardry/CSS-Guidelines
+// =============================
+@mixin size-and-leading(
+  $font-size: $base-font-size,
+  $leading: $base-line-height
+){
+  // font-size: $font-size +px;
+  font-size: relative-size($font-size, $base-font-size);
+  line-height: relative-size($leading, $font-size, '');
+}
+
+@mixin margin(
+  $margin-top: 0,
+  $margin-bottom: $base-line-height
+) {
+  margin-top: relative-size($margin-top, $base-font-size);
+  margin-bottom: relative-size($margin-bottom, $base-font-size);
+  // margin: relative-size($margin-top, $base-font-size) 0 relative-size($margin-bottom, $base-font-size);
+}
+
+@mixin padding(
+  $padding-top: 0,
+  $padding-bottom: $base-line-height
+) {
+  padding-top: relative-size($padding-top, $base-font-size);
+  padding-bottom: relative-size($padding-bottom, $base-font-size);
+}
+
+
+// set this to whichever text selection color you use
+$selectionColor: #b4d5fe;
+
+@mixin textShadowToCropUnderline($color-background) {
+  text-shadow:
+    .03em 0 $color-background,
+    -.03em 0 $color-background,
+    0 .03em $color-background,
+    0 -.03em $color-background,
+
+    .06em 0 $color-background,
+    -.06em 0 $color-background,
+    .09em 0 $color-background,
+    -.09em 0 $color-background,
+
+    .12em 0 $color-background,
+    -.12em 0 $color-background,
+    .15em 0 $color-background,
+    -.15em 0 $color-background;
+}
+
+// http://www.sumnoise.com/2014/03/30/underlining-links/
+// https://eager.io/blog/smarter-link-underlines/
+// https://blog.omgmog.net/post/better-link-underlines-with-sass/
+@mixin underline($color: $color-text-light, $background-color: $color-background, $line-offset: 92, $line-size: 1) {
+  background-repeat: repeat-x;
+  background-size: relative-size($line-size) relative-size($line-size); // width height
+  // background-size: 1px 1px; // width height
+  // background-position: 0 #{$line-offset}#{%};
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, $color 50%, $color 50%);
+  @include textShadowToCropUnderline($background-color);
+
+  &::selection {
+    @include textShadowToCropUnderline($selectionColor);
+    background-color: $selectionColor;
+  }
+
+  &::-moz-selection {
+    @include textShadowToCropUnderline($selectionColor);
+    background-color: $selectionColor;
+  }
+
+  &:before,
+  &:after,
+  *,
+  *:before,
+  *:after {
+    text-shadow: none;
+  }
+
+  &:visited {
+
+  }
+}
+
+@mixin tabbed-link() {
+  // background-color: $color-highlight;
+  // outline: 2px solid $color-highlight;
+
+  // background-color: $color-highlight;
+  // outline: 3px auto $color-main;
+  outline: 1px dotted $color-main;
+  // outline-offset: 2px;
+
+  outline: 1px dotted $color-text-dark;
+  outline-offset: .15em;
+
+  // outline: 2px solid #00a0d4;
+
+  // border-bottom-color: transparent;
+
+  // text-decoration: underline;
+  // border-bottom-color: transparent;
+
+  // text-decoration: underline;
+  // @include underline($color-text-dark, $color-highlight);
+
+  // box-shadow: 0 0 3px 1px white, 0 0 3px 3px $color-main !important;
+  // border-bottom: .125rem solid transparent;
+  // background: #eee;
+  // outline: 3px solid #ffbf47;
+  // royalblue
+  // background-color: #ffbf47;
+}
+
+
+@mixin links-with-custom-style() {
+  padding: 0; /* Override default. */
+  list-style: none;
+
+  li {
+    display: inline-block;
+  }
+
+  li > a {
+    @include size-and-leading(16, $base-line-height);
+    padding: 6px 15px;
+    display: inline-block;
+    vertical-align: middle;
+    color: $color-text-dark;
+    border-bottom: none;
+    font-weight: $font-weight-bold;
+    overflow: hidden; // TO make sure the focus ring respects layout
+  }
+
+  li > a::after {
+    content: '';
+    display: block;
+    height: 3px;
+  }
+
+  li > a:focus,
+  li > a:hover,
+  li > a:active {
+    color: $color-text-dark;
+
+    &::after {
+      background-color: $color-text-dark;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+- name: Work
+  link: /work/
+  ariaLabel: What I do for living
+- name: Log
+  link: /log/
+  ariaLabel: all articles
+- name: About
+  link: /about/
+  ariaLabel: about this website

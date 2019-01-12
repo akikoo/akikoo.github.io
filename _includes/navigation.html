@@ -1,0 +1,32 @@
+<nav role="navigation" id="nav-main" aria-labelledby="main-nav">
+  <h2 class="is-visuallyhidden" id="main-nav">Site links</h2>
+  <ul class="nav-main l-row">
+    <li class="nav-main__item nav-main__item--home l-cell">
+    {% if page.url == '/' %}
+    <h1 class="masthead">
+    {% else %}
+    <div class="masthead">
+    {% endif %}
+    <a class="logo" title="akikoo.org | the web home of Aki Kärkkäinen" href="/">
+      <span class="logo__img"><img src="/assets/images/akikoo_logo.jpg" alt="Home" /></span>
+      <span class="logo__text"><span class="logo__name is-visuallyhidden">Aki Kärkkäinen</span><span class="logo__title is-visuallyhidden">Accessible UX/UI Developer</span></span>
+    </a>
+    {% if page.url != '/' %}
+    </div>
+    {% else %}
+    </h1>
+    {% endif %}
+    </li>
+
+    {% assign current = 'nav-main__item--current' %}
+    {% for item in site.data.navigation %}
+    <li class="nav-main__item l-cell
+    {% if page.pagetype == 'post' and item.name == 'Log' %}{{current}}
+    {% elsif page.pagetype == 'category' and item.name == 'Log' %}{{current}}
+    {% elsif page.url == item.link %}{{current}}
+    {% endif %}">
+      <a class="nav-main__link ga-nav-main" aria-label="{{item.ariaLabel}}" href="{{item.link}}">{{item.name}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

@@ -1,0 +1,20 @@
+<article class="h-entry h-entry--in-collection hentry">
+  {% if page.url == '/' %}
+  <h3 class="p-name entry-title">
+  {% else %}
+  <h2 class="p-name entry-title">
+  {% endif %}
+    <a class="p-name__link u-url ga-entry-title" href="{{post.url}}" rel="bookmark">{{post.title}}</a>
+  {% if page.url != '/' %}
+  </h2>
+  {% else %}
+  </h3>
+  {% endif %}
+
+  {% include post-meta-in-collection.html time=post.date %}
+
+  <div class="e-content entry-content">
+    <p>{{post.excerpt|markdownify}}</p>
+    <span class="read-more-wrapper"><a href="{{post.url}}" class="read-more">Read<span class="is-visuallyhidden">&nbsp;post {{post.title}}</span></a></span>
+  </div>
+</article>

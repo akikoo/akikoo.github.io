@@ -1,0 +1,14 @@
+<nav aria-label="Browse log">
+  <div class="l-background--light">
+    <div class="l-constrained">
+      <ul class="nav-log nav-log--posts">
+      {% if page.previous.url %}
+        <li class="nav-log__prev"><a rel="prev" href="{{page.previous.url}}"><span aria-hidden="true">&larr;</span> <span class="nav-log__text" aria-label="Older posts">Older</span></a></li>
+      {% endif %}
+      {% if page.next.url %}
+        <li class="nav-log__next"><a rel="next" href="{{page.next.url}}"><span class="nav-log__text" aria-label="Newer posts">Newer</span> <span aria-hidden="true">&rarr;</span></a></li>
+      {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>

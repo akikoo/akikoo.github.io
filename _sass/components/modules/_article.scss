@@ -1,0 +1,123 @@
+/* ==========================================================================
+   @group Article
+   ========================================================================== */
+
+// Article wrapper
+.h-entry {
+  &--in-collection {
+    background: #fff;
+    padding: 5px 15px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include respond-to($breakpoint-medium) {
+      // @include margin($base-line-height * 2, $base-line-height * 2);
+    }
+
+    .e-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 auto;
+    }
+
+    transition: box-shadow $transition-duration linear;
+
+    &:hover {
+      box-shadow: 0 2px 4px 0 hsla(0,0%,68%,.32);
+    }
+  }
+}
+
+.e-content {
+  &--single {
+    @include respond-to($breakpoint-medium) {
+      @include margin($base-line-height * 2, $base-line-height * 2);
+    }
+  }
+}
+
+.l-heading {
+  padding-top: $navbar-height + $base-line-height;
+  @include margin(0, $base-line-height);
+
+  @include respond-to($breakpoint-medium) {
+    padding: relative-size(81 + (27 * 2)) 0 0; // Hardcode for now
+  }
+
+  // background: $color-main;
+  background: linear-gradient(45deg, #0ED42E, #00d4ff);
+
+  &--styleguide {
+    background: none;
+  }
+}
+
+.read-more-wrapper {
+  margin-top: auto;
+}
+
+.read-more {
+  @include size-and-leading(16, $base-line-height);
+  padding: 6px 0;
+  // margin-top: -27px;
+  display: inline-block;
+  vertical-align: middle;
+  color: $color-text-dark;
+  border-bottom: none;
+  font-weight: $font-weight-bold;
+  overflow: hidden; // TO make sure the focus ring respects layout
+
+  &::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: $color-main;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color-main;
+
+    &::after {
+      background-color: $color-main;
+    }
+  }
+}
+
+.articles {
+  // Equal height items
+  @include respond-to($breakpoint-medium) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  // Custom responsive grid
+  &__item {
+    @include respond-to($breakpoint-medium) {
+      display: flex;
+    }
+
+    margin-bottom: $gutter;
+
+    @include respond-to($breakpoint-medium) {
+      @include columns(6);
+      margin-bottom: 0;
+    }
+
+    @include respond-to($breakpoint-large) {
+      @include columns(4);
+    }
+  }
+
+  &--home {
+    .articles__item {
+      @include respond-to($breakpoint-large) {
+        @include columns(6);
+      }
+    }
+  }
+}

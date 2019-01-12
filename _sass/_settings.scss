@@ -1,0 +1,123 @@
+// ========================================================================== //
+// 
+// Variables file containing defaults for One Web Boilerplate.
+//
+//
+// Font sizes & line heights are calculated as follows:
+//
+// Base font-size: 16px
+// Base line-height: 24px (1.5 x 16)
+//
+// Element font-size in ems: desired font-size in pixels / parent font-size in pixels.
+// Example: 14px/16px = 0.875em
+//
+// Line-height & margin-bottom: base line-height in pixels / current font-size in pixels.
+// Example: 24px/14px = 1.71428571428571em
+//
+// This results in consistent baseline even if element font size decreases or increases.
+//
+// ========================================================================== //
+
+
+// ========================================================================== //
+// =Paths 
+// ========================================================================== //
+$font-base                 : '/assets/fonts';
+
+
+// ========================================================================== //
+// =Grid settings
+// ========================================================================== //
+// Column number, gutter etc. 
+
+// Defaults, feel free to change
+$columns                    : 12;     // Any number will do.
+$gutter                     : 15px;   // Rendered as padding
+$navbar-height              : 81px;   // 3 x $base-line-height
+$navbar-log-height          : 49px;
+
+
+// ========================================================================== //
+// =Box model setting (true uses border-box, false uses content-box (browser default)).
+//  See http://www.adobe.com/devnet/html5/articles/css-everything-is-global-and-how-to-deal-with-it.html
+// ========================================================================== //
+$global-border-box-model    : true;
+
+
+// ========================================================================== //
+// =Color settings
+// ========================================================================== //
+// Common colours
+$color-white                : #fff;
+$color-main                 : #d40e39; // WCAG2 AA
+$color-complementary        : #0ed42e; // Green
+
+// $color-complementary        : #5deac2; // green
+// $color-complementary        : #d9ffe4; // Green
+// $color-purple               : #da70d6; // "orchid"
+// $color-highlight            : #fbf36d; // yellow
+
+// Text colors
+$color-text-dark            : #222;
+$color-text-light           : #666;
+
+// Backgrounds
+$color-background           : #f4f4f4;
+
+// Borders
+$color-border               : #ddd;
+
+// Links
+$color-link-default         : $color-text-dark;
+$color-link-visited         : #884488;
+$color-link-hover           : #2e8aca; // Old: #39c
+$color-link-active          : #39c;
+
+// Social 
+$color-link-social-linkedin : #007bb6;
+$color-link-social-facebook : #3b5998;
+$color-link-social-github   : #171515;
+$color-link-social-flickr   : #ff0084;
+$color-link-social-lastfm   : #c3000d;
+$color-link-social-tumblr   : #34526f;
+$color-link-social-twitter  : #00acee;
+$color-link-social-feed     : #ee802f;
+$color-link-social-googleplus: #dd4b39;
+
+
+// ========================================================================== //
+// =Box shadow settings
+// ========================================================================== //
+$box-shadow                 : 0 0 10px rgba($color-text-dark, 0.1);
+
+
+// ========================================================================== //
+// =Transition/animation settings
+// ========================================================================== //
+$transition-duration        : .1s;
+
+
+// ========================================================================== //
+// =Font settings
+// ========================================================================== //
+/* Base sizes */
+$base-font-size             : 18;
+$line-height-multiplier     : 1.5;
+$base-line-height           : $base-font-size * $line-height-multiplier; /* 27px if `$base-font-size` is 18px */
+/* Font weights */
+$font-weight-regular        : 400;
+$font-weight-bold           : 700;
+
+/* Font stacks */
+// $font-family-open-sans      : open_sans, "Helvetica Neue",​ sans-serif;
+$font-family-sans-serif     : 'Source Sans Pro', sans-serif;
+$font-family-serif          : Cambria, Georgia, Times, "Times New Roman", serif;
+$font-family-monospace      : "Bitstream Vera Sans Mono", Consolas, "Courier New", monospace;
+
+// ========================================================================== //
+// =Media Query breakpoint settings. Define your own to suit the design. 
+// ========================================================================== //
+$breakpoint-small           : 30em;     /* 480/16 */
+$breakpoint-medium          : 48em;     /* 768/16 */
+$breakpoint-large           : 62em;     /* 992/16 */
+$breakpoint-xlarge          : 86.375em; /* 1382/16 */

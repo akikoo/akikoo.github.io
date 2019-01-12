@@ -1,0 +1,41 @@
+/* ==========================================================================
+   @group Nav-main
+   ========================================================================== */
+
+/* Nav
+   ========================================================================== */
+
+.nav-main {
+  @include links-with-custom-style();
+  @include flex-row();
+  height: 100%;
+
+  &__item {
+    text-align: center;
+    @include respond-to($breakpoint-medium) {
+      width: percentage(((100 - 66.6666666667) / 3) / 100); // Deduct 8 columns first
+      padding: 0;
+    }
+  }
+
+  &__item--home {
+    // Keep logo on the left
+    @include respond-to($breakpoint-medium, max) {
+      margin-right: auto;
+    }
+
+    @include respond-to($breakpoint-medium) {
+      @include columns(8);
+      padding: 0 $gutter;
+    }
+  }
+
+  // Override mixin
+  &__item--current &__link {
+    color: $color-text-dark;
+
+    &::after {
+      background-color: $color-text-dark;
+    }
+  }
+}

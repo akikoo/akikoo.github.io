@@ -1,0 +1,59 @@
+/* ==========================================================================
+   @group Logo
+   ========================================================================== */
+
+.logo {
+  @include flex-row();
+  border-bottom: none; // Cancel border
+  color: $color-text-dark;
+  font-weight: $font-weight-bold;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color-text-dark;
+    border-bottom: none; // Cancel border
+  }
+
+  &:focus &__img,
+  &:hover &__img,
+  &:active &__img {
+    border: 2px solid $color-complementary;
+    transition: border $transition-duration cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  &__title {
+    display: block;
+    color: $color-text-dark;
+  }
+
+  &__name.is-visuallyhidden {
+    @include respond-to($breakpoint-medium) {
+      position: static;
+      clip: auto;
+      width: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      padding: relative-size(10);
+    }
+  }
+
+  &__img {
+    position: relative; // Context for the cropped image
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid darken($color-background, 20%);
+    transition: border $transition-duration cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

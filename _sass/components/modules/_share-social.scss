@@ -1,0 +1,93 @@
+/* ==========================================================================
+   @group Share-social
+   ========================================================================== */
+
+body .share-social {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+
+  &__item {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+  }
+
+  &__link {
+    white-space: normal;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 50%;
+    transition: all $transition-duration ease-in-out;
+    background-image: none; // Cancel gradient.
+    text-shadow: none;
+    background: $color-white;
+
+    &:focus {
+      // outline: none;
+    }
+  }
+
+  &__link--facebook {
+    border: 1px solid $color-link-social-facebook;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $color-link-social-facebook;
+    }
+  }
+
+  &__link--twitter {
+    border: 1px solid $color-link-social-twitter;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background: $color-link-social-twitter;
+    }
+  }
+
+  &__link--googleplus {
+    border: 1px solid $color-link-social-googleplus;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background: $color-link-social-googleplus;
+    }
+  }
+
+  &__link--linkedin {
+    border: 1px solid $color-link-social-linkedin;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background: $color-link-social-linkedin;
+    }
+  }
+
+  &__link > span {
+    @include size-and-leading(16);
+    display: inline-block;
+    transition: color $transition-duration ease;
+  }
+
+  &__link:focus > span,
+  &__link:hover > span,
+  &__link:active > span {
+    transition: color $transition-duration ease;
+    color: $color-white;
+  }
+
+  &__link:focus,
+  &__link:hover,
+  &__link:active {
+    border: 1px solid transparent;
+  }
+}

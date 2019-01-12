@@ -1,0 +1,58 @@
+/* ==========================================================================
+   @group Nav-log
+   ========================================================================== */
+
+// Single post and category navigation (generic).
+.nav-log {
+  @include clearfix();
+  @include links-with-custom-style();
+
+  // Override and customize mixin for categories
+  &--categories {
+    @include padding($base-line-height / 2, $base-line-height/ 2);
+
+    li > a {
+      text-transform: uppercase;
+      @include size-and-leading(16, $base-line-height);
+      padding: 4px 10px;
+
+      @include respond-to($breakpoint-medium) {
+        @include size-and-leading(18, $base-line-height);
+        padding: 6px 15px;
+      }
+    }
+
+    .current-cat > a,
+    li > a:focus,
+    li > a:hover,
+    li > a:active {
+      color: $color-main;
+
+      &::after {
+        background-color: $color-main;
+      }
+    }
+
+  }
+
+  // Override and customize mixin for posts navigation (prev/next)
+  &--posts {
+    @include padding($base-line-height);
+    margin: 0; // Override
+
+    li {
+      float: left;
+    }
+  }
+
+  &--posts &__pagination {
+    @include size-and-leading(16, $base-line-height);
+    padding: 6px 10px;
+  }
+
+  &--home {
+    text-align: center;
+    @include padding($base-line-height);
+    margin: 0; // Override
+  }
+}

@@ -1,0 +1,28 @@
+---
+layout: default
+title: Home
+---
+
+<section class="l-colophon" aria-labelledby="colophon-heading">
+  <div class="l-colophon__row mt0">
+    {% include aside.html %}
+  </div>
+</section>
+
+<section aria-labelledby="recent-posts-heading">
+  <div class="l-constrained l-center-align">
+    <h2 class="section-heading" id="recent-posts-heading">Recent posts</h2>
+  </div>
+
+  <div class="l-constrained hfeed">
+    <div class="l-row articles articles--home">
+    {% for post in site.posts limit:2 %}
+      <div class="l-cell articles__item">
+        {% include article.html %}
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include navigation-log-home.html %}

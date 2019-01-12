@@ -1,0 +1,128 @@
+<!-- FORM ELEMENTS -->
+
+<form action="#">
+  <fieldset>
+    <legend>Group title</legend>
+
+    <div class="control">
+      <label for="form-text" class="label-text">Text <strong class="required" title="Required">*</strong></label>
+      <input id="form-text" class="control-text  required" type="text" name="form-text" placeholder="placeholder text">
+      <em class="inline-message">Note about this field.</em>
+    </div>
+
+    <div class="control">
+      <label for="form-password" class="label-text">Password</label>
+      <input id="form-password" class="control-text" type="password" name="form-password">
+      <em class="inline-message">Note about this field.</em>
+    </div>
+
+    <div class="control">
+      <label for="form-email" class="label-text">E-mail</label>
+      <input id="form-email" class="control-text" type="email" name="form-email">
+      <em class="inline-message">Note about this field.</em>
+    </div>
+
+    <div class="control">
+      <label for="form-number" class="label-text">Number</label>
+      <input id="form-number" class="control-text" type="number" name="form-number">
+      <em class="inline-message">Note about this field.</em>
+    </div>
+
+    <div class="control">
+      <label for="form-url" class="label-text">URL</label>
+      <input id="form-url" class="control-text" type="url" name="form-url">
+      <em class="inline-message">Note about this field.</em>
+    </div>
+
+    <div class="control">
+      <label for="form-textarea" class="label-text">Textarea</label>
+      <textarea id="form-textarea" rows="5" cols="20" name="form-textarea" maxlength="1000"></textarea>
+      <em class="inline-message">Note about this field.</em>
+    </div>
+
+    <div class="control">
+      <label for="form-file" class="label-file">File</label>
+      <input id="form-file" type="file" name="form-file">
+      <em class="inline-message">Note about this field.</em>
+    </div>
+
+    <div class="control">
+      <label for="form-select" class="label-select">Select</label>
+      <select id="form-select" name="form-select">
+        <optgroup label="Option Group">
+          <option selected="selected" value="">Please select</option>
+          <option value="option1">option1</option>
+          <option value="option2">option2</option>
+          <option value="option1">option3</option>
+          <option value="option2">option4</option>
+        </optgroup>
+      </select>
+      <em class="inline-message">Note about this field.</em>
+    </div>
+
+    <div class="control">
+      <label for="form-multiselect" class="label-select">Multi-select</label>
+      <select id="form-multiselect" name="form-multiselect" multiple="multiple">
+        <option value="option1">option1</option>
+        <option value="option2">option2</option>
+        <option value="option1">option3</option>
+        <option value="option2">option4</option>
+      </select>
+      <em class="inline-message">Note about this field.</em>
+    </div>
+
+    <div class="control">
+      <input list="browsers">
+      <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Google Chrome">
+        <option value="Opera">
+        <option value="Safari">
+      </datalist>
+    </div>
+
+    <div class="control">
+      <label for="form-checkbox3">Single checkbox</label>
+      <input id="form-checkbox3" type="checkbox" value="" name="form-checkbox3">
+      <label for="form-checkbox3" class="label-check">Checkbox</label>
+      <em class="inline-message">Note about this field.</em>
+    </div>
+
+    <fieldset class="control-group">
+      <legend>Checkbox group</legend>
+      <div class="control">
+        <input id="form-checkbox1" type="checkbox" value="" name="form-checkbox1">
+        <label for="form-checkbox1" class="label-check">Checkbox 1</label>
+      </div>
+      <div class="control">
+        <input id="form-checkbox2" type="checkbox" value="" name="form-checkbox2">
+        <label for="form-checkbox2" class="label-check">Checkbox 2</label>
+      </div>
+    </fieldset>
+
+    <fieldset class="control-group">
+      <legend>Radio group</legend>
+      <div class="control">
+        <input id="form-radio1" type="radio" value="" name="form-radio">
+        <label for="form-radio1" class="label-radio">Radio 1</label>
+      </div>
+      <div class="control">
+        <input id="form-radio2" type="radio" value="" name="form-radio">
+        <label for="form-radio2" class="label-radio">Radio 2</label>
+      </div>
+      <div class="control">
+        <input id="form-radio3" type="radio" value="" name="form-radio">
+        <label for="form-radio3" class="label-radio">Radio 3</label>
+      </div>
+    </fieldset>
+
+    <div class="control  control-submit">
+      <input type="submit" value="Submit input" />
+      <input type="button" value="Button input (doesn't submit the form)" />
+      <!-- <input type="image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Image input" /> -->
+      <button type="submit" name="Submit">Submit button</button>
+      <a href="#" class="btn">Link styled as button</a>
+    </div>
+  </fieldset>
+</form>

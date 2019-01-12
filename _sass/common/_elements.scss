@@ -1,0 +1,491 @@
+// ========================================================================== //
+// 
+// Base/Mobile First default colour and typography styles for base elements. 
+// No layout rules, nor classes/IDs here (with possibly a few exceptions, such as headings).
+// 
+// Extending normalize.css, following the same element order.
+//
+// The idea is to begin with a layout-less version and serve only default, linear 
+// layout. Remember these rules are applied also in older desktop browsers that 
+// don't support media queries.
+//
+// @author Aki Karkkainen
+// @url https://github.com/akikoo/one-web-boilerplate
+// Twitter: http://twitter.com/akikoo
+// 
+// Licensed under the MIT license.
+// 
+// ========================================================================== //
+
+
+/* ==========================================================================
+   Contents
+   ========================================================================== */
+/**
+ * BASE.........................Global base styles
+ * LINKS........................Default link styles and states
+ * TYPOGRAPHY...................Font, sizes, line heights
+ * GROUPED DECLARATIONS.........Global grouped styles
+ * LISTS........................Ordered, unordered and definition lists
+ * EMBEDDED CONTENT.............Image, video etc.
+ * FIGURES......................Figure styles
+ * FORMS........................See Forms module
+ * TABLES.......................Global table styles
+ */
+
+
+/* ==========================================================================
+   @group Base
+   ========================================================================== */
+
+/* Enable this if you want to reset ALL paddings and margins; CSSLint will throw 
+   a warning though.
+* {
+    margin: 0;
+    padding: 0;
+}
+*/
+
+/* 
+ * Apply a natural box layout model to all elements.
+ * http://paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+
+/* The placeholder rule */ 
+%border-box-model {
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+} 
+
+/* The box model conditional */ 
+@if $global-border-box-model == true {
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+}
+
+/* Individual component conditional override example
+.element { 
+  @if $global-border-box-model == false { 
+    @extend %border-box-model;
+  } 
+}
+*/ 
+
+html,
+button,
+input,
+select,
+textarea {
+  color: $color-text-dark;
+  font-family: $font-family-sans-serif;
+}
+
+html {
+  font-size: $base-font-size / 16 +em;  /* 16px is browser default */
+  line-height: $line-height-multiplier; /* 24px if `$base-font-size` is 16px */
+  background: $color-background;
+}    
+    
+/* 
+ * =hr (a better looking default horizontal rule)
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $color-border;
+  padding: 0;
+}
+
+
+/* ==========================================================================
+   @group Links
+   ========================================================================== */
+a {
+  // Remember the order: LoVe Fears HAte
+  // Unvisited link
+  color: $color-text-dark;
+  white-space: pre-wrap;
+  text-decoration: none;
+  border-bottom: 2px solid $color-main;
+  // @include underline($color-main);
+  // transition: color $transition-duration linear, border-bottom $transition-duration linear;
+  // background-image: linear-gradient(to bottom, transparent 89%, $color-text-light 89%, $color-text-light 95%, transparent 95%);
+  // text-shadow: 0 0.03em $color-background, 0 -0.03em $color-background, 0.06em 0 $color-background, 0 -0.06em $color-background, 0.03em 0 $color-background, -0.03em 0 $color-background, 0.06em 0 $color-background, -0.06em 0 $color-background, 0.09em 0 $color-background, -0.09em 0 $color-background, 0.12em 0 $color-background, -0.12em 0 $color-background, 0.15em 0 $color-background, -0.15em 0 $color-background;
+  // @include underline($color-main);
+
+  // Visited links
+  &:visited {
+
+  }
+
+  // The user clicks on a link
+  &:focus {
+    color: $color-main;
+    outline: none;
+  }
+
+  // The user mouses over a link
+  &:hover {
+    color: $color-main;
+  }
+
+  // The user has clicked a link
+  &:active {
+
+  }
+}
+
+/* When tab key is used (`is-tabbed` class is appended to body)
+   ========================================================================== */
+.is-tabbed a:focus {
+  @include tabbed-link();
+}
+
+/* ==========================================================================
+   @group Typography
+   ========================================================================== */
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+
+}
+
+/*
+ * Remove border from linked headings.
+ */
+h1 a, 
+h2 a, 
+h3 a, 
+h4 a, 
+h5 a, 
+h6 a {
+  border-bottom: none;
+}
+
+/**
+ * Double-stranded heading hierarchy. 
+ * See http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
+ */
+h1, 
+.h1 {
+  @include size-and-leading(36, $base-line-height * 1.5);
+  @include margin($base-line-height);
+  padding: 0;
+  color: $color-text-dark;
+  font-weight: $font-weight-bold;
+  @include respond-to($breakpoint-medium) {
+    @include size-and-leading(60, $base-line-height * 2.5);
+    @include margin(0, $base-line-height * 2);
+  }
+
+  // Single article
+  &.p-name {
+    @include padding(0, $base-line-height);
+    @include margin(0, 0);
+
+    @include respond-to($breakpoint-medium) {
+      @include padding(0, $base-line-height * 2);
+    }
+
+    color: $color-white;
+
+    mark {
+      color: $color-white;
+    }
+  }
+}
+
+h2, 
+.h2 {
+  @include size-and-leading(23);
+  @include margin($base-line-height * 1.5, $base-line-height / 2);
+  color: $color-text-dark;
+  font-weight: $font-weight-bold;
+  @include respond-to($breakpoint-medium) {
+    @include size-and-leading(30, $base-line-height * 1.5);
+    @include margin($base-line-height * 2, $base-line-height / 2);
+  }
+}
+
+h3, 
+.h3 {
+  @include size-and-leading(18);
+  @include margin($base-line-height, $base-line-height / 4);
+  color: $color-text-dark;
+  font-weight: $font-weight-bold;
+  @include respond-to($breakpoint-medium) {
+    @include size-and-leading(21);
+    @include margin($base-line-height * 1.5, $base-line-height / 4);
+  }
+}
+
+// Single article title in a collection
+h2.p-name,
+h3.p-name {
+  @include size-and-leading(23); // Same as h2
+  @include margin(0, 0); // Overwrite global heading margins
+
+  @include respond-to($breakpoint-medium) {
+    @include size-and-leading(30, $base-line-height * 1.5); // Same as h2
+  }
+
+  // background: $color-highlight;
+
+  .p-name__link {
+    padding: relative-size($base-line-height / 2) 0;
+    display: block;
+    white-space: normal;
+    color: $color-text-dark;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-main;
+      // text-decoration-line: underline;
+      // text-decoration-color: rgba($color-main, .3);
+    }
+  }
+}
+
+h4, 
+.h4 {
+  @include size-and-leading(18);
+  @include margin($base-line-height);
+  color: $color-text-dark;
+  font-weight: $font-weight-bold;
+}
+
+h5, 
+.h5 {
+  @include size-and-leading(16);
+  @include margin($base-line-height);
+  color: $color-text-dark;
+  font-weight: $font-weight-bold;
+}
+
+h6, 
+.h6 {
+  @include size-and-leading(16);
+  @include margin($base-line-height);
+  color: $color-text-dark;
+  font-weight: $font-weight-bold;
+}
+
+
+/*
+ * Specific heading styles
+ */
+/*hx*/.section-heading {
+  // Local var
+  $heading-background-offset: 30px;
+
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  @include size-and-leading(21);
+  @include margin($base-line-height);
+  display: inline-block; // Needed for :after layout
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: calc(100% + #{$heading-background-offset});
+    margin-left: -($heading-background-offset / 2);
+    height: relative-size($base-line-height / 2);
+    background: $color-complementary;
+    background: linear-gradient(45deg, #0ED42E, #00d4ff);
+    position: absolute;
+  }
+}
+
+blockquote {
+  @include margin($base-line-height / 2);
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+figcaption {
+  @include margin($base-line-height / 2);
+}
+
+mark {
+  background: transparent; /* Overwrite normalize rule. */
+}
+
+pre {
+  @include size-and-leading(16, 20);
+  @include margin($base-line-height / 2);
+  overflow-x: auto;
+  padding: 16px;
+  border: 1px solid $color-border;
+  border-left-width: 5px;
+  background: darken($color-background, 1%);
+}
+
+code {
+  @include size-and-leading(16, 20);
+  background: darken($color-background, 1%);
+  padding: 5px;
+}
+
+// Overrides
+pre code {
+  padding: 0;
+  font-size: 1em;
+}
+
+p {
+  @include size-and-leading(16);
+  @include margin(); // Top margin of `0` and bottom margin of `$base-line-height` is the default
+
+  @include respond-to($breakpoint-medium) {
+    @include size-and-leading(18);
+  }
+}
+
+/*
+ * Lifted from current design. 
+ */
+abbr[title],
+acronym {
+  cursor: help;
+}
+
+a:hover abbr, 
+a:hover acronym,
+a:focus abbr, 
+a:focus acronym,
+a:active abbr, 
+a:active acronym {
+  cursor: pointer;
+}
+
+
+  /* ==========================================================================
+     @group Grouped declarations
+     ========================================================================== */
+ul, 
+ol, 
+dl, 
+menu, 
+table, 
+form, 
+fieldset {
+  @include size-and-leading(16);
+  @include margin();
+
+  @include respond-to($breakpoint-medium) {
+    @include size-and-leading(18);
+  }
+
+}
+
+
+/* ==========================================================================
+   @group Lists
+   ========================================================================== */
+
+ul ul, 
+ul ol, 
+ol ol, 
+ol ul {
+  margin: 0;
+}
+
+dt {
+  font-weight: $font-weight-bold;
+}
+
+
+/* ==========================================================================
+   @group Embedded content
+   ========================================================================== */
+   
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+img {
+  vertical-align: middle;
+}
+
+img {
+  display: block;
+  margin: 0;
+  max-width: 100%;
+}
+
+
+/*
+ * Flexible images and embedded videos
+ */
+img,
+audio, 
+video,
+object,
+embed, 
+svg {
+  max-width: 100%;
+  height: auto; /* http://www.brucelawson.co.uk/2012/responsive-web-design-preserving-images-aspect-ratio/ */
+}
+
+/* ==========================================================================
+   @group Figures
+   ========================================================================== */
+
+
+/* ==========================================================================
+   @group Forms - see Forms module!
+   ========================================================================== */
+
+
+/* ==========================================================================
+   @group Tables
+   ========================================================================== */
+
+table {
+  width: 100%;
+  border-top: 1px solid $color-border;
+  border-left: 1px solid $color-border;
+}
+
+caption {
+  font-weight: $font-weight-bold;
+  text-align: left;
+}
+
+td, 
+th {
+  text-align: left;
+  border-right: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
+  padding: 2px 6px;
+}
+
+th {
+  background: $color-background;
+}
+
+
+/* =img*/
+/*Wordpress statistics*/
+#wpstats {
+  display: none;
+}

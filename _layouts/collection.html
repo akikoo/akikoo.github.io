@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<section>
+  <div class="l-heading">
+    {% if page.pagetype == 'category' %}
+    {% capture title %}
+      Archive for the <mark>{{page.category}}</mark> category
+    {% endcapture %}
+    {% else %}
+      {% assign title = page.title %}
+    {% endif %}
+
+    <h1 class="l-constrained p-name">{{title}}</h1>
+    {% include categories-in-collection.html %}
+  </div>
+
+  <div class="l-constrained">
+    <div class="l-row articles">
+    {% if page.pagetype == 'category' %}
+      {% assign items = site.categories[page.category] %}
+    {% else %}
+      {% assign items = site.posts %}
+    {% endif %}
+
+    {% for post in items %}
+      <div class="l-cell articles__item">
+        {% include article.html %}
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</section>

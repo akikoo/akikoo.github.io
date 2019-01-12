@@ -1,0 +1,15 @@
+<nav aria-labelledby="category-nav-heading">
+  <div class="l-background">
+    <div class="l-constrained">
+      <h2 class="section-heading is-visuallyhidden" id="category-nav-heading">Categories</h2>
+      <ul class="nav-log nav-log--categories l-row">
+        <li class="cat-item cat-item--all {% if page.url == '/log/' %}current-cat{% endif %}"><a class="ga-nav-log" title="Show all articles" href="https://www.akikoo.org/log">All posts</a> <span class="count is-visuallyhidden">{{site.posts|size}} posts in total</span></li>
+        {% assign categories = site.categories | sort %}
+        {% for category in categories %}
+        {% assign category_name = category[0] %}
+        <li class="cat-item {% if page.category == category_name %}current-cat{% endif %}"><a href="/log/category/{{category_name|downcase}}/">{{category_name}}</a> <span class="count is-visuallyhidden">{{category|last|size}} posts in total</span></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>

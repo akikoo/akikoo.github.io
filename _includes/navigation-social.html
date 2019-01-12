@@ -1,0 +1,15 @@
+<div class="l-social">
+    <div class="l-center-align">
+      <h2 class="section-heading">Find me elsewhere</h2>
+    </div>
+    <ul class="nav-social">
+    {% for item in site.data.navigation-social %}
+      <li class="nav-social__item">
+        <a class="nav-social__link nav-social__link--{{item.id}} ga-nav-social" href="{{item.link}}" rel="me">
+          <span class="i-{{item.id}}" aria-hidden="true"></span>
+          <span class="is-visuallyhidden"><strong>{{item.id}}</strong>/{{item.name}}</span>
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+</div>

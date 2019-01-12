@@ -1,0 +1,39 @@
+title: akikoo.org
+description: The web home of Aki Kärkkäinen
+url: https://www.akikoo.org
+author: Aki Kärkkäinen
+twitter:
+  username: akikoo
+  card: summary
+lang: en
+social:
+  name: Aki Kärkkäinen
+  links:
+    - https://twitter.com/akikoo
+    - https://www.linkedin.com/in/akikoo
+    - https://github.com/akikoo
+    - https://www.flickr.com/people/akikoo
+    - https://www.facebook.com/akiweb
+    - https://www.last.fm/user/akikoo
+collections:
+  posts:
+    output: true
+    permalink: /log/:year/:month/:day/:title/
+  category:
+    output: true
+    permalink: /log/category/:name
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: "single"
+      pagetype: "post"
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: category
+    values:
+      layout: "collection"
+      pagetype: "category"
+sass:
+  style: compressed

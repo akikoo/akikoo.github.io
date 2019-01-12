@@ -1,0 +1,29 @@
+/* ==========================================================================
+   @group Books
+   ========================================================================== */
+
+
+/*Favourite books
+------------------------------------------------------------------------------*/
+.books {
+  padding: 0;
+  list-style-type: none;
+}
+
+.books li {
+  clear: left;
+}
+
+.books li a img {
+  float: left;
+  padding: 0;
+  border: none;
+}
+
+.books li h4 {
+  margin-top: 0;
+}
+
+.books li p {
+  clear: left;
+}

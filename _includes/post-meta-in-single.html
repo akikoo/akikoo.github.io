@@ -1,0 +1,15 @@
+<footer>
+  <div class="l-constrained">
+    <p class="meta entry-meta entry-meta--single">
+      <time datetime="{{include.time|date_to_xmlschema}}" class="dt-published published">{{include.time| date: '%-d %B, %Y'}}</time>
+      <span class="middot" aria-hidden="true">&middot;</span>
+      <span class="fn p-author author h-card"><span class="i-user is-hidden" aria-hidden="true"></span> Aki Kärkkäinen</span>
+    </p>
+  </div>
+
+  <div class="l-background">
+    <div class="l-constrained">
+      {% include categories-in-single.html %}
+    </div>
+  </div>
+</footer>

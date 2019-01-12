@@ -1,0 +1,6 @@
+<span class="categories__text is-visuallyhidden">Filed under: </span>
+<ul class="nav-log nav-log--categories">
+  {% for category in page.categories %}
+  <li><a href="/log/category/{{category|downcase}}/" rel="category tag">{{category}}</a></li>
+  {% endfor %}
+</ul>

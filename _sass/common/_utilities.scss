@@ -1,0 +1,174 @@
+// ========================================================================== //
+// 
+// Utility styles from the HTML5 Mobile Boilerplate and others.
+// 
+// Credits: big thanks to the H5BP dev community and team.
+// http://html5boilerplate.com
+// http://html5boilerplate.com/mobile
+// 
+// @author Aki Karkkainen (I'm only pulling stuff together from the fantastic 
+// resources mentioned above).
+// @url https://github.com/akikoo/one-web-boilerplate
+// Twitter: http://twitter.com/akikoo
+//
+// Licensed under the MIT license.
+//
+// ========================================================================== //
+
+
+/* ==========================================================================
+   Contents
+   ========================================================================== */
+/**
+ * H5BP.........................HTML5 Boilerplate helpers
+ * OTHER........................Various other helpers
+ */
+
+
+/* ==========================================================================
+   @group Utilities (H5BP). Helper classes from the HTML5 Mobile boilerplate.
+   ========================================================================== */
+
+/* Prevent callout */
+.nocallout {
+  -webkit-touch-callout: none;
+}
+
+.pressed {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+textarea[contenteditable] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if
+   they have been set as display: none */
+.gifhidden {
+  position: absolute;
+  left: -100%;
+}
+
+/*
+ * Image replacement
+ */
+.ir {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0;
+  direction: ltr;
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -999em;
+}
+
+.ir br {
+  display: none;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.is-hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.is-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.is-visuallyhidden.focusable:active,
+.is-visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.is-invisible {
+  visibility: hidden;
+}
+
+
+
+/* ==========================================================================
+   @group Utilities (other)
+   ========================================================================== */
+
+/* 
+ * Visually hiding content that will be read by a screen reader.
+ */
+/*a*/.accessibility {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 4;
+  @include size-and-leading(14);
+
+  /* Active when the user tabs to the link */
+  &:focus {
+    position: fixed;
+    top: relative-size($base-line-height / 4);
+    left: 1%;
+    width: auto;
+    height: auto;
+    transition: none;
+    padding: relative-size(($base-line-height / 2) - 2);
+    border: none;
+    text-decoration: underline;
+    background: $color-white;
+  }
+}
+
+.break-word {
+  word-wrap: break-word;
+}
+
+.is-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* 
+ * Classes for aligning images left or right.
+ */
+.l, 
+.r {
+  padding: 0; 
+}
+
+.l {
+  float: left;
+  margin: 1% 2% 1% 0;
+}
+
+.r {
+  float: right;
+  margin: 1% 0 1% 2%;
+}

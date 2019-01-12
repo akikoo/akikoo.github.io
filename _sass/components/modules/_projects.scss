@@ -1,0 +1,158 @@
+/* ==========================================================================
+   @group Projects
+   See https://clearleft.com/posts/an-equal-height-grid-using-flexbox
+   ========================================================================== */
+
+@import "../../mixins/cover-absolutely";
+
+.projects-intro {
+  @include respond-to($breakpoint-medium) {
+    @include size-and-leading(24, 36);
+  }
+
+  @include respond-to($breakpoint-large) {
+    @include size-and-leading(30, 50);
+  }
+}
+
+.projects {
+  list-style-type: none;
+  padding: 0;
+
+  // Equal height items
+  @include respond-to($breakpoint-medium) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  // Custom responsive grid
+  &__item {
+    @include respond-to($breakpoint-medium) {
+      display: flex;
+    }
+
+    margin-bottom: $gutter;
+
+    @include respond-to($breakpoint-medium) {
+      @include columns(4);
+      margin-bottom: 0;
+    }
+
+    @include respond-to($breakpoint-large) {
+      @include columns(3);
+    }
+  }
+
+  // Main link wrapper for mouse users
+  .block-link {
+    position: relative; // For overlay link
+    background: $color-white;
+
+    @include respond-to($breakpoint-medium) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__overlay-link {
+      @include cover-absolutely();
+      z-index: 1;
+      border-bottom: 0;
+      overflow: hidden;
+      text-indent: 200%;
+      white-space: nowrap;
+      visibility: visible;
+    }
+
+    transition: box-shadow $transition-duration linear;
+
+    &:hover {
+      box-shadow: 0 2px 4px 0 hsla(0,0%,68%,.32);
+    }
+  }
+
+  // Details wrapper
+  &__description {
+    @include respond-to($breakpoint-medium) {
+      flex: 1 0 auto;
+    }
+  }
+
+  // Image
+  &__thumbnail {
+    float: left;
+    margin: 0 10px 0 0;
+    max-width: 45%;
+
+    @include respond-to($breakpoint-medium) {
+      float: none;
+      margin: 0;
+      max-width: none;
+      width: 100%;
+    }
+  }
+
+  // Project title
+  &__heading {
+    margin: 0 10px 0 0;
+    padding: 10px 0 0;
+    text-transform: uppercase;
+
+    @include respond-to($breakpoint-medium, max) {
+      overflow: hidden; // Make sure text doesn't wrap around the image
+    }
+
+    @include respond-to($breakpoint-medium) {
+      margin: 0 10px;
+      padding: 0;
+    }
+  }
+
+  // Main project link for keyboard users
+  .projects__link {
+    position: relative;
+    z-index: 2;
+    display: block;
+    border-bottom: 3px solid $color-border;
+    transition: border $transition-duration linear;
+
+    @include padding(0, $base-line-height / 4);
+    @include margin(0, $base-line-height / 4);
+
+    @include respond-to($breakpoint-medium) {
+      @include padding(10, $base-line-height / 4);
+      @include margin(0, $base-line-height / 4);
+    }
+
+    &:focus,
+    &:hover {
+      color: $color-text-dark;
+      border-bottom: 3px solid $color-text-dark;
+    }
+  }
+
+  // For mouse users only
+  .block-link:hover .projects__link {
+    border-bottom: 3px solid $color-text-dark;
+  }
+
+  // Project description
+  &__text {
+    margin: 0 10px; // Override
+
+    @include respond-to($breakpoint-medium, max) {
+      overflow: hidden; // Make sure text doesn't wrap around the image
+    }
+  }
+
+  &__year {
+    display: block;
+    padding: 10px;
+    line-height: 1;
+    clear: left; // Clear floated image
+    color: $color-text-light;
+    letter-spacing: .02em;
+    @include respond-to($breakpoint-medium) {
+      padding: relative-size($base-line-height) 10px 10px;
+    }
+  }
+}

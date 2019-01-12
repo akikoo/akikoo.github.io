@@ -1,0 +1,396 @@
+// ========================================================================== //
+// 
+// Layout rules for One Web Boilerplate elements and modules.
+// For more info on how to categorize your CSS, see SMACSS: http://smacss.com/
+//
+// Ems are based on generic browser default setting of 16px font size.
+// 
+// Use 'layout-' or 'l-' prefix in your classes. Consider putting rules for layout 
+// classes inside media queries only (mobile first!). 
+// 
+// Credits & inspiration: 
+// http://forabeautifulweb.com/blog/about/hardboiled_css3_media_queries/
+// http://forabeautifulweb.com/blog/about/320_and_up/
+// http://html5boilerplate.com/mobile
+// http://adactio.com/journal/1700/
+// http://zomigi.com/blog/essential-considerations-for-crafting-quality-media-queries/
+// http://nicolasgallagher.com/mobile-first-css-sass-and-ie/
+//
+// @author Aki Karkkainen
+// @url https://github.com/akikoo/one-web-boilerplate
+// Twitter: http://twitter.com/akikoo
+//
+// Licensed under the MIT license.
+// 
+// ========================================================================== //
+
+@import "../mixins/center-transform";
+
+/**
+ * How to generate files for both modern browsers and oldIE, from the same source:
+ * 
+ * .selector {
+ *   @include respond-to($breakpoint-medium) {
+ *     float: left;
+ *     width: 50%;
+ *     @include old-ie {
+ *       // These hacks won't appear in the normal stylesheet.
+ *       // Serve fixed-width layout to oldIE (overwrite width declaration above).
+ *       // Alternatively, you could remove this and set fixed width to the parent instead.
+ *       width: relative-size(384);
+ *     }
+ *   }
+ * }
+ * 
+ */
+
+
+/* ==========================================================================
+   @group Layout
+   ========================================================================== */
+
+.l-constrained {
+  margin-left: $gutter;
+  margin-right: $gutter;
+  @include respond-to($breakpoint-medium) {
+    // margin-left: 10%;
+    // margin-right: 10%;
+  }
+  @include respond-to($breakpoint-large) {
+    margin-left: auto;
+    margin-right: auto;
+    width: relative-size(950);
+  }
+}
+    
+body .l-nav {
+  margin: 1em $gutter 0;
+  padding: 1em 0;
+  border-top: 1px solid $color-border;
+  @include respond-to($breakpoint-medium) {
+    margin: 1em 13% 0;
+  }
+}
+
+[role="banner"] {
+  height: $navbar-height;
+
+  .l-constrained {
+    height: 100%; // Inherit height from parent
+  }
+}
+
+// Frontpage colophon
+.l-colophon {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+
+  &__row {
+    height: 100%;
+  }
+
+  &__row &__wrapper {
+    width: 100%; //Override default
+    height: 100%;
+  }
+
+  &__row &__text {
+    @include center-transform(y);
+    width: 100%;
+    padding: $navbar-height $gutter 0; // Offset for navbar
+
+    @include respond-to($breakpoint-medium) {
+      padding: $navbar-height 10% 0;
+    }
+    @include respond-to($breakpoint-large) {
+      padding: $navbar-height 20% 0;
+    }
+  }
+
+  &__row &__image {
+    display: none; // WIP
+    width: 50%; //Override default
+    margin: 0;
+    height: 100%;
+    // background-image: url('images/Workatbownty6.jpg');
+    // background-size: cover;
+    // background-position: center left;
+  }
+}
+
+[role="complementary"] {
+  // clear: left;
+  @include respond-to($breakpoint-medium) {
+    // clear: none;
+  }
+}
+
+[role="navigation"] {
+  height: 100%;
+}
+
+[role="search"]  {
+  @include margin($base-line-height * 3, 0);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+#content-main {
+  outline: 0;
+}
+
+
+/* Grid container (row), containing any number of cells/columns
+   ========================================================================== */
+.l-row {
+  @include respond-to($breakpoint-medium) {
+    @include clearfix;
+    padding: 0; // Needed to overwrite the default list padding.
+    margin: 0 (-$gutter);
+  }
+}
+
+/* Nested rows */
+.l-row .l-row {
+  @include respond-to($breakpoint-medium) {
+    margin: $gutter (-$gutter);
+  }
+}
+
+
+/* Grid cells. No explicit width by default. Extend with `.l-cell--n` classes.
+   ========================================================================== */
+/**
+* In order to work around browsers' different rounding behaviours, we'll float 
+* the last column in a row to the right so the edge aligns. You can override 
+* that behaviour by adding class="l-cell-end" in the last column. 
+* 
+* Idea taken from: 
+* http://foundation.zurb.com/docs/grid.php 
+* http://www.netmagazine.com/tutorials/building-modern-grid-system
+* 
+*/
+
+.l-cell {
+  @include respond-to($breakpoint-medium) {
+    float: left;
+    min-height: 1px;
+    position: relative;
+    /*
+     * Allow the browser to break lines within words in order to prevent overflow
+     * when an otherwise unbreakable string is too long to fit in its containing cell.
+     */
+    word-wrap: break-word;  // Allow the browser to break lines within words in order to prevent overflow.
+    padding: $gutter;
+  }
+}
+
+
+/* Cancel the left margin in the first item */
+.l-cell:first-child, 
+.l-cell .l-cell:first-child {
+  // margin-left: 0;
+}
+
+.l-cell:last-child { 
+  @include respond-to($breakpoint-medium) {
+    float: right; 
+  }
+}
+
+
+/* Cell modifiers
+   ========================================================================== */
+
+.l-cell.l-cell-end {
+  @include respond-to($breakpoint-medium) {
+    float: left; 
+  }
+}
+
+.l-cell-8:last-child {
+  @include respond-to($breakpoint-medium) {
+    float: none;
+  }
+}
+
+.l-cell {
+  &--medium-break {
+    @include respond-to($breakpoint-medium) {
+      clear: left;
+    }
+
+    @include respond-to($breakpoint-large) {
+      clear: none;
+    }
+  }
+
+  &--large-break {
+    @include respond-to($breakpoint-large) {
+      clear: left;
+    }
+  }
+}
+
+
+/* Cell dimensions (assuming we're using six columns; this can be changed in _settings.scss)
+   ========================================================================== */
+
+// First level
+.l-cell-1 {
+  @include respond-to($breakpoint-medium) {
+    @include columns(1);
+  }
+}
+
+.l-cell-2 {
+  @include respond-to($breakpoint-medium) {
+    @include columns(2);
+  }
+}
+
+.l-cell-3 {
+  @include respond-to($breakpoint-medium) {
+    @include columns(3);
+  }
+}
+
+.l-cell-4 {
+  @include respond-to($breakpoint-medium) {
+    @include columns(4);
+  }
+}
+
+.l-cell-5 {
+  @include respond-to($breakpoint-medium) {
+    @include columns(5);
+  }
+}
+
+.l-cell-6 {
+  @include respond-to($breakpoint-medium) {
+    @include columns(6);
+  }
+}
+
+.l-cell-7 {
+  @include respond-to($breakpoint-medium) {
+    @include columns(7);
+  }
+}
+
+.l-cell-8 {
+  @include respond-to($breakpoint-medium) {
+    @include columns(8);
+  }
+}
+
+.l-cell-9 {
+  @include respond-to($breakpoint-medium) {
+    @include columns(9);
+  }
+}
+
+.l-cell-10 {
+  @include respond-to($breakpoint-medium) {
+    @include columns(10);
+  }
+}
+
+.l-cell-11 {
+  @include respond-to($breakpoint-medium) {
+    @include columns(11);
+  }
+}
+
+.l-cell-12 {
+  @include respond-to($breakpoint-medium) {
+    @include columns(12);
+  }
+}
+
+// Second level
+// nestedcolumns(children, parent);
+.l-cell-7 .l-cell-4 {
+  @include respond-to($breakpoint-medium) {
+    @include nestedcolumns(4, 7);
+  }
+}
+
+.l-cell-7 .l-cell-3 {
+  @include respond-to($breakpoint-medium) {
+    @include nestedcolumns(3, 7);
+  }
+}
+
+.l-cell-5 .l-cell-2 {
+  @include respond-to($breakpoint-medium) {
+    @include nestedcolumns(2, 5);
+  }
+}
+
+.l-cell-5 .l-cell-3 {
+  @include respond-to($breakpoint-medium) {
+    @include nestedcolumns(3, 5);
+  }
+}
+
+
+/*
+ * Nested nav and search
+ */
+.l-cell-4 .l-cell-1 {
+  @include respond-to($breakpoint-medium) {
+    @include nestedcolumns(1, 4);
+  }
+}
+.l-cell-4 .l-cell-2 {
+  @include respond-to($breakpoint-medium) {
+    @include nestedcolumns(2, 4);
+  }
+}
+
+.l-cell-4 .l-cell-4 {
+  @include respond-to($breakpoint-medium) {
+    @include nestedcolumns(4, 4);
+  }
+}
+
+
+.l-cell-3 .l-cell-1 {
+  @include respond-to($breakpoint-medium) {
+    @include nestedcolumns(1, 3);
+  }
+}
+
+
+/* Layout utilities
+   ========================================================================== */
+.l-inline-block {
+  display: inline-block;
+}
+
+.l-center-align {
+  text-align: center;
+}
+
+.pr {
+  @include respond-to($breakpoint-medium) {
+    padding-right: 20px;
+  }
+}
+
+.mt0 {
+  margin-top: 0;
+}
+
+.l-background {
+  background: $color-white;
+
+  &--light {
+
+  }
+}

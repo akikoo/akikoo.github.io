@@ -1,0 +1,99 @@
+/* ==========================================================================
+   @group Buttons
+   ========================================================================== */
+.btn,
+button,
+input[type="button"],
+input[type="submit"] {
+  display: inline-block;
+  padding: relative-size(10) relative-size(20);
+  text-align: center;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  font-weight: $font-weight-bold;
+}
+
+
+/* Buttons that are actually links.
+   ========================================================================== */
+a.btn {
+  white-space: nowrap;
+  text-shadow: none;
+  text-decoration: none;
+}
+
+
+/* Primary buttons (Action)
+   ========================================================================== */
+.btn-action {
+  color: $color-white;
+  background: $color-main;
+  border: 2px solid $color-main;
+  transition: color $transition-duration linear, background $transition-duration linear, border $transition-duration linear;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+  }
+
+  &:focus::after,
+  &:hover::after,
+  &:active::after {
+    background-color: $color-white;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color-white;
+    background: darken($color-main, 5%) !important;
+    border: 2px solid darken($color-main, 5%);
+    transition: color $transition-duration linear, background $transition-duration linear, border $transition-duration linear;
+    // text-decoration: underline;
+  }
+}
+
+
+/* Secondary buttons
+   ========================================================================== */
+.btn-secondary {
+  color: $color-main;
+  background: $color-white;
+  border: 2px solid $color-main;
+  transition: color $transition-duration linear, background $transition-duration linear, border $transition-duration linear;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+  }
+
+  &:focus::after,
+  &:hover::after,
+  &:active::after {
+    background-color: $color-main;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    border: 2px solid $color-main;
+    background: $color-white !important;
+    transition: color $transition-duration linear, background $transition-duration linear, border $transition-duration linear;
+  }
+}
+
+
+/* Frontpage
+   ========================================================================== */
+.ga-home-read-log,
+.ga-home-follow-twitter {
+  @include margin(0, $base-line-height / 2);
+  @include respond-to($breakpoint-medium) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}

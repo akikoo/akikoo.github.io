@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+{% seo %}
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+{% feed_meta %}
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+{% include accessibility.html %}
+{% include header.html %}
+<main id="content-main" role="main" tabindex="-1">
+{{content}}
+</main>
+{% include contentinfo.html %}
+
+<script>
+  (function (window) {
+    var handleFirstTab = function (e) {
+      if (e.keyCode === 9) {
+        document.body.classList.add('is-tabbed');
+        window.removeEventListener('keydown', handleFirstTab);
+        window.addEventListener('mousedown', handleMouseDownOnce);
+      }
+    };
+
+    var handleMouseDownOnce = function () {
+      document.body.classList.remove('is-tabbed');
+      window.removeEventListener('mousedown', handleMouseDownOnce);
+      window.addEventListener('keydown', handleFirstTab);
+    };
+
+    window.addEventListener('keydown', handleFirstTab);
+  }(this));
+</script>
+<!-- Design by Aki Kärkkäinen - https://www.akikoo.org -->
+</body>
+</html>
