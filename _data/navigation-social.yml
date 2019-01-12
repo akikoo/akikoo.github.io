@@ -17,5 +17,5 @@
   link: https://www.last.fm/user/akikoo
   name: akikoo
 - id: feed
-  link: https://www.akikoo.org/feed/
+  link: https://www.akikoo.org/feed.xml
   name: RSS
