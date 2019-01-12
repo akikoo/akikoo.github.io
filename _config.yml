@@ -1,3 +1,4 @@
+# Site settings
 title: akikoo.org
 description: The web home of Aki Kärkkäinen
 url: https://www.akikoo.org
@@ -37,5 +38,7 @@ defaults:
       pagetype: "category"
 sass:
   style: compressed
+
+# Build settings
 plugins:
   - jekyll-feed
