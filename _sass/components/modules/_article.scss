@@ -104,14 +104,14 @@
     word-break: break-word;
   }
 
-  @include respond-to($breakpoint-medium) {
+  @include respond-to($breakpoint-small) {
     &__item {
       flex: 0 0 50%;
       padding: 15px;
     }
   }
 
-  @include respond-to($breakpoint-large) {
+  @include respond-to($breakpoint-medium) {
     &__item {
       flex: 0 0 33.3333%;
     }
@@ -119,7 +119,7 @@
 
   &--home {
     .articles__item {
-      @include respond-to($breakpoint-large) {
+      @include respond-to($breakpoint-medium) {
         flex: 0 0 50%;
       }
     }

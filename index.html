@@ -15,9 +15,9 @@ title: Home
   </div>
 
   <div class="l-constrained hfeed">
-    <div class="l-row articles articles--home">
+    <div class="articles articles--home">
     {% for post in site.posts limit:2 %}
-      <div class="l-cell articles__item">
+      <div class="articles__item">
         {% include article.html %}
       </div>
     {% endfor %}
