@@ -2,6 +2,9 @@
 <html lang="en" dir="ltr">
 {% include header.html %}
 <body>
+{% if jekyll.environment == "production" %}
+{% include analytics-noscript.html %}
+{% endif %}
 {% include accessibility.html %}
 {% include masthead.html %}
 <main id="content-main" role="main" tabindex="-1">
