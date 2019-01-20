@@ -85,20 +85,18 @@
   }
 
   // Image
-  &__thumbnail {}
+  &__thumbnail {
+    border: 10px solid transparent;
+    border-bottom: none;
+  }
 
   // Project title
   &__heading {
     margin: 0 10px;
-    padding: 10px 0 0;
     text-transform: uppercase;
 
     @include respond-to($breakpoint-small, max) {
       overflow: hidden; // Make sure text doesn't wrap around the image
-    }
-
-    @include respond-to($breakpoint-small) {
-      padding: 0;
     }
   }
 
@@ -107,28 +105,17 @@
     position: relative;
     z-index: 2;
     display: block;
-    border-bottom: 3px solid $color-border;
-    transition: border $transition-duration linear;
 
-    @include padding(0, $base-line-height / 4);
-    @include margin(0, $base-line-height / 4);
-
-    @include respond-to($breakpoint-small) {
-      @include padding(10, $base-line-height / 4);
-      @include margin(0, $base-line-height / 4);
-    }
+    @include padding($base-line-height / 2, $base-line-height / 4);
 
     &:focus,
     &:hover {
       color: $color-text-dark;
-      border-bottom: 3px solid $color-text-dark;
     }
   }
 
   // For mouse users only
-  .block-link:hover .projects__link {
-    border-bottom: 3px solid $color-text-dark;
-  }
+  .block-link:hover .projects__link {}
 
   // Project description
   &__text {
