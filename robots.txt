@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /contact/
-Disallow: /tag
+Allow: /
