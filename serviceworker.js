@@ -60,9 +60,7 @@ self.addEventListener("fetch", function (event) {
     }
 
     function unableToResolve () {
-      if (request.headers.get('Accept').indexOf('text/html') !== -1) {
-        return caches.match('/offline/')
-      }
+      return caches.match('/offline/')
     }
   }));
 });
