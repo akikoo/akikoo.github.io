@@ -1,0 +1,14 @@
+<script>
+// Register the service-worker
+if (navigator.serviceWorker) {
+  window.addEventListener('load', function () {
+    if (navigator.serviceWorker.controller) {
+    }
+    else {
+      navigator.serviceWorker.register('/serviceworker.js', {
+        scope: '/'
+      }).then(function () {}, function () {});
+    }
+  });
+}
+</script>

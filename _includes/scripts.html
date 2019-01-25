@@ -1,19 +1,2 @@
-<script>
-  (function (window) {
-    var handleFirstTab = function (e) {
-      if (e.keyCode === 9) {
-        document.body.classList.add('is-tabbed');
-        window.removeEventListener('keydown', handleFirstTab);
-        window.addEventListener('mousedown', handleMouseDownOnce);
-      }
-    };
-
-    var handleMouseDownOnce = function () {
-      document.body.classList.remove('is-tabbed');
-      window.removeEventListener('mousedown', handleMouseDownOnce);
-      window.addEventListener('keydown', handleFirstTab);
-    };
-
-    window.addEventListener('keydown', handleFirstTab);
-  }(this));
-</script>
+{% include script-keyboard-focus.html %}
+{% include script-serviceworker-register.html %}
