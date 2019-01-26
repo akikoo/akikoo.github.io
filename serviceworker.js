@@ -14,18 +14,11 @@ var offlineFundamentals = [
   '/about/',
   '/assets/css/styles.css',
   '/assets/images/akikoo_logo.jpg',
-  '/assets/images/portfolio/2007-eca-tna-booklet-s.png',
-  '/assets/images/portfolio/2008-skynet-be-entertainment-s.png',
-  '/assets/images/portfolio/2009-energy-research-s.png',
-  '/assets/images/portfolio/2009-enrd-ec-europa-eu-s.png',
-  '/assets/images/portfolio/2009-reseau-pwdr-be-s.jpg',
-  '/assets/images/portfolio/2010-kantor-group-eu-s.png',
-  '/assets/images/portfolio/2011-etihadairways-com-s.jpg',
-  '/assets/images/portfolio/2015-podio-com-s.png',
-  '/assets/images/portfolio/2016-beagle-co-s.png',
-  '/assets/images/portfolio/2017-bownty-com-s.png',
-  '/assets/images/portfolio/2017-github-code-s.png',
-  '/assets/images/portfolio/2017-social-digital-dk-s.jpg',
+  {% for file in site.static_files %}
+  {% if file.path contains '/assets/images/portfolio' %}
+  '{{ file.path }}',
+  {% endif %}
+  {% endfor %}
   {% for category in site.categories %}
     '/log/category/{{category[0]|downcase}}/',
   {% endfor %}
