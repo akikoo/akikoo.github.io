@@ -1,20 +1,20 @@
 // ========================================================================== //
-// 
-// Base/Mobile First default colour and typography styles for base elements. 
+//
+// Base/Mobile First default colour and typography styles for base elements.
 // No layout rules, nor classes/IDs here (with possibly a few exceptions, such as headings).
-// 
+//
 // Extending normalize.css, following the same element order.
 //
-// The idea is to begin with a layout-less version and serve only default, linear 
-// layout. Remember these rules are applied also in older desktop browsers that 
+// The idea is to begin with a layout-less version and serve only default, linear
+// layout. Remember these rules are applied also in older desktop browsers that
 // don't support media queries.
 //
 // @author Aki Karkkainen
 // @url https://github.com/akikoo/one-web-boilerplate
 // Twitter: http://twitter.com/akikoo
-// 
+//
 // Licensed under the MIT license.
-// 
+//
 // ========================================================================== //
 
 
@@ -38,7 +38,7 @@
    @group Base
    ========================================================================== */
 
-/* Enable this if you want to reset ALL paddings and margins; CSSLint will throw 
+/* Enable this if you want to reset ALL paddings and margins; CSSLint will throw
    a warning though.
 * {
     margin: 0;
@@ -46,12 +46,12 @@
 }
 */
 
-/* 
+/*
  * Apply a natural box layout model to all elements.
  * http://paulirish.com/2012/box-sizing-border-box-ftw/
  */
 
-/* The placeholder rule */ 
+/* The placeholder rule */
 %border-box-model {
   html {
     box-sizing: border-box;
@@ -61,9 +61,9 @@
   *:after {
     box-sizing: inherit;
   }
-} 
+}
 
-/* The box model conditional */ 
+/* The box model conditional */
 @if $global-border-box-model == true {
   html {
     box-sizing: border-box;
@@ -76,12 +76,12 @@
 }
 
 /* Individual component conditional override example
-.element { 
-  @if $global-border-box-model == false { 
+.element {
+  @if $global-border-box-model == false {
     @extend %border-box-model;
-  } 
+  }
 }
-*/ 
+*/
 
 html,
 button,
@@ -95,10 +95,9 @@ textarea {
 html {
   font-size: $base-font-size / 16 +em;  /* 16px is browser default */
   line-height: $line-height-multiplier; /* 24px if `$base-font-size` is 16px */
-  background: $color-background;
-}    
-    
-/* 
+}
+
+/*
  * =hr (a better looking default horizontal rule)
  */
 hr {
@@ -158,11 +157,11 @@ a {
    @group Typography
    ========================================================================== */
 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
 
 }
@@ -170,20 +169,20 @@ h6 {
 /*
  * Remove border from linked headings.
  */
-h1 a, 
-h2 a, 
-h3 a, 
-h4 a, 
-h5 a, 
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
 h6 a {
   border-bottom: none;
 }
 
 /**
- * Double-stranded heading hierarchy. 
+ * Double-stranded heading hierarchy.
  * See http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
  */
-h1, 
+h1,
 .h1 {
   @include size-and-leading(36, $base-line-height * 1.5);
   @include margin($base-line-height);
@@ -212,7 +211,7 @@ h1,
   }
 }
 
-h2, 
+h2,
 .h2 {
   @include size-and-leading(23);
   @include margin($base-line-height * 1.5, $base-line-height / 2);
@@ -224,7 +223,7 @@ h2,
   }
 }
 
-h3, 
+h3,
 .h3 {
   @include size-and-leading(18);
   @include margin($base-line-height, $base-line-height / 4);
@@ -264,7 +263,7 @@ h3.p-name {
   }
 }
 
-h4, 
+h4,
 .h4 {
   @include size-and-leading(18);
   @include margin($base-line-height);
@@ -272,7 +271,7 @@ h4,
   font-weight: $font-weight-bold;
 }
 
-h5, 
+h5,
 .h5 {
   @include size-and-leading(16);
   @include margin($base-line-height);
@@ -280,7 +279,7 @@ h5,
   font-weight: $font-weight-bold;
 }
 
-h6, 
+h6,
 .h6 {
   @include size-and-leading(16);
   @include margin($base-line-height);
@@ -362,18 +361,18 @@ p {
 }
 
 /*
- * Lifted from current design. 
+ * Lifted from current design.
  */
 abbr[title],
 acronym {
   cursor: help;
 }
 
-a:hover abbr, 
+a:hover abbr,
 a:hover acronym,
-a:focus abbr, 
+a:focus abbr,
 a:focus acronym,
-a:active abbr, 
+a:active abbr,
 a:active acronym {
   cursor: pointer;
 }
@@ -382,12 +381,12 @@ a:active acronym {
   /* ==========================================================================
      @group Grouped declarations
      ========================================================================== */
-ul, 
-ol, 
-dl, 
-menu, 
-table, 
-form, 
+ul,
+ol,
+dl,
+menu,
+table,
+form,
 fieldset {
   @include size-and-leading(16);
   @include margin();
@@ -403,9 +402,9 @@ fieldset {
    @group Lists
    ========================================================================== */
 
-ul ul, 
-ul ol, 
-ol ol, 
+ul ul,
+ul ol,
+ol ol,
 ol ul {
   margin: 0;
 }
@@ -418,7 +417,7 @@ dt {
 /* ==========================================================================
    @group Embedded content
    ========================================================================== */
-   
+
 /*
  * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
  */
@@ -437,10 +436,10 @@ img {
  * Flexible images and embedded videos
  */
 img,
-audio, 
+audio,
 video,
 object,
-embed, 
+embed,
 svg {
   max-width: 100%;
   height: auto; /* http://www.brucelawson.co.uk/2012/responsive-web-design-preserving-images-aspect-ratio/ */
@@ -471,7 +470,7 @@ caption {
   text-align: left;
 }
 
-td, 
+td,
 th {
   text-align: left;
   border-right: 1px solid $color-border;

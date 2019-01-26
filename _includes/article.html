@@ -13,8 +13,9 @@
 
   {% include post-meta-in-collection.html time=post.date %}
 
-  <div class="e-content entry-content">
-    <p>{{post.excerpt|markdownify}}</p>
-    <span class="read-more-wrapper"><a href="{{post.url}}" class="read-more">Read<span class="is-visuallyhidden">&nbsp;post {{post.title}}</span></a></span>
-  </div>
+  <a class="overlay-link" href="{{post.url}}" aria-hidden="true" tabindex="-1">{{post.title}}</a>
 </article>
+
+
+
+

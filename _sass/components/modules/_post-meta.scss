@@ -5,6 +5,7 @@
 .entry-meta {
   @include margin(0, $base-line-height / 2);
   font-weight: $font-weight-bold;
+  color: $color-text-light;
 
   @include respond-to($breakpoint-medium) {
     @include size-and-leading(18);
