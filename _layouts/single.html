@@ -25,4 +25,8 @@ layout: default
   </div>
 </article>
 
+{% if page.url != '/work/' and page.url != '/about/' and page.url != '/styleguide/' and page.url != '/offline/' %}
 {% include navigation-log.html %}
+{% endif %}
+
+
