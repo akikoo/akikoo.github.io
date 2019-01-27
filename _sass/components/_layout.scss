@@ -395,8 +395,8 @@ body {
 
 .l-background {
   background: $color-white;
+}
 
-  &--light {
-    background: $color-background;
-  }
+.l-background-light {
+  background: $color-background;
 }

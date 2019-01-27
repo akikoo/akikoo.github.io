@@ -60,6 +60,6 @@
   &--home {
     text-align: center;
     @include padding($base-line-height);
-    margin: 0; // Override
+    margin: relative-size($base-line-height) 0 0;
   }
 }

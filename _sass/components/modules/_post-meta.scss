@@ -12,14 +12,12 @@
   }
 
   &--single {
-    @include margin(0, $base-line-height);
-    color: $color-white;
+    @include margin(0, $base-line-height / 2);
   }
 
   .categories-twitter > a,
   .categories-twitter > a:hover,
   .categories-twitter > a:focus {
-    color: $color-white;
     border-bottom: 2px solid $color-white;
   }
 }

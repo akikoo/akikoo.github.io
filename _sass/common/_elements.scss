@@ -202,12 +202,6 @@ h1,
     @include respond-to($breakpoint-medium) {
       @include padding(0, $base-line-height * 2);
     }
-
-    color: $color-white;
-
-    mark {
-      color: $color-white;
-    }
   }
 }
 
@@ -295,14 +289,16 @@ h6,
   // Local var
   $heading-background-offset: 30px;
 
+  color: $color-text-light;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
   letter-spacing: .8px;
   @include size-and-leading(21);
   @include margin($base-line-height);
-  display: inline-block; // Needed for :after layout
-  position: relative;
+  // display: inline-block; // Needed for :after layout
+  // position: relative;
 
+  /*
   &::after {
     content: '';
     display: block;
@@ -313,6 +309,7 @@ h6,
     background: linear-gradient(45deg, #0ED42E, #00d4ff);
     position: absolute;
   }
+  */
 }
 
 blockquote {
