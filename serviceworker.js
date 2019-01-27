@@ -7,7 +7,7 @@
 var version = 'v1::';
 
 var offlineFundamentals = [
-  '/offline/',
+  '/offline.html',
   '/',
   '/work/',
   '/log/',
@@ -53,7 +53,7 @@ self.addEventListener("fetch", function (event) {
     }
 
     function unableToResolve () {
-      return caches.match('/offline/')
+      return caches.match('/offline.html')
     }
   }));
 });
