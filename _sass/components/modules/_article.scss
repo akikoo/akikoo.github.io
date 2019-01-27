@@ -8,8 +8,7 @@
 .h-entry {
   &--in-collection {
     background: #fff;
-    padding: 5px 15px;
-    overflow: hidden;
+    padding: 10px 15px;
     position: relative;
 
     display: flex;
@@ -17,7 +16,12 @@
     width: 100%;
 
     @include respond-to($breakpoint-medium) {
+      padding: 15px;
       // @include margin($base-line-height * 2, $base-line-height * 2);
+    }
+
+    @include respond-to($breakpoint-large) {
+      margin: 8px;
     }
 
     .e-content {
@@ -108,12 +112,13 @@
   // Equal height items
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -15px;
+  @include respond-to($breakpoint-large) {
+    margin: 0 -22px;
+  }
 
   // Custom responsive grid
   &__item {
     flex: 0 0 100%;
-    padding: 8px 15px;
     display: flex;
     word-break: break-word;
   }
@@ -121,7 +126,6 @@
   @include respond-to($breakpoint-small) {
     &__item {
       flex: 0 0 50%;
-      padding: 15px;
     }
   }
 

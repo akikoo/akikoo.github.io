@@ -1,14 +1,14 @@
 // ========================================================================== //
-// 
+//
 // Layout rules for One Web Boilerplate elements and modules.
 // For more info on how to categorize your CSS, see SMACSS: http://smacss.com/
 //
 // Ems are based on generic browser default setting of 16px font size.
-// 
-// Use 'layout-' or 'l-' prefix in your classes. Consider putting rules for layout 
-// classes inside media queries only (mobile first!). 
-// 
-// Credits & inspiration: 
+//
+// Use 'layout-' or 'l-' prefix in your classes. Consider putting rules for layout
+// classes inside media queries only (mobile first!).
+//
+// Credits & inspiration:
 // http://forabeautifulweb.com/blog/about/hardboiled_css3_media_queries/
 // http://forabeautifulweb.com/blog/about/320_and_up/
 // http://html5boilerplate.com/mobile
@@ -21,14 +21,14 @@
 // Twitter: http://twitter.com/akikoo
 //
 // Licensed under the MIT license.
-// 
+//
 // ========================================================================== //
 
 @import "../mixins/center-transform";
 
 /**
  * How to generate files for both modern browsers and oldIE, from the same source:
- * 
+ *
  * .selector {
  *   @include respond-to($breakpoint-medium) {
  *     float: left;
@@ -41,7 +41,7 @@
  *     }
  *   }
  * }
- * 
+ *
  */
 
 
@@ -52,17 +52,23 @@
 .l-constrained {
   margin-left: $gutter;
   margin-right: $gutter;
-  @include respond-to($breakpoint-medium) {
-    // margin-left: 10%;
-    // margin-right: 10%;
+
+  &.no-margin {
+    margin: 0;
+    @include respond-to($breakpoint-large) {
+      margin-left: auto;
+      margin-right: auto;
+      width: relative-size(950);
+    }
   }
+
   @include respond-to($breakpoint-large) {
     margin-left: auto;
     margin-right: auto;
     width: relative-size(950);
   }
 }
-    
+
 body .l-nav {
   margin: 1em $gutter 0;
   padding: 1em 0;
@@ -164,14 +170,14 @@ body {
 /* Grid cells. No explicit width by default. Extend with `.l-cell--n` classes.
    ========================================================================== */
 /**
-* In order to work around browsers' different rounding behaviours, we'll float 
-* the last column in a row to the right so the edge aligns. You can override 
-* that behaviour by adding class="l-cell-end" in the last column. 
-* 
-* Idea taken from: 
-* http://foundation.zurb.com/docs/grid.php 
+* In order to work around browsers' different rounding behaviours, we'll float
+* the last column in a row to the right so the edge aligns. You can override
+* that behaviour by adding class="l-cell-end" in the last column.
+*
+* Idea taken from:
+* http://foundation.zurb.com/docs/grid.php
 * http://www.netmagazine.com/tutorials/building-modern-grid-system
-* 
+*
 */
 
 .l-cell {
@@ -190,14 +196,14 @@ body {
 
 
 /* Cancel the left margin in the first item */
-.l-cell:first-child, 
+.l-cell:first-child,
 .l-cell .l-cell:first-child {
   // margin-left: 0;
 }
 
-.l-cell:last-child { 
+.l-cell:last-child {
   @include respond-to($breakpoint-medium) {
-    float: right; 
+    float: right;
   }
 }
 
@@ -207,7 +213,7 @@ body {
 
 .l-cell.l-cell-end {
   @include respond-to($breakpoint-medium) {
-    float: left; 
+    float: left;
   }
 }
 

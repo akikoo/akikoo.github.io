@@ -16,7 +16,7 @@ layout: default
     {% include categories-in-collection.html %}
   </div>
 
-  <div class="l-constrained">
+  <div class="l-constrained no-margin">
     <div class="articles">
     {% if page.pagetype == 'category' %}
       {% assign items = site.categories[page.category] %}
