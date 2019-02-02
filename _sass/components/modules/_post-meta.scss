@@ -14,12 +14,6 @@
   &--single {
     @include margin(0, $base-line-height / 2);
   }
-
-  .categories-twitter > a,
-  .categories-twitter > a:hover,
-  .categories-twitter > a:focus {
-    border-bottom: 2px solid $color-white;
-  }
 }
 
 .middot {
