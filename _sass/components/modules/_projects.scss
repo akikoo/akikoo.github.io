@@ -102,7 +102,7 @@
   .projects__link {
     position: relative;
     z-index: 2;
-    display: block;
+    display: inline-block;
 
     @include padding($base-line-height / 4, $base-line-height / 4);
     margin-top: relative-size($base-line-height / 4);
@@ -111,10 +111,23 @@
     &:hover {
       color: $color-text-dark;
     }
+
+    &:after {
+      content: '';
+      display: block;
+      height: 3px;
+      transition: background $transition-duration linear;
+    }
+  }
+
+  .projects__link:focus:after {
+    background: $color-text-dark;
   }
 
   // For mouse users only
-  .block-link:hover .projects__link {}
+  .block-link:hover .projects__link:after {
+    background: $color-text-dark;
+  }
 
   // Project description
   &__text {

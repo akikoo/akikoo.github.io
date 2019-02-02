@@ -20,8 +20,7 @@
   &:focus &__img,
   &:hover &__img,
   &:active &__img {
-    border: 2px solid $color-complementary;
-    transition: border $transition-duration cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
   }
 
   &__title {
@@ -48,8 +47,6 @@
     height: 60px;
     overflow: hidden;
     border-radius: 50%;
-    border: 2px solid darken($color-background, 20%);
-    transition: border $transition-duration cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     > img {
       width: 100%;
