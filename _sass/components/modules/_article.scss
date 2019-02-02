@@ -8,17 +8,12 @@
 .h-entry {
   &--in-collection {
     background: #fff;
-    padding: 10px 15px;
+    padding: 15px;
     position: relative;
 
     display: flex;
     flex-direction: column;
     width: 100%;
-
-    @include respond-to($breakpoint-medium) {
-      padding: 15px;
-      // @include margin($base-line-height * 2, $base-line-height * 2);
-    }
 
     @include respond-to($breakpoint-large) {
       margin: 8px;
