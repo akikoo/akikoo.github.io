@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .entry-meta {
-  @include margin(0, $base-line-height / 2);
+  margin: 0;
   font-weight: $font-weight-bold;
   color: $color-text-light;
 
