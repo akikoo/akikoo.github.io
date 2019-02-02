@@ -38,22 +38,22 @@
   image: 2009-reseau-pwdr-be-s.jpg
   url: http://reseau-pwdr.be/
   year: 2009 <span class="middot" aria-hidden="true">&middot;</span> Brussels
-- name: Euratom Energy Research
+- name: Euratom Energy
   description: New website for Energy Research Directorate of the European Commission's DG for Research and Innovation
   image: 2009-energy-research-s.png
   url: http://ec.europa.eu/research/energy/euratom/index_en.cfm
   year: 2009 <span class="middot" aria-hidden="true">&middot;</span> Brussels
-- name: Belgacom Skynet, Entertainment
+- name: Belgacom Skynet
   description: New front-end for one of the leading Belgian web portals for consumers and corporate customers
   image: 2008-skynet-be-entertainment-s.png
   url: http://www.skynet.be/fr
   year: 2008 <span class="middot" aria-hidden="true">&middot;</span> Brussels
-- name: ECA TNA booklet (pdf)
+- name: ECA booklet (pdf)
   description: Booklet design for European Cockpit Association, representing 38 000+ European pilots at EU level, in 37 European states
   image: 2007-eca-tna-booklet-s.png
   url: https://www.eurocockpit.be/sites/default/files/2017-04/Transnational%20Representation%20and%20Collective%20Bargaining%20in%20Europe%2C%20ECA%202007.pdf
   year: 2007 <span class="middot" aria-hidden="true">&middot;</span> Brussels
-- name: Projects on Github
+- name: Github Projects
   description: Some of my open source projects, focusing on accessibility, architecture and workflow
   image: 2017-github-code-s.png
   url: https://github.com/akikoo
