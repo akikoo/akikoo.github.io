@@ -104,13 +104,13 @@ body .l-nav {
   &__row &__text {
     @include center-transform(y);
     width: 100%;
-    padding: $navbar-height $gutter 0; // Offset for navbar
+    padding: 0 $gutter;
 
     @include respond-to($breakpoint-medium) {
-      padding: $navbar-height 10% 0;
+      padding: 0 10%;
     }
     @include respond-to($breakpoint-large) {
-      padding: $navbar-height 20% 0;
+      padding: 0 20%;
     }
   }
 
