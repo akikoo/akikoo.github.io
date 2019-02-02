@@ -4,7 +4,6 @@
 
 // Single post and category navigation (generic).
 .nav-log {
-  @include clearfix();
   @include links-with-custom-style();
 
   // Override and customize mixin for categories
@@ -44,11 +43,10 @@
 
   // Override and customize mixin for posts navigation (prev/next)
   &--posts {
-    @include padding($base-line-height);
     margin: 0; // Override
 
-    li {
-      float: left;
+    @include respond-to($breakpoint-medium) {
+      text-align: right;
     }
   }
 

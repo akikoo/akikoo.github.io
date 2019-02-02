@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .entry-meta {
-  margin: 0;
+  margin: 6px 0;
   font-weight: $font-weight-bold;
   color: $color-text-light;
 
@@ -12,7 +12,7 @@
   }
 
   &--single {
-    @include margin(0, $base-line-height / 2);
+
   }
 }
 
