@@ -24,3 +24,9 @@ layout: default
     {% endif %}
   </div>
 </article>
+
+{% if page.url != '/work/' and page.url != '/about/' and page.url != '/styleguide/' and page.url != '/offline.html' %}
+<div class="l-constrained">
+  {% include navigation-log.html %}
+</div>
+{% endif %}

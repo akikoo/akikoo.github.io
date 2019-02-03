@@ -1,19 +1,10 @@
 <footer>
   <div class="l-constrained">
-    <div class="l-row">
-      <div class="l-cell l-cell-6">
-        <p class="meta entry-meta entry-meta--single">
-          <time datetime="{{include.time|date_to_xmlschema}}" class="dt-published published">{{include.time| date: '%-d %B, %Y'}}</time>
-          <span class="middot" aria-hidden="true">&middot;</span>
-          <span class="fn p-author author h-card"><span class="i-user is-hidden" aria-hidden="true"></span> Aki Kärkkäinen</span>
-        </p>
-      </div>
-      <div class="l-cell l-cell-6">
-        {% if page.url != '/work/' and page.url != '/about/' and page.url != '/styleguide/' and page.url != '/offline.html' %}
-        {% include navigation-log.html %}
-        {% endif %}
-      </div>
-    </div>
+    <p class="meta entry-meta entry-meta--single">
+      <time datetime="{{include.time|date_to_xmlschema}}" class="dt-published published">{{include.time| date: '%-d %B, %Y'}}</time>
+      <span class="middot" aria-hidden="true">&middot;</span>
+      <span class="fn p-author author h-card"><span class="i-user is-hidden" aria-hidden="true"></span> Aki Kärkkäinen</span>
+    </p>
   </div>
 
   <div class="l-background-light">

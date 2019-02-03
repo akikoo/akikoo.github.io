@@ -44,10 +44,10 @@
   // Override and customize mixin for posts navigation (prev/next)
   &--posts {
     margin: 0; // Override
+  }
 
-    @include respond-to($breakpoint-medium) {
-      text-align: right;
-    }
+  &--posts &__next {
+    float: right;
   }
 
   &--posts &__pagination {

@@ -4,7 +4,8 @@
 
 [role="contentinfo"] {
   background: $color-white;
-  @include margin($base-line-height, 0);
+  padding: relative-size($base-line-height / 2) 0 0;
+  @include margin($base-line-height / 2, 0);
 }
 
 // Contentinfo paragraph.
