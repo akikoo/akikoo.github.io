@@ -44,6 +44,10 @@
   // Override and customize mixin for posts navigation (prev/next)
   &--posts {
     margin: 0; // Override
+
+    li > a {
+      font-weight: $font-weight-regular; // Override
+    }
   }
 
   &--posts &__next {
