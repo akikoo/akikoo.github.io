@@ -27,7 +27,7 @@
   // Custom responsive grid
   &__item {
     flex: 0 0 100%;
-    padding: 15px;
+    padding: 0 15px 45px;
     display: flex;
   }
 
@@ -133,12 +133,15 @@
   }
 
   &__year {
+    font-size: relative-size(16);
     display: block;
     padding: 10px;
     line-height: 1;
     clear: left; // Clear floated image
     letter-spacing: .02em;
     margin-top: relative-size($base-line-height / 4);
+    color: $color-text-light;
+    text-transform: uppercase;
     @include respond-to($breakpoint-small) {
       margin-top: relative-size($base-line-height / 2);
     }
