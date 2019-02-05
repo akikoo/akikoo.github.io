@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .entry-meta {
-  margin: 6px 0;
+  margin: 0 0 relative-size(($base-line-height / 2) + 4);
   font-weight: $font-weight-regular;
   color: $color-text-light;
 
