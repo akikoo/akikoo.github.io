@@ -1,3 +1,8 @@
+- name: Mobiam
+  description: New track & trace service (MVP) by Sony Mobile Communications for customers in transportation and logistics industry
+  image: 2019-mobiam-io-s.png
+  url: https://mobiam.io/
+  year: 2019 <span class="middot" aria-hidden="true">&middot;</span> Lund
 - name: Social Digital
   description: Accessible responsive redesign for non-profit providing digital solutions for people with specific needs
   image: 2017-social-digital-dk-s.jpg
@@ -33,11 +38,6 @@
   image: 2009-enrd-ec-europa-eu-s.png
   url: http://enrd.ec.europa.eu/
   year: 2010 <span class="middot" aria-hidden="true">&middot;</span> Brussels
-- name: Wallonian region
-  description: Website for the European network for Rural Development in Wallonia, Belgium
-  image: 2009-reseau-pwdr-be-s.jpg
-  url: http://reseau-pwdr.be/
-  year: 2009 <span class="middot" aria-hidden="true">&middot;</span> Brussels
 - name: Euratom Energy
   description: New website for Energy Research Directorate of the European Commission's DG for Research and Innovation
   image: 2009-energy-research-s.png
