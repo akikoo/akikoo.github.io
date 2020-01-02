@@ -196,12 +196,8 @@ h1,
 
   // Single article
   &.p-name {
-    @include padding(0, $base-line-height);
+    @include padding(0, 0);
     @include margin(0, 0);
-
-    @include respond-to($breakpoint-medium) {
-      @include padding(0, $base-line-height * 2);
-    }
   }
 }
 

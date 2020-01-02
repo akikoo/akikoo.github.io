@@ -46,13 +46,15 @@
 
 .l-heading {
   padding-top: $navbar-height + $base-line-height;
+  padding-bottom: relative-size($base-line-height);
   @include margin(0, $base-line-height);
 
   @include respond-to($breakpoint-medium) {
-    padding: relative-size(81 + (27 * 2)) 0 0; // Hardcode for now
+    padding-top: relative-size(81 + (27 * 2)); // Hardcode for now
+    padding-bottom: relative-size($base-line-height * 2);
   }
 
-  // background: $color-main;
+  background: $color-background;
   // background: linear-gradient(45deg, #0ED42E, #00d4ff);
 
   &--styleguide {

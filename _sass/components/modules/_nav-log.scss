@@ -10,12 +10,13 @@
   &--categories {
     margin-left: -10px;
     margin-right: -10px;
+    margin-bottom: 0; // Override
+    @include padding($base-line-height / 2, 0);
 
     @include respond-to($breakpoint-medium) {
       margin: 0 -15px;
+      @include padding($base-line-height, 0);
     }
-
-    @include padding($base-line-height / 2, $base-line-height/ 2);
 
     li > a {
       text-transform: uppercase;
