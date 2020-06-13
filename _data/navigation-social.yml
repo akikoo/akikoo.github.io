@@ -1,13 +1,13 @@
 - id: twitter
   link: https://twitter.com/akikoo/
   name: akikoo
-- id: linkedin
+- id: linkedin2
   link: https://www.linkedin.com/in/akikoo/
   name: akikoo
 - id: github
   link: https://github.com/akikoo
   name: akikoo
-- id: flickr
+- id: flickr2
   link: https://www.flickr.com/people/akikoo/
   name: akikoo
 - id: facebook
@@ -16,6 +16,9 @@
 - id: lastfm
   link: https://www.last.fm/user/akikoo
   name: akikoo
-- id: feed
+- id: goodreads
+  link: https://www.goodreads.com/akikoo
+  name: akikoo
+- id: rss
   link: https://www.akikoo.org/feed.xml
   name: RSS

@@ -63,7 +63,7 @@ body .nav-social {
     }
   }
 
-  &__link--linkedin {
+  &__link--linkedin2 {
     border: 1px solid $color-link-social-linkedin;
 
     &:focus,
@@ -83,7 +83,7 @@ body .nav-social {
     }
   }
 
-  &__link--flickr {
+  &__link--flickr2 {
     border: 1px solid $color-link-social-flickr;
 
     &:focus,
@@ -113,33 +113,23 @@ body .nav-social {
     }
   }
 
-  &__link--tumblr {
-    border: 1px solid $color-link-social-tumblr;
+  &__link--goodreads {
+    border: 1px solid $color-link-social-goodreads;
 
     &:focus,
     &:hover,
     &:active {
-      background-color: $color-link-social-tumblr;
+      background-color: $color-link-social-goodreads;
     }
   }
 
-  &__link--feed {
-    border: 1px solid $color-link-social-feed;
+  &__link--rss {
+    border: 1px solid $color-link-social-rss;
 
     &:focus,
     &:hover,
     &:active {
-      background-color: $color-link-social-feed;
-    }
-  }
-
-  &__link--googleplus {
-    border: 1px solid $color-link-social-googleplus;
-
-    &:focus,
-    &:hover,
-    &:active {
-      background-color: $color-link-social-googleplus;
+      background-color: $color-link-social-rss;
     }
   }
 
