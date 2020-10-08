@@ -203,14 +203,13 @@ $selectionColor: #b4d5fe;
     vertical-align: middle;
     color: $color-text-dark;
     border-bottom: none;
-    font-weight: $font-weight-bold;
     overflow: hidden; // TO make sure the focus ring respects layout
   }
 
   li > a::after {
     content: '';
     display: block;
-    height: 3px;
+    height: 2px;
   }
 
   li > a:focus,

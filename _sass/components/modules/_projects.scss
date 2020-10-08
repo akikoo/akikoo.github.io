@@ -76,6 +76,10 @@
       .projects__thumbnail {
         transform: translate3d(0, -4px, 0);
       }
+
+      .projects__link {
+        color: $color-text-dark;
+      }
     }
   }
 
@@ -111,15 +115,14 @@
     @include padding($base-line-height / 2, $base-line-height / 4);
     margin-top: relative-size($base-line-height / 4);
 
-    &:focus,
-    &:hover {
+    &:focus {
       color: $color-text-dark;
     }
 
     &:after {
       content: '';
       display: block;
-      height: 3px;
+      height: 2px;
       transition: background $transition-duration linear;
       line-height: 0;
     }
