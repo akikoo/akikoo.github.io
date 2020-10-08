@@ -115,7 +115,7 @@ hr {
 a {
   // Remember the order: LoVe Fears HAte
   // Unvisited link
-  color: $color-text-dark;
+  color: $color-main;
   white-space: pre-wrap;
   text-decoration: none;
   border-bottom: 2px solid $color-main;
@@ -163,7 +163,7 @@ h3,
 h4,
 h5,
 h6 {
-
+  color: $color-text-light;
 }
 
 /*
@@ -187,7 +187,6 @@ h1,
   @include size-and-leading(36, $base-line-height * 1.5);
   @include margin($base-line-height);
   padding: 0;
-  color: $color-text-dark;
   font-weight: $font-weight-bold;
   @include respond-to($breakpoint-medium) {
     @include size-and-leading(60, $base-line-height * 2.5);
@@ -205,7 +204,6 @@ h2,
 .h2 {
   @include size-and-leading(23);
   @include margin($base-line-height * 1.5, $base-line-height / 2);
-  color: $color-text-dark;
   font-weight: $font-weight-bold;
   @include respond-to($breakpoint-medium) {
     @include size-and-leading(30, $base-line-height * 1.5);
@@ -217,7 +215,6 @@ h3,
 .h3 {
   @include size-and-leading(18);
   @include margin($base-line-height, $base-line-height / 4);
-  color: $color-text-dark;
   font-weight: $font-weight-bold;
   @include respond-to($breakpoint-medium) {
     @include size-and-leading(21);
@@ -241,7 +238,7 @@ h3.p-name {
     padding: 0;
     display: block;
     white-space: normal;
-    color: $color-text-dark;
+    color: $color-text-light;
 
     @include respond-to($breakpoint-medium) {
       padding: relative-size($base-line-height / 4) 0;
@@ -261,7 +258,6 @@ h4,
 .h4 {
   @include size-and-leading(18);
   @include margin($base-line-height);
-  color: $color-text-dark;
   font-weight: $font-weight-bold;
 }
 
@@ -269,7 +265,6 @@ h5,
 .h5 {
   @include size-and-leading(16);
   @include margin($base-line-height);
-  color: $color-text-dark;
   font-weight: $font-weight-bold;
 }
 
@@ -277,7 +272,6 @@ h6,
 .h6 {
   @include size-and-leading(16);
   @include margin($base-line-height);
-  color: $color-text-dark;
   font-weight: $font-weight-bold;
 }
 
@@ -289,7 +283,6 @@ h6,
   // Local var
   $heading-background-offset: 30px;
 
-  color: $color-text-light;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
   letter-spacing: .8px;
