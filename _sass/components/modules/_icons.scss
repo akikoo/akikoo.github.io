@@ -4,9 +4,9 @@
   @font-face {
   font-family: 'icons';
   src:
-    url($font-base + '/icons.ttf?uz58pi') format('truetype'),
-    url($font-base + '/icons.woff?uz58pi') format('woff'),
-    url($font-base + '/icons.svg?uz58pi#icons') format('svg');
+    url($font-base + '/icons.ttf?q95f0s') format('truetype'),
+    url($font-base + '/icons.woff?q95f0s') format('woff'),
+    url($font-base + '/icons.svg?q95f0s#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -52,6 +52,9 @@
 .i-lastfm:before {
   content: "\eacb";
 }
+.i-instagram:before {
+  content: "\ea92";
+}
 
 /* 
  * Branding 
@@ -83,6 +86,9 @@
 }
 .i-rss {
   color: $color-link-social-rss;
+}
+.i-instagram {
+  color: $color-link-social-instagram;
 }
 
 .section-heading .i-share {

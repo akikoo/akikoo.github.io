@@ -123,6 +123,16 @@ body .nav-social {
     }
   }
 
+  &__link--instagram {
+    border: 1px solid $color-link-social-instagram;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $color-link-social-instagram;
+    }
+  }
+
   &__link--rss {
     border: 1px solid $color-link-social-rss;
 

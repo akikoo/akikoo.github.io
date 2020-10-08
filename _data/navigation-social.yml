@@ -4,6 +4,9 @@
 - id: linkedin2
   link: https://www.linkedin.com/in/akikoo/
   name: akikoo
+- id: instagram
+  link: https://www.instagram.com/akikooorg/
+  name: akikooorg
 - id: github
   link: https://github.com/akikoo
   name: akikoo
@@ -11,7 +14,7 @@
   link: https://www.flickr.com/people/akikoo/
   name: akikoo
 - id: facebook
-  link: https://www.facebook.com/
+  link: https://www.facebook.com/akiweb
   name: akiweb
 - id: lastfm
   link: https://www.last.fm/user/akikoo
