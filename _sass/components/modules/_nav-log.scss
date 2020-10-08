@@ -48,9 +48,7 @@
     margin: 0; // Override
   }
 
-  &--posts &__next {
-    float: right;
-  }
+  &--posts &__next {}
 
   &--posts &__pagination {
     @include size-and-leading(16, $base-line-height);
