@@ -60,6 +60,10 @@
 
     transition: box-shadow $transition-duration linear;
 
+    @include respond-to($breakpoint-small, max) {
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 0 20px rgba(0, 0, 0, .05);
+    }
+    
     &:hover {
       box-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 0 20px rgba(0, 0, 0, .05);
 
