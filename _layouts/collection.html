@@ -13,10 +13,10 @@ layout: default
     {% endif %}
 
     <h1 class="l-constrained p-name">{{title}}</h1>
-    {% include categories-in-collection.html %}
   </div>
 
-  <div class="l-constrained no-margin">
+  <div class="l-constrained">
+    {% include categories-in-collection.html %}
     <div class="articles">
     {% if page.pagetype == 'category' %}
       {% assign items = site.categories[page.category] %}

@@ -11,15 +11,14 @@
     margin-left: -10px;
     margin-right: -10px;
     margin-bottom: 0; // Override
-    @include padding($base-line-height / 2, 0);
 
     @include respond-to($breakpoint-medium) {
       margin: 0 -15px;
-      @include padding($base-line-height, 0);
     }
 
     li > a {
       text-transform: uppercase;
+      letter-spacing: .02rem;
       font-weight: $font-weight-regular; // Override
       @include size-and-leading(16, $base-line-height);
       padding: 4px 10px;
@@ -27,6 +26,12 @@
       @include respond-to($breakpoint-medium) {
         @include size-and-leading(18, $base-line-height);
         padding: 6px 15px;
+      }
+
+      &::before {
+        content: "#";
+        letter-spacing: .05rem;
+        color: rgba(0, 0, 0, .5);
       }
     }
 

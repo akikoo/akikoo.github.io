@@ -39,7 +39,7 @@
     word-break: break-word;
 
     @include respond-to($breakpoint-medium) {
-      @include margin($base-line-height * 2, $base-line-height * 2);
+      @include margin(0, $base-line-height * 2);
     }
   }
 }
@@ -109,6 +109,7 @@
   // Equal height items
   display: flex;
   flex-wrap: wrap;
+  margin: 0 -15px;
   @include respond-to($breakpoint-large) {
     margin: 0 -22px;
   }

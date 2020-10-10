@@ -12,8 +12,10 @@ layout: default
     {% include post-meta-in-single.html time=page.date %}
     {% endif %}
   </div>
+
   <div class="e-content e-content--single entry-content l-constrained">
     {% if page.url != '/work/' and page.url != '/about/' and page.url != '/styleguide/' and page.url != '/offline.html' %}
+    {% include categories-in-single.html %}
     <div class="l-row">
       <div class="l-cell {% if page.url != '/work/' %}l-cell-8{% endif %}">
         {{content}}
