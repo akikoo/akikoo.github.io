@@ -5,16 +5,6 @@
 
 @import "../../mixins/cover-absolutely";
 
-.projects-intro {
-  @include respond-to($breakpoint-medium) {
-    @include size-and-leading(24, 36);
-  }
-
-  @include respond-to($breakpoint-large) {
-    @include size-and-leading(30, 50);
-  }
-}
-
 .projects {
   list-style-type: none;
   padding: 0;
