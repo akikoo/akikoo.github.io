@@ -4,14 +4,19 @@
 
 .clients {
   list-style-type: none;
+  padding: 0;
+
+  @include respond-to($breakpoint-medium, max) {
+    text-align: left;
+  }   
 
   &__item {
     display: inline-block;
-    margin: 8px; 
+    margin: 5px; 
     
     @include respond-to($breakpoint-medium) {
       margin: 13px;
-    }   
+    }
   }
 
   &__link {
