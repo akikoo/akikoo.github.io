@@ -1,0 +1,9 @@
+<ul class="clients">
+{% for item in site.data.clients %}
+  <li class="clients__item">
+    <a class="clients__link{% if item.className %} clients__link--{{item.className}} {% endif %}" href="{{item.url}}">
+      <img class="clients__logo" src="/assets/images/clients/{{item.image}}" alt="{{item.name}}" />
+    </a>
+  </li>
+{% endfor %}
+</ul>

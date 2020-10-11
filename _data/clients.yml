@@ -1,0 +1,56 @@
+- name: Skatteverket
+  image: skatteverket.png
+  url: https://www.skatteverket.se
+- name: Sony Network Communications Europe
+  image: sony.png
+  url: https://iot.sonynetworkcom.com
+- name: One Agency
+  image: one_agency.png
+  url: https://www.oneagency.se
+- name: Podio
+  image: citrix_podio.png
+  url: https://podio.com
+- name: Citrix
+  image: citrix.svg
+  url: https://www.citrix.com
+- name: Bownty
+  image: bownty.svg
+  url: http://bownty.com
+- name: DigitasLBi
+  image: digitas_lbi.jpg
+  url: https://www.digitas.com
+- name: Etihad Airways
+  image: etihad_airways.svg
+  url: http://www.etihadairways.com
+- name: European Commission
+  image: european_commission.svg
+  url: https://ec.europa.eu/info/index_en
+- name: TicTacPhoto
+  image: tictacphoto.jpg
+  url: https://www.tictacphoto.com
+- name: Belgacom Skynet
+  image: belgacom_skynet.png
+  url: http://skynet.be
+- name: The European Cockpit Association
+  image: eurocockpit.png
+  url: https://www.eurocockpit.be
+  className: eca
+- name: The Helsinki Festival
+  image: helsingin_juhlaviikot.svg
+  url: https://helsinkifest.fi
+- name: Kantor Management Consultants
+  image: kantor.png
+  url: http://kantor-group.eu
+- name: Social Digital
+  image: social_digital.svg
+  url: https://www.socialdigital.dk
+- name: Diversa
+  image: diversa.png
+  url: http://diversa.dk
+- name: Svenska Teatern
+  image: svenska_teatern.svg
+  url: https://svenskateatern.fi
+  className: svenskateatern
+- name: The Jyväskylä Festival
+  image: jyväskylä_festival.jpg
+  url: https://jyvaskylankesa.fi

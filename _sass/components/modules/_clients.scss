@@ -1,0 +1,40 @@
+/* ==========================================================================
+   @group Clients
+   ========================================================================== */
+
+.clients {
+  list-style-type: none;
+
+  &__item {
+    display: inline-block;
+    margin: 8px; 
+    
+    @include respond-to($breakpoint-medium) {
+      margin: 13px;
+    }   
+  }
+
+  &__link {
+    display: block;
+    padding: 10px;
+    border-bottom: none;
+    white-space: normal;
+
+    &--eca {
+      background: rgb(17, 138, 203);
+    }
+
+    &--svenskateatern {
+      background: $color-text-dark;
+    }      
+  }
+
+  &__logo {
+    height: 35px;
+    width: auto;
+
+    @include respond-to($breakpoint-medium) {
+      height: 50px;
+    }
+  }
+}
