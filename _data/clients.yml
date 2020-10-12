@@ -13,9 +13,6 @@
 - name: Citrix
   image: citrix.svg
   url: https://www.citrix.com
-- name: Bownty
-  image: bownty.svg
-  url: http://bownty.com
 - name: DigitasLBi
   image: digitas_lbi.jpg
   url: https://www.digitas.com
@@ -25,28 +22,55 @@
 - name: European Commission
   image: european_commission.svg
   url: https://ec.europa.eu/info/index_en
+- name: IKEA
+  image: ikea.svg
+  url: https://www.ikea.com
+- name: Maersk
+  image: maersk.svg
+  url: https://www.maersk.com
+- name: E.ON
+  image: eon.svg
+  url: https://www.eon.com
+- name: Radisson Hotel Group
+  image: radisson_hotel_group.svg
+  url: https://www.radissonhotelgroup.com/
+- name: Volvo
+  image: volvo.png
+  url: https://www.volvocars.com/
+- name: Carlsberg Group
+  image: carlsberg_group.svg
+  url: https://www.carlsberggroup.com/
+- name: Diversa
+  image: diversa.png
+  url: http://diversa.dk
+- name: Social Digital
+  image: social_digital.svg
+  url: https://www.socialdigital.dk
+- name: The European Network for Rural Development (ENRD)
+  image: enrd.png
+  url: https://enrd.ec.europa.eu/
+- name: Le Programme wallon de Développement Rural (PwDR) 
+  image: reseau-pwdr.png
+  url: https://reseau-pwdr.be/
+- name: The European Cockpit Association
+  image: eurocockpit.png
+  url: https://www.eurocockpit.be
+  className: eca
 - name: TicTacPhoto
   image: tictacphoto.jpg
   url: https://www.tictacphoto.com
 - name: Belgacom Skynet
   image: belgacom_skynet.png
   url: http://skynet.be
-- name: The European Cockpit Association
-  image: eurocockpit.png
-  url: https://www.eurocockpit.be
-  className: eca
+- name: Bownty
+  image: bownty.svg
+  url: http://bownty.com
 - name: The Helsinki Festival
   image: helsingin_juhlaviikot.svg
   url: https://helsinkifest.fi
 - name: Kantor Management Consultants
   image: kantor.png
   url: http://kantor-group.eu
-- name: Social Digital
-  image: social_digital.svg
-  url: https://www.socialdigital.dk
-- name: Diversa
-  image: diversa.png
-  url: http://diversa.dk
 - name: Svenska Teatern
   image: svenska_teatern.svg
   url: https://svenskateatern.fi
