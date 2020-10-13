@@ -5,6 +5,7 @@
 .clients {
   list-style-type: none;
   padding: 0;
+  @include margin($base-line-height);
 
   @include respond-to($breakpoint-medium, max) {
     text-align: left;

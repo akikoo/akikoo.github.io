@@ -287,7 +287,8 @@ h6,
   text-transform: uppercase;
   letter-spacing: .8px;
   @include size-and-leading(21);
-  @include margin($base-line-height);
+  @include padding($base-line-height + $base-line-height/4, $base-line-height + $base-line-height/4);
+  margin: 0;
   // display: inline-block; // Needed for :after layout
   // position: relative;
 
