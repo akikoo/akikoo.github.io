@@ -30,6 +30,7 @@ defaults:
     values:
       layout: "single"
       pagetype: "post"
+      image: /assets/images/akikoo_logo.jpg
   - scope:
       path: "" # an empty string here means all files in the project
       type: category
