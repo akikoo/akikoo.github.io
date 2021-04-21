@@ -67,6 +67,7 @@ DEPENDENCIES
   jekyll-feed
   jekyll-seo-tag
   jekyll-sitemap
+  kramdown
 
 BUNDLED WITH
    1.17.3

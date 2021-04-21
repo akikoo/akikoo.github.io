@@ -8,6 +8,9 @@ source 'https://rubygems.org'
 # This will help ensure the proper Jekyll version is running.
 gem 'jekyll'
 
+#  Fix for "Dependabot cannot update kramdown to a non-vulnerable version" on Github
+gem 'kramdown'
+
 # plugins
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
