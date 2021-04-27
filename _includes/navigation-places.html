@@ -1,0 +1,14 @@
+<nav role="navigation" aria-labelledby="places-nav">
+  <h2 id="places-nav">Other parts in this series</h2>
+  <ol>
+    {% for item in site.data.navigation-places %}
+    <li>
+      {% if page.url == item.link %}
+      {{item.city}} ({{item.country}})
+      {% else %}
+      <a href="{{item.link}}">{{item.city}}</a> ({{item.country}})
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</nav>
