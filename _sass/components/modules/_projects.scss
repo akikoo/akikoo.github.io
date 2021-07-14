@@ -37,6 +37,7 @@
   .block-link {
     position: relative; // For overlay link
     background: $color-white;
+    width: 100%;
 
     @include respond-to($breakpoint-small) {
       display: flex;
@@ -56,6 +57,10 @@
     .projects__thumbnail {
       transform: translate3d(0, 0, 0);
       transition: transform $transition-duration linear;
+
+      &--cert {
+        margin: 10px 0 0 6px;
+      }
     }
 
     transition: box-shadow $transition-duration linear;

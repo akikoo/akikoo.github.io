@@ -1,0 +1,17 @@
+<ul class="projects">
+{% for item in site.data.certifications %}
+  <li class="projects__item">
+    <div class="block-link">
+      <div class="projects__description">
+        <img class="projects__thumbnail projects__thumbnail--cert" src="/assets/images/certifications/{{item.image}}" alt="" width="70" />
+        <h3 class="projects__heading">
+          <a class="projects__link" href="{{item.url}}">{{item.name}}</a>
+        </h3>
+        <p class="projects__text">{{item.description}}</p>
+      </div>
+      <span class="projects__year"><span class="is-visuallyhidden">Certified: </span> {{item.year}}</span>
+      <a class="block-link__overlay-link" href="{{item.url}}" aria-hidden="true" tabindex="-1">{{item.name}}</a>
+    </div>
+  </li>
+{% endfor %}
+</ul>
