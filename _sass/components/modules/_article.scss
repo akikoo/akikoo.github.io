@@ -37,6 +37,7 @@
 .e-content {
   &--single {
     word-break: break-word;
+    @include margin(0, $base-line-height);
 
     @include respond-to($breakpoint-medium) {
       @include margin(0, $base-line-height * 2);
