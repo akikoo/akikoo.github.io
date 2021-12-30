@@ -310,6 +310,7 @@ blockquote {
   @include margin($base-line-height / 2);
   margin-left: 40px;
   margin-right: 40px;
+  font-style: italic;
 }
 
 figcaption {
