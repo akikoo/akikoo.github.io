@@ -7,10 +7,7 @@
     {% else %}
     <div class="masthead">
     {% endif %}
-    <a itemprop="url" class="logo" title="akikoo.org | the web home of Aki Kärkkäinen" href="/">
-      <span class="logo__img"><img src="/assets/images/akikoo_logo.jpg" alt="Home" /></span>
-      <span class="logo__text"><span class="logo__name is-visuallyhidden">Aki Kärkkäinen</span> <span class="logo__title is-visuallyhidden"> - Scrum Master, agile practitioner</span></span>
-    </a>
+      {% include logo.html %}
     {% if page.url != '/' %}
     </div>
     {% else %}
