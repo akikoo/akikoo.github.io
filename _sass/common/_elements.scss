@@ -202,6 +202,7 @@ h1,
 
 h2,
 .h2 {
+  scroll-margin-top: #{$base-line-height * 4}#{px} ; /* get past the fixed header */
   @include size-and-leading(23);
   @include margin($base-line-height * 1.5, $base-line-height / 2);
   font-weight: $font-weight-bold;
