@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .entry-meta {
-  margin: 0 0 relative-size(($base-line-height / 2) + 4);
+  margin: 0;
   font-weight: $font-weight-regular;
 
   @include respond-to($breakpoint-medium) {
@@ -11,10 +11,8 @@
   }
 
   &--single {
-    margin: relative-size(($base-line-height / 2)) 0 0;
     @include respond-to($breakpoint-medium) {
-      font-size: relative-size(30);
-      margin: relative-size(($base-line-height)) 0 0;
+      @include size-and-leading(18, $base-line-height * 1.5);
     }
   }
 }

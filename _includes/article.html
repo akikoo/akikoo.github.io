@@ -1,4 +1,7 @@
 <article class="h-entry h-entry--in-collection hentry">
+
+  {% include post-meta-in-collection.html time=post.date %}
+
   {% if page.url == '/' %}
   <h3 class="p-name entry-title">
   {% else %}
@@ -10,8 +13,6 @@
   {% else %}
   </h3>
   {% endif %}
-
-  {% include post-meta-in-collection.html time=post.date %}
 
   <a class="overlay-link" href="{{post.url}}" aria-hidden="true" tabindex="-1">{{post.title}}</a>
 </article>

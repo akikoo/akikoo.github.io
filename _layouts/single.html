@@ -6,11 +6,11 @@ layout: default
 <article class="h-entry hentry">
   <div class="l-heading">
     <div class="l-constrained">
+      {% if page.url != '/work/' and page.url != '/about/' and page.url != '/styleguide/' and page.url != '/offline.html' %}
+      {% include post-meta-in-single.html time=page.date %}
+      {% endif %}
       <h1 class="p-name entry-title">{{page.title}}</h1>
     </div>
-    {% if page.url != '/work/' and page.url != '/about/' and page.url != '/styleguide/' and page.url != '/offline.html' %}
-    {% include post-meta-in-single.html time=page.date %}
-    {% endif %}
   </div>
 
   <div class="e-content e-content--single entry-content l-constrained">
