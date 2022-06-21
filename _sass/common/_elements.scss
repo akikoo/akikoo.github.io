@@ -443,6 +443,12 @@ svg {
    ========================================================================== */
 figure {
   margin: 0; // Override
+
+  @include respond-to($breakpoint-large) {
+    background: $color-background;
+    padding: 1rem 1rem 0;
+    margin: 0 -1rem;
+  }
 }
 
 figcaption {
@@ -450,7 +456,7 @@ figcaption {
   
   /*p*/.figcaption {
     background: $color-background;
-    padding: .7rem;
+    padding: .7rem 0;
   }
 }
 
