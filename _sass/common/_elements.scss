@@ -442,10 +442,10 @@ svg {
    @group Figures
    ========================================================================== */
 figure {
-  margin: 0; // Override
+  margin: 0 (-$gutter); // Override
+  background: $color-background;
 
   @include respond-to($breakpoint-large) {
-    background: $color-background;
     padding: 1rem 1rem 0;
     margin: 0 -1rem;
   }
@@ -453,10 +453,13 @@ figure {
 
 figcaption {
   margin-top: 0; // Override
-  
+
   /*p*/.figcaption {
-    background: $color-background;
-    padding: .7rem 0;
+    padding: .7rem $gutter;
+
+    @include respond-to($breakpoint-large) {
+      padding: .7rem 0;
+    }
   }
 }
 
