@@ -446,8 +446,7 @@ figure {
   background: $color-background;
 
   @include respond-to($breakpoint-large) {
-    padding: 1rem 1rem 0;
-    margin: 0 -1rem;
+    padding: $gutter $gutter 0;
   }
 }
 
