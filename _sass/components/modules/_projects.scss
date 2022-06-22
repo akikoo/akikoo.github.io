@@ -8,16 +8,21 @@
 .projects {
   list-style-type: none;
   padding: 0;
+  background: $color-background;
 
   // Equal height items
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -15px;
+  margin: 0 -15px #{$base-line-height}#{px};
+
+  @include respond-to($breakpoint-medium) {
+    margin: 0 -15px #{$base-line-height * 1.5}#{px};
+  }
 
   // Custom responsive grid
   &__item {
     flex: 0 0 100%;
-    padding: 0 15px 45px;
+    padding: 15px;
     display: flex;
   }
 
@@ -110,7 +115,8 @@
     position: relative;
     z-index: 2;
     display: inline-block;
-
+    color: $color-text-dark;
+  
     @include padding($base-line-height / 2, $base-line-height / 4);
     margin-top: relative-size($base-line-height / 4);
 
@@ -148,11 +154,12 @@
   &__year {
     font-size: relative-size(16);
     display: block;
-    padding: 15px;
+    padding: 15px 0;
+    margin: relative-size($base-line-height / 2) 15px 0;
+    border-top: 1px solid $color-border;
     line-height: 1;
     clear: left; // Clear floated image
     letter-spacing: .02em;
-    margin-top: relative-size($base-line-height / 4);
     color: $color-text-light;
     text-transform: uppercase;
     @include respond-to($breakpoint-small) {
