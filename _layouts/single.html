@@ -8,8 +8,10 @@ layout: default
     <div class="l-constrained">
       {% if page.url != '/work/' and page.url != '/about/' and page.url != '/styleguide/' and page.url != '/offline.html' %}
       {% include post-meta-in-single.html time=page.date %}
-      {% endif %}
+      <h1 class="p-name entry-title entry-title--withmeta">{{page.title}}</h1>
+      {% else %}
       <h1 class="p-name entry-title">{{page.title}}</h1>
+      {% endif %}
     </div>
   </div>
 
