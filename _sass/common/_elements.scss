@@ -118,7 +118,7 @@ a {
   color: $color-main;
   white-space: pre-wrap;
   text-decoration: none;
-  border-bottom: 2px solid $color-main;
+  border-bottom: 2px solid rgba($color-main, .2);
   // @include underline($color-main);
   // transition: color $transition-duration linear, border-bottom $transition-duration linear;
   // background-image: linear-gradient(to bottom, transparent 89%, $color-text-light 89%, $color-text-light 95%, transparent 95%);
@@ -133,12 +133,14 @@ a {
   // The user clicks on a link
   &:focus {
     color: $color-main;
+    border-bottom: 2px solid rgba($color-main, .8);
     outline: none;
   }
 
   // The user mouses over a link
   &:hover {
     color: $color-main;
+    border-bottom: 2px solid rgba($color-main, .8);
   }
 
   // The user has clicked a link
@@ -176,6 +178,11 @@ h4 a,
 h5 a,
 h6 a {
   border-bottom: none;
+  
+  &:hover, 
+  &:focus {
+    border-bottom: none;
+  }
 }
 
 /**

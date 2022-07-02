@@ -61,6 +61,11 @@
   text-indent: 200%;
   white-space: nowrap;
   visibility: visible;
+
+  &:hover, 
+  &:focus {
+    border-bottom: none;
+  }
 }
 
 .read-more {
