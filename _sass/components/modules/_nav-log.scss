@@ -11,7 +11,20 @@
     margin-left: -10px;
     margin-right: -10px;
     margin-bottom: 0; // Override
-    @include padding(0, $base-line-height / 2);
+
+    &::after {
+      display: block;
+      margin: relative-size($base-line-height / 4) $gutter 0;
+      content: "";
+      border-bottom: 1px solid $color-border;
+
+      @include respond-to($breakpoint-medium) {
+        margin-bottom: relative-size($base-line-height / 2);
+      }
+    }
+
+    @include padding($base-line-height / 4, $base-line-height / 4);
+
 
     @include respond-to($breakpoint-medium) {
       margin: 0 -15px;
@@ -49,6 +62,17 @@
 
   }
 
+  &--categories-single {
+      &::after {
+        margin: relative-size($base-line-height / 4) $gutter relative-size($base-line-height / 4);
+
+        @include respond-to($breakpoint-medium) {
+          width: calc(66.5666666667% - #{$gutter * 2});
+          margin-bottom: 0;
+        }
+      }
+  }
+
   // Override and customize mixin for posts navigation (prev/next)
   &--posts {
     margin: 0; // Override
@@ -65,5 +89,86 @@
     text-align: center;
     @include padding($base-line-height);
     margin: relative-size($base-line-height) 0 0;
+  }
+}
+
+// Posts Prev/Next navigation
+.l-nav-single {
+    display: flex;
+
+  &__meta {
+    display: flex;
+    align-items: center; // vertically
+  }
+
+  &__prevnext {
+    display: flex;
+    align-items: center; // vertically
+    margin-left: auto; // align right
+    margin-right: $gutter;
+  }
+}
+
+.nav-posts {
+  $self: &; // Used for targeting certain element  
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+
+  &__prevlink,
+  &__nextlink {
+    display: inline-flex;
+    justify-content: center; // horizontally
+    align-items: center;     // vertically    
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    border: 1px solid rgba($color-border, 0.5);
+    background-color: $color-background;
+  }
+
+  a#{$self}__prevlink:focus,
+  a#{$self}__nextlink:focus,
+  a#{$self}__prevlink:hover,
+  a#{$self}__nextlink:hover {
+    border: 1px solid rgba($color-text-light, 0.2);
+
+    &::before,
+    &::after {
+      border-color: rgba($color-text-light, 1);
+    } 
+  }
+
+  &__prev {
+    margin-right: 1rem;
+  }
+
+  &__prevlink::before, 
+  &__nextlink::after {
+    width: 10px;
+    height: 10px;
+    border: 2px solid rgba($color-text-light, 0.5);
+    border-width: 0 2px 2px 0;
+    content: '';
+  }
+
+  // Left
+  &__prevlink::before {
+    transform: rotate(135deg);
+  }
+
+  // Right
+  &__nextlink::after {
+    transform: rotate(-45deg);
+  }
+
+  &__prevlink--disabled,
+  &__nextlink--disabled {
+    border: 1px solid $color-border;
+    
+    &::before,
+    &::after {
+      border-color: $color-border;
+    }
   }
 }

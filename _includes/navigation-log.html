@@ -1,10 +1,19 @@
 <nav aria-label="Browse log">
-  <ul class="nav-log nav-log--posts">
-  {% if page.previous.url %}
-    <li class="nav-log__prev"><a rel="prev" href="{{page.previous.url}}"><span aria-hidden="true">&larr;</span> <span class="nav-log__text" aria-label="Older posts">Older</span></a></li>
-  {% endif %}
-  {% if page.next.url %}
-    <li class="nav-log__next"><a rel="next" href="{{page.next.url}}"><span class="nav-log__text" aria-label="Newer posts">Newer</span> <span aria-hidden="true">&rarr;</span></a></li>
-  {% endif %}
+  <ul class="nav-posts">
+    <li class="nav-posts__prev">
+      {% if page.previous.url %}
+        <a rel="prev" class="nav-posts__prevlink" title="Previous" href="{{page.previous.url}}"><span class="nav-log__text is-visuallyhidden" aria-label="Older posts">Prev</span></a>
+      {% else %}
+        <span class="nav-posts__prevlink nav-posts__prevlink--disabled"><span class="nav-log__text is-visuallyhidden" aria-label="Older posts">Prev</span></span>
+      {% endif %}
+    </li>
+
+    <li class="nav-posts__next">
+      {% if page.next.url %}
+        <a rel="next" class="nav-posts__nextlink" title="Next" href="{{page.next.url}}"><span class="nav-log__text is-visuallyhidden" aria-label="Newer posts">Next</span></a>
+      {% else %}
+        <span class="nav-posts__nextlink nav-posts__nextlink--disabled"><span class="nav-log__text is-visuallyhidden" aria-label="Newer posts">Next</span></span>
+      {% endif %}
+    </li>
   </ul>
 </nav>
