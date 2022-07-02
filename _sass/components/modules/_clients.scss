@@ -32,7 +32,12 @@
 
     &--svenskateatern {
       background: $color-text-dark;
-    }      
+    }
+
+    &:focus, 
+    &:hover {
+      border: none;
+    }
   }
 
   &__logo {
