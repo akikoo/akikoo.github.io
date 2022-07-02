@@ -20,7 +20,7 @@ permalink: /styleguide/
 
 <h2>1. Grid, colors and font stacks</h2>
 
-<p>8 columns by default. Can easily be changed in /scss/_settings.scss. Then go to /scss/components/_layout.scss, to generate new styles. Finally, update markup in /styleguide/grid.html.</p>
+<p>12 columns by default. Can easily be changed in /scss/_settings.scss. Then go to /scss/components/_layout.scss, to generate new styles. Finally, update markup in /styleguide/grid.html.</p>
 
 <h3>Grid</h3>
 {% include styleguide/grid.html %}
@@ -142,6 +142,21 @@ permalink: /styleguide/
   {% include navigation.html %}
 </div>
 
+<h3>Nav Posts</h3>
+<div class="module">
+  {% include navigation-log.html %}
+</div>
+
+<h3>Certifications</h3>
+<div class="module">
+  {% include certifications.html %}
+</div>
+
+<h3>Clients</h3>
+<div class="module">
+  {% include clients.html %}
+</div>
+
 <h3>Nav Archives (all categories)</h3>
 <div class="module">
   {% include categories-in-collection.html %}
@@ -152,7 +167,7 @@ permalink: /styleguide/
   {% include navigation-social.html %}
 </div>
 
-<h3>FAQ (intro)</h3>
+<h3>Intro</h3>
 <div class="module">
   {% include aside.html %}
 </div>
