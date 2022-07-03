@@ -208,54 +208,46 @@ h1,
 h2,
 .h2 {
   scroll-margin-top: #{$base-line-height * 4}#{px} ; /* get past the fixed header */
-  @include size-and-leading(23);
-  @include margin($base-line-height * 1.5, $base-line-height / 2);
+  @include size-and-leading(24);
+  @include margin($base-line-height);
   font-weight: $font-weight-bold;
   @include respond-to($breakpoint-medium) {
-    @include size-and-leading(30, $base-line-height * 1.5);
-    @include margin($base-line-height * 2, $base-line-height / 2);
+    @include size-and-leading(36, $base-line-height * 1.5);
   }
 }
 
 h3,
 .h3 {
-  @include size-and-leading(18);
-  @include margin($base-line-height, $base-line-height / 4);
+  @include size-and-leading(21);
+  @include margin($base-line-height);
   font-weight: $font-weight-bold;
   @include respond-to($breakpoint-medium) {
-    @include size-and-leading(21);
-    @include margin($base-line-height * 1.5, $base-line-height / 4);
+    @include size-and-leading(24);
   }
 }
 
 // Single article title in a collection
 h2.p-name,
 h3.p-name {
-  @include size-and-leading(23); // Same as h2
+  @include size-and-leading(21); // Same as h3
   @include margin(0, 0); // Overwrite global heading margins
 
   @include respond-to($breakpoint-medium) {
-    @include size-and-leading(30, $base-line-height * 1.5); // Same as h2
+    @include size-and-leading(24, $base-line-height + $base-line-height / 4); 
   }
-
-  // background: $color-highlight;
 
   .p-name__link {
     padding: 0;
     display: block;
     white-space: normal;
-    color: $color-text-light;
+    color: rgba($color-text-dark, .8);
 
     @include respond-to($breakpoint-medium) {
-      padding: relative-size($base-line-height / 4) 0;
+      margin: relative-size($base-line-height / 4) 0;
     }
 
-    &:focus,
-    &:hover,
-    &:active {
-      color: $color-main;
-      // text-decoration-line: underline;
-      // text-decoration-color: rgba($color-main, .3);
+    &:focus {
+      color: rgba($color-text-dark, 1);
     }
   }
 }
@@ -265,6 +257,9 @@ h4,
   @include size-and-leading(18);
   @include margin($base-line-height);
   font-weight: $font-weight-bold;
+  @include respond-to($breakpoint-medium) {
+    @include size-and-leading(21);
+  }
 }
 
 h5,
@@ -272,6 +267,9 @@ h5,
   @include size-and-leading(16);
   @include margin($base-line-height);
   font-weight: $font-weight-bold;
+  @include respond-to($breakpoint-medium) {
+    @include size-and-leading(18);
+  }
 }
 
 h6,
@@ -292,9 +290,13 @@ h6,
   font-weight: $font-weight-bold;
   text-transform: uppercase;
   letter-spacing: .8px;
-  @include size-and-leading(21);
-  @include padding($base-line-height + $base-line-height/4, $base-line-height + $base-line-height/4);
+  @include size-and-leading(18);
+  @include padding($base-line-height, $base-line-height);
   margin: 0;
+  
+  @include respond-to($breakpoint-medium) {
+    @include size-and-leading(21);
+  }
   // display: inline-block; // Needed for :after layout
   // position: relative;
 

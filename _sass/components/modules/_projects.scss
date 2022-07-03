@@ -105,10 +105,14 @@
     margin: 0;
     text-transform: uppercase;
     letter-spacing: .8px;
-    @include size-and-leading(21);  
+    @include size-and-leading(18);  
 
     @include respond-to($breakpoint-small, max) {
       overflow: hidden; // Make sure text doesn't wrap around the image
+    }
+
+    @include respond-to($breakpoint-medium) {
+      @include size-and-leading(21);
     }
   }
 
