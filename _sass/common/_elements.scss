@@ -207,7 +207,6 @@ h1,
 
 h2,
 .h2 {
-  scroll-margin-top: #{$base-line-height * 4}#{px} ; /* get past the fixed header */
   @include size-and-leading(24);
   @include margin($base-line-height);
   font-weight: $font-weight-bold;
@@ -313,6 +312,10 @@ h6,
   }
   */
 }
+
+:target {
+  scroll-margin-top: #{$base-line-height * 4}#{px} ; /* get past the fixed header */
+} 
 
 blockquote {
   @include margin($base-line-height / 2);
