@@ -102,8 +102,10 @@
 
   // Project title
   &__heading {
-    margin: 0 15px;
+    margin: 0;
     text-transform: uppercase;
+    letter-spacing: .8px;
+    @include size-and-leading(21);  
 
     @include respond-to($breakpoint-small, max) {
       overflow: hidden; // Make sure text doesn't wrap around the image
@@ -116,9 +118,9 @@
     z-index: 2;
     display: inline-block;
     color: $color-text-dark;
-  
-    @include padding($base-line-height / 2, $base-line-height / 4);
-    margin-top: relative-size($base-line-height / 4);
+
+    padding: $gutter 0;
+    margin: $gutter $gutter relative-size($base-line-height / 4);
 
     &:focus {
       color: $color-text-dark;
