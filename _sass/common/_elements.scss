@@ -329,7 +329,8 @@ figcaption {
 }
 
 mark {
-  background: transparent; /* Overwrite normalize rule. */
+  background: $color-background; /* Overwrite normalize rule. */
+  padding: relative-size($base-line-height / 4) relative-size($base-line-height / 4); 
 }
 
 pre {
