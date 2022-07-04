@@ -15,10 +15,6 @@
     flex-direction: column;
     width: 100%;
 
-    @include respond-to($breakpoint-large) {
-      margin: 8px;
-    }
-
     .e-content {
       display: flex;
       flex-direction: column;
@@ -106,10 +102,7 @@
   // Equal height items
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -15px relative-size($base-line-height);
-  @include respond-to($breakpoint-large) {
-    margin: 0 -22px relative-size($base-line-height);
-  }
+  margin: 0 (-$gutter) relative-size($base-line-height);
 
   // Custom responsive grid
   &__item {
