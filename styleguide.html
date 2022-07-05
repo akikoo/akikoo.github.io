@@ -132,9 +132,14 @@ permalink: /styleguide/
 
 <h3>Post metadata (in single post)</h3>
 <div class="module">
-  <div style="background: linear-gradient(45deg, #0ED42E, #00d4ff)">
+  <div>
     {% include post-meta-in-single.html time=site.time %}
   </div>
+</div>
+
+<h3>Logo</h3>
+<div class="module">
+  {% include logo.html %}
 </div>
 
 <h3>Nav Main</h3>
@@ -144,7 +149,7 @@ permalink: /styleguide/
 
 <h3>Nav Posts</h3>
 <div class="module">
-  {% include navigation-log.html %}
+  {% include styleguide/navigation-log.html %}
 </div>
 
 <h3>Certifications</h3>

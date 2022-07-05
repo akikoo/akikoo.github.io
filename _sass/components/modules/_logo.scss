@@ -4,6 +4,7 @@
 
 .logo {
   @include flex-row();
+  @include size-and-leading(21);
   border-bottom: none; // Cancel border
   color: $color-text-dark;
   font-weight: $font-weight-bold;
