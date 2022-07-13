@@ -1,14 +1,20 @@
-- id: twitter
-  link: https://twitter.com/akikoo/
-  name: akikoo
 - id: linkedin2
   link: https://www.linkedin.com/in/akikoo/
+  name: akikoo
+- id: medium
+  link: https://akikoo.medium.com/
+  name: akikoo
+- id: goodreads
+  link: https://www.goodreads.com/akikoo
   name: akikoo
 - id: instagram
   link: https://www.instagram.com/akikooorg/
   name: akikooorg
 - id: github
   link: https://github.com/akikoo
+  name: akikoo
+- id: twitter
+  link: https://twitter.com/akikoo/
   name: akikoo
 - id: flickr2
   link: https://www.flickr.com/people/akikoo/
@@ -18,9 +24,6 @@
   name: akiweb
 - id: lastfm
   link: https://www.last.fm/user/akikoo
-  name: akikoo
-- id: goodreads
-  link: https://www.goodreads.com/akikoo
   name: akikoo
 - id: rss
   link: https://www.akikoo.org/feed.xml

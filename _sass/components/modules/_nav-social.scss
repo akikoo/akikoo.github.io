@@ -53,6 +53,16 @@ body .nav-social {
     }
   }
 
+  &__link--medium {
+    border: 1px solid $color-link-social-medium;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $color-link-social-medium;
+    }
+  }
+
   &__link--twitter {
     border: 1px solid $color-link-social-twitter;
 
