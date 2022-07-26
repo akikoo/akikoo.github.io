@@ -8,3 +8,8 @@
   image: psmi.svg
   url: https://www.scrum.org/user/405331
   year: 2018 <span class="middot" aria-hidden="true">&middot;</span> scrum.org
+- name: Elephant Carpaccio
+  description: The Elephant Carpaccio workshop with Alistair Cockburn
+  image: badge_elephant_carpaccio.png
+  url: https://heartofagile.com/students/?fname=aki&lname=k%C3%A4rkk%C3%A4inen&fr_search_button=Search
+  year: 2022 <span class="middot" aria-hidden="true">&middot;</span> Heart of Agile
