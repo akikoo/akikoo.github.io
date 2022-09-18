@@ -1,3 +1,6 @@
+- name: Trygg-Hansa
+  image: trygg_hansa.png
+  url: https://www.trygghansa.se/
 - name: Skatteverket
   image: skatteverket.png
   url: https://www.skatteverket.se
