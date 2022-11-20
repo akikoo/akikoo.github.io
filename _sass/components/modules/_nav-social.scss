@@ -73,6 +73,16 @@ body .nav-social {
     }
   }
 
+  &__link--mastodon {
+    border: 1px solid $color-link-social-mastodon;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $color-link-social-mastodon;
+    }
+  }
+
   &__link--linkedin2 {
     border: 1px solid $color-link-social-linkedin;
 

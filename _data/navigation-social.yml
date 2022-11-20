@@ -16,6 +16,9 @@
 - id: twitter
   link: https://twitter.com/akikoo/
   name: akikoo
+- id: mastodon
+  link: https://mastodon.social/@akikoo
+  name: akikoo
 - id: flickr2
   link: https://www.flickr.com/people/akikoo/
   name: akikoo

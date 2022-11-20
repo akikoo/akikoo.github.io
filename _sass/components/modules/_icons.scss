@@ -4,9 +4,9 @@
   @font-face {
   font-family: 'icons';
   src:
-    url($font-base + '/icons.ttf?dveund') format('truetype'),
-    url($font-base + '/icons.woff?dveund') format('woff'),
-    url($font-base + '/icons.svg?dveund#icons') format('svg');
+    url($font-base + '/icons.ttf?54mxn0') format('truetype'),
+    url($font-base + '/icons.woff?54mxn0') format('woff'),
+    url($font-base + '/icons.svg?54mxn0#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -39,6 +39,9 @@
 }
 .i-twitter:before {
   content: "\ea96";
+}
+.i-mastodon:before {
+  content: "\e902";
 }
 .i-rss:before {
   content: "\ea9b";
@@ -86,6 +89,9 @@
 }
 .i-twitter {
   color: $color-link-social-twitter;
+}
+.i-mastodon {
+  color: $color-link-social-mastodon;
 }
 .i-goodreads {
   color: $color-link-social-goodreads;
