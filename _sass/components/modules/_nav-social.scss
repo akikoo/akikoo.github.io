@@ -173,6 +173,16 @@ body .nav-social {
     }
   }
 
+  &__link--youtube {
+    border: 1px solid $color-link-social-youtube;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $color-link-social-youtube;
+    }
+  }
+
   &__link > span {
     @include size-and-leading(16);
     display: inline-block;

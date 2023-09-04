@@ -10,6 +10,9 @@
 - id: instagram
   link: https://www.instagram.com/akikooorg/
   name: akikooorg
+- id: youtube
+  link: https://www.youtube.com/@akikarkkainen
+  name: akikarkkainen
 - id: github
   link: https://github.com/akikoo
   name: akikoo
