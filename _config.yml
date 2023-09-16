@@ -39,6 +39,7 @@ defaults:
       pagetype: "category"
 sass:
   style: compressed
+imgpath: /assets/images/posts
 
 # Build settings
 plugins:
