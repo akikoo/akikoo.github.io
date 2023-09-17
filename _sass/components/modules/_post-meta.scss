@@ -4,6 +4,7 @@
 
 .entry-meta {
   margin: 0;
+  margin: 0 15px 0;
   font-weight: $font-weight-regular;
 
   @include respond-to($breakpoint-medium) {
@@ -11,6 +12,7 @@
   }
 
   &--single {
+    margin: 0;
     @include respond-to($breakpoint-medium) {
       @include size-and-leading(18, $base-line-height * 1.5);
     }
@@ -20,3 +22,27 @@
 .middot {
   margin: 0 3px;
 }
+
+// Entry image in collection
+.entry-img {
+  object-fit: cover;
+  object-position: center;
+  height: max(5vw, 10rem);
+  @include margin(0, $base-line-height / 1.5);
+
+  // Entry image placeholder (no image yet) in collection
+  &--noimg {
+    position: relative;
+    
+    // Generated using https://kovart.github.io/dashed-border-generator/
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='rgb(243,242,242)' stroke='black' stroke-width='1' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+
+    // Placeholder text
+    &__placeholder {
+      color: rgba($color-text-light, .6);
+      font-size: relative-size(16);
+      @include center-transform();
+    }
+  }
+}
+

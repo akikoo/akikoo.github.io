@@ -8,7 +8,6 @@
 .h-entry {
   &--in-collection {
     background: #fff;
-    padding: 15px;
     position: relative;
 
     display: flex;
@@ -116,7 +115,7 @@
       flex: 0 0 calc(50% - #{$gutter * 2});
       border-bottom: 1px solid $color-border;
       margin: 0 $gutter;
-      padding: $gutter 0;
+      padding: $gutter * 2 0;
     }
   }
 

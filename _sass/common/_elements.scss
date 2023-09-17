@@ -242,7 +242,7 @@ h3.p-name {
     color: rgba($color-text-dark, .8);
 
     @include respond-to($breakpoint-medium) {
-      margin: relative-size($base-line-height / 4) 0;
+      margin: relative-size($base-line-height / 4) $gutter relative-size($base-line-height / 2);
     }
 
     &:focus {

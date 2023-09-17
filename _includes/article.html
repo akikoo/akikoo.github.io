@@ -1,5 +1,13 @@
 <article class="h-entry h-entry--in-collection hentry">
 
+  {% if post.image.path %}
+  <img class="entry-img" src="{{post.image.path}}" alt="" />
+  {% else %}
+  <div class="entry-img entry-img--noimg">
+    <span class="entry-img--noimg__placeholder" aria-hidden="true">no cover image yet</span>
+  </div>  
+  {% endif %}
+
   {% include post-meta-in-collection.html time=post.date %}
 
   {% if page.url == '/' %}
