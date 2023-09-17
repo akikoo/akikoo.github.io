@@ -4,11 +4,11 @@
 
 .entry-meta {
   margin: 0;
-  margin: 0 15px 0;
   font-weight: $font-weight-regular;
 
   @include respond-to($breakpoint-medium) {
     @include size-and-leading(18);
+    margin: 0 $gutter 0;
   }
 
   &--single {
@@ -28,7 +28,15 @@
   object-fit: cover;
   object-position: center;
   height: max(5vw, 10rem);
-  @include margin(0, $base-line-height / 1.5);
+  @include margin(0, $base-line-height / 2);
+
+  @include respond-to($breakpoint-small) {
+    @include margin(0, $base-line-height / 2.5);
+  }
+
+  @include respond-to($breakpoint-medium) {
+    @include margin(0, $base-line-height / 1.5);
+  }
 
   // Entry image placeholder (no image yet) in collection
   &--noimg {

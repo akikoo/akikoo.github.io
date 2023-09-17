@@ -8,11 +8,16 @@
 .h-entry {
   &--in-collection {
     background: #fff;
+    padding: $gutter;
     position: relative;
 
     display: flex;
     flex-direction: column;
     width: 100%;
+
+    @include respond-to($breakpoint-small) {
+      padding: 0;
+    }
 
     .e-content {
       display: flex;
@@ -105,20 +110,21 @@
     flex: 0 0 100%;
     display: flex;
     word-break: break-word;
+    margin: 0 0 $gutter;
   }
 
   @include respond-to($breakpoint-small) {
     &__item {
       flex: 0 0 calc(50% - #{$gutter * 2});
-      border-bottom: 1px solid $color-border;
-      margin: 0 $gutter;
-      padding: $gutter * 2 0;
+      margin: $gutter $gutter $gutter * 2;
     }
   }
 
   @include respond-to($breakpoint-medium) {
     &__item {
       flex: 0 0 calc(33.3333% - #{$gutter * 2});
+      margin: 0 $gutter;
+      margin: $gutter/2 $gutter $gutter * 2;
     }
   }
 
