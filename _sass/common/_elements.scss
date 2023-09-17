@@ -245,8 +245,11 @@ h3.p-name {
       margin: relative-size($base-line-height / 4) $gutter relative-size($base-line-height / 2);
     }
 
+    transition: all $transition-duration linear;
+    text-decoration: solid underline transparent 1px;
     &:focus {
       color: rgba($color-text-dark, 1);
+      text-decoration: solid underline $color-text-dark 2px;
     }
   }
 }
