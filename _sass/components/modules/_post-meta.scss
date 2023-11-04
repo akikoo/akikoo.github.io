@@ -26,7 +26,7 @@
 // Entry image in collection
 .entry-img {
   object-fit: cover;
-  object-position: center;
+  object-position: left;
   height: max(5vw, 10rem);
   @include margin(0, $base-line-height / 2);
 
