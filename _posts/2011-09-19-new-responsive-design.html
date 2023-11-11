@@ -8,7 +8,15 @@ date: '2011-09-19 22:32:48 +0200'
 date_gmt: '2011-09-19 20:32:48 +0200'
 categories:
 - Webdev
+image:
+  path: /assets/images/social/new_responsive_design.jpg
 ---
+<figure>
+  <img src="/assets/images/posts/new_responsive_design.jpg" alt="" />
+  <figcaption>
+    <p class="figcaption"><i>Photo by <a href="https://unsplash.com/@elcarito">Carlos Torres</a> on <a href="https://unsplash.com/photos/brown-concrete-building-at-daytime-CRn-_80z4SE">Unsplash</a></i>.</p>
+  </figcaption>
+</figure>
 <p>I've created a new fluid, <a href="http://www.alistapart.com/articles/responsive-web-design/">responsive</a>, <a href="http://www.lukew.com/ff/entry.asp?933">mobile first</a>/<a href="http://adactio.com/journal/1716/">one web</a> skin for akikoo.org (I'm hesitating to call it a design). Anyway, here it is. </p>
 <p>My goal was to target smartphones, tablets, netbooks and desktops with the same codebase by responsively enhancing the site with <abbr title="Cascading Style Sheets">CSS3</abbr> Media Queries and some JavaScript. All users get reset, typography and colour declarations. Width and float declarations are added only if larger viewport is detected, using four resolution breakpoints. </p>
 <p>All elements are aligned to a fluid 8-column symmetrical grid structure. All font sizes are defined in ems, according to the traditional typographic scale (8-9-10-11-12-14-16-18-21-24-36 etc.). I've also made an effort to maintain a consistent baseline even if element font size decreases or increases. </p>

@@ -11,7 +11,15 @@ categories:
 tags:
 - Webdev
 - Ant
+image:
+  path: /assets/images/social/building_frontend_code_with_ant.jpg
 ---
+<figure>
+  <img src="/assets/images/posts/building_frontend_code_with_ant.jpg" alt="" />
+  <figcaption>
+    <p class="figcaption"><i>Photo by <a href="https://unsplash.com/@sebastien_bonneval">Sebastien Bonneval</a> on <a href="https://unsplash.com/photos/a-person-drawing-on-a-paper-Pgj2hJdUYD8">Unsplash</a></i>.</p>
+  </figcaption>
+</figure>
 <p>Recently I've been checking various ways for optimising frontend code. In <a href="http://www.amazon.com/o/ASIN/047022780X/">Professional JavaScript for Web Developers (2nd Edition)</a>, Nicholas C. Zakas speaks about best practices for deploying websites in production (among other good things). Having a solid build process for deployment saves both time and bandwidth, and helps automating repetitive tasks. There are plenty of online resources about the subject, but Julien Lecomte's <a href="http://www.julienlecomte.net/blog/2007/09/16/">Building Web Applications With Apache Ant</a> explains really well what possibilities <a href="http://ant.apache.org/">Ant</a> offers for frontend code build process (see also <a href="http://www.javascriptr.com/2009/07/21/setting-up-a-javascript-build-process/">Setting up a JavaScript Build Process</a>). For more details, see <a href="http://ant.apache.org/manual/index.html">Apache Ant Manual</a>.</p>
 <p>Based on the advice from those articles, I've put together a basic Ant script which concatenates and minifies both JS and CSS files during the build process. This could be used as a base template for frontend production code.</p>
 <p>On this site, I use <a href="http://code.google.com/p/minify/">Minify PHP5 app</a> on the server side to automatically combine and minify multiple CSS and Javascript files every time they change. However, I wanted to define a structured build process that I can customise and reuse for any website I work on.</p>
