@@ -13,3 +13,8 @@
   image: badge_elephant_carpaccio.png
   url: https://heartofagile.com/students/?fname=aki&lname=k%C3%A4rkk%C3%A4inen&fr_search_button=Search
   year: 2022 <span class="middot" aria-hidden="true">&middot;</span> Heart of Agile
+- name: AKP I
+  description: Agile Kata Pro
+  image: badge-akpi.png
+  url: https://www.agilekata.pro/certification
+  year: 2024 <span class="middot" aria-hidden="true">&middot;</span> agilekata.pro
