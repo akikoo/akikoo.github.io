@@ -1,3 +1,18 @@
+- name: SSM
+  description: Certified SAFe® 6 Scrum Master
+  image: badge-ssm.svg
+  url: https://www.credly.com/badges/c24cb069-24aa-48e5-a301-a0d51b9e7152/public_url
+  year: 2024 <span class="middot" aria-hidden="true">&middot;</span> Scaled Agile, Inc.
+- name: AKP I
+  description: Agile Kata Pro
+  image: badge-akpi.png
+  url: https://www.agilekata.pro/certification
+  year: 2024 <span class="middot" aria-hidden="true">&middot;</span> agilekata.pro
+- name: Elephant Carpaccio
+  description: The Elephant Carpaccio workshop with Alistair Cockburn
+  image: badge_elephant_carpaccio.png
+  url: https://heartofagile.com/students/?fname=aki&lname=k%C3%A4rkk%C3%A4inen&fr_search_button=Search
+  year: 2022 <span class="middot" aria-hidden="true">&middot;</span> Heart of Agile
 - name: PSPO I
   description: Professional Scrum Product Owner
   image: pspoi.svg
@@ -8,13 +23,3 @@
   image: psmi.svg
   url: https://www.scrum.org/user/405331
   year: 2018 <span class="middot" aria-hidden="true">&middot;</span> scrum.org
-- name: Elephant Carpaccio
-  description: The Elephant Carpaccio workshop with Alistair Cockburn
-  image: badge_elephant_carpaccio.png
-  url: https://heartofagile.com/students/?fname=aki&lname=k%C3%A4rkk%C3%A4inen&fr_search_button=Search
-  year: 2022 <span class="middot" aria-hidden="true">&middot;</span> Heart of Agile
-- name: AKP I
-  description: Agile Kata Pro
-  image: badge-akpi.png
-  url: https://www.agilekata.pro/certification
-  year: 2024 <span class="middot" aria-hidden="true">&middot;</span> agilekata.pro
