@@ -232,14 +232,19 @@ h3.p-name {
   @include margin(0, 0); // Overwrite global heading margins
 
   @include respond-to($breakpoint-medium) {
-    @include size-and-leading(24, $base-line-height + $base-line-height / 4); 
+    @include size-and-leading(24, $base-line-height + $base-line-height / 8); 
   }
 
   .p-name__link {
+    margin: 0 $gutter 0;
     padding: 0;
     display: block;
     white-space: normal;
-    color: rgba($color-text-dark, .8);
+    color: $color-text-dark;
+
+    @include respond-to($breakpoint-small) {
+      margin: 0 $gutter relative-size($base-line-height / 2);
+    }
 
     @include respond-to($breakpoint-medium) {
       margin: relative-size($base-line-height / 4) $gutter relative-size($base-line-height / 2);
@@ -248,7 +253,6 @@ h3.p-name {
     transition: all $transition-duration linear;
     text-decoration: solid underline transparent 1px;
     &:focus {
-      color: rgba($color-text-dark, 1);
       text-decoration: solid underline $color-text-dark 2px;
     }
   }

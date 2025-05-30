@@ -8,7 +8,6 @@
 .projects {
   list-style-type: none;
   padding: 0;
-  background: $color-background;
 
   // Equal height items
   display: flex;
@@ -41,7 +40,7 @@
   // Main link wrapper for mouse users
   .block-link {
     position: relative; // For overlay link
-    background: $color-white;
+    background: $color-background;
     width: 100%;
 
     @include respond-to($breakpoint-small) {
@@ -70,23 +69,22 @@
       }
     }
 
-    transition: box-shadow $transition-duration linear;
-
-    @include respond-to($breakpoint-small, max) {
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 0 20px rgba(0, 0, 0, .05);
-    }
+    transition: all $transition-duration linear;
     
-    &:hover {
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 0 20px rgba(0, 0, 0, .05);
+    @include respond-to($breakpoint-small) {
+      &:hover {
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 0 20px rgba(0, 0, 0, .05);
+        background: $color-white;
 
-      .projects__thumbnail {
-        transform: translate3d(0, -4px, 0);
-      }
+        .projects__thumbnail {
+          transform: scale(1.05); /* 105% of original size */
+        }
 
-      .projects__link {
-        color: $color-text-dark;
+        .projects__link {
+          color: $color-text-dark;
+        }
       }
-    }
+    } 
   }
 
   // Details wrapper
@@ -99,22 +97,22 @@
 
   // Image
   &__thumbnail {
-    border-bottom: none;
+    border-bottom: 3px solid $color-white;
   }
 
   // Project title
   &__heading {
     margin: 0;
-    text-transform: uppercase;
-    letter-spacing: .8px;
-    @include size-and-leading(18);  
+    // text-transform: uppercase;
+    // letter-spacing: .8px;
+    @include size-and-leading(21);
 
     @include respond-to($breakpoint-small, max) {
       overflow: hidden; // Make sure text doesn't wrap around the image
     }
 
     @include respond-to($breakpoint-medium) {
-      @include size-and-leading(21);
+      @include size-and-leading(24);
     }
   }
 
@@ -125,9 +123,11 @@
     display: inline-block;
     color: $color-text-dark;
 
-    padding: $gutter 0;
+    padding: $gutter/2 0;
     margin: $gutter $gutter relative-size($base-line-height / 4);
 
+    transition: all $transition-duration linear;
+    
     &:focus {
       color: $color-text-dark;
     }
@@ -136,7 +136,8 @@
       content: '';
       display: block;
       height: 2px;
-      transition: background $transition-duration linear;
+      background: transparent;
+      transition: all $transition-duration linear;
       line-height: 0;
     }
   }
