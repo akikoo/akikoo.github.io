@@ -137,8 +137,9 @@
   }
 }
 
-// Intro text (About, Work)
+// Intro text (Work, Log, About)
 .text-intro {
+  @include size-and-leading(21, 36);
   @include respond-to($breakpoint-medium) {
     @include size-and-leading(24, 36);
   }
