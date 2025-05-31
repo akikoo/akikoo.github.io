@@ -25,12 +25,17 @@ collections:
     permalink: /log/category/:path/index.html
 defaults:
   - scope:
-      path: ""
+      path: "" # All posts
       type: posts
     values:
-      layout: "single"
+      layout: "post"
       pagetype: "post"
-      image: /assets/images/akikoo_logo.jpg
+  - scope:
+      path: "" # All pages
+      type: pages
+    values:
+      layout: "page"
+      pagetype: "page"
   - scope:
       path: "" # an empty string here means all files in the project
       type: category

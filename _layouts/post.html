@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<!-- hAtom microformat -->
+<article class="h-entry hentry">
+  <div class="l-heading">
+    <div class="l-constrained">
+      <div class="l-nav-single">
+        <div class="l-nav-single__meta">
+          {% include post-meta-in-single.html time=page.date %}
+        </div>
+        <div class="l-nav-single__prevnext">
+          {% include navigation-log.html %}
+        </div>
+      </div>
+
+      <h1 class="p-name entry-title entry-title--withmeta">{{page.title}}</h1>
+    </div>
+  </div>
+
+  <div class="e-content e-content--single entry-content l-constrained">
+    {% include categories-in-single.html %}
+
+    <div class="l-row">
+      <div class="l-cell {% if page.url != '/work/' %}l-cell-8{% endif %}">
+        {{content}}
+      </div>
+    </div>
+
+    {% include navigation-log.html %}
+  </div>
+</article>
