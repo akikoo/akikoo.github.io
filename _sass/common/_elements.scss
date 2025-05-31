@@ -208,7 +208,7 @@ h1,
 h2,
 .h2 {
   @include size-and-leading(24);
-  @include margin($base-line-height);
+  @include margin($base-line-height * 1.5, $base-line-height);
   font-weight: $font-weight-bold;
   @include respond-to($breakpoint-medium) {
     @include size-and-leading(36, $base-line-height * 1.5);
@@ -218,10 +218,11 @@ h2,
 h3,
 .h3 {
   @include size-and-leading(21);
-  @include margin($base-line-height);
+  @include margin($base-line-height * 1.5, $base-line-height / 2);
   font-weight: $font-weight-bold;
   @include respond-to($breakpoint-medium) {
     @include size-and-leading(24);
+    @include margin($base-line-height * 1.5, $base-line-height * .75);
   }
 }
 
