@@ -37,6 +37,12 @@ defaults:
       layout: "page"
       pagetype: "page"
   - scope:
+      path: "pages/work" # All project pages
+      type: pages
+    values:
+      layout: "page"
+      permalink: /work/:basename/
+  - scope:
       path: "" # an empty string here means all files in the project
       type: category
     values:
