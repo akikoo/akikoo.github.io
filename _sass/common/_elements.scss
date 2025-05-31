@@ -338,7 +338,7 @@ figcaption {
 
 mark {
   background: $color-background; /* Overwrite normalize rule. */
-  padding: relative-size($base-line-height / 4) relative-size($base-line-height / 4); 
+  padding: 0 relative-size($base-line-height / 4); 
 }
 
 pre {
