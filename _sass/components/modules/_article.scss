@@ -9,7 +9,7 @@
   &--in-collection {
     background: $color-background;
     padding: 0 0 $gutter;
-    margin: $gutter;
+    margin: $gutter $gutter 0;
     position: relative;
 
     display: flex;
