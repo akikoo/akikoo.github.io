@@ -201,7 +201,7 @@ h1,
 
   // With date and categories
   &.entry-title--withmeta {
-    @include margin($base-line-height / 2, $base-line-height / 2);
+    @include margin(0, $base-line-height * .75);
   }
 }
 
