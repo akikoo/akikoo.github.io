@@ -192,10 +192,6 @@ $selectionColor: #b4d5fe;
   padding: 0; /* Override default. */
   list-style: none;
 
-  li {
-    display: inline-block;
-  }
-
   li > a {
     @include size-and-leading(16, $base-line-height);
     padding: 6px 15px;

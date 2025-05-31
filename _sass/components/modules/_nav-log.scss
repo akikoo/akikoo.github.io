@@ -11,23 +11,17 @@
     margin-left: -10px;
     margin-right: -10px;
     margin-bottom: 0; // Override
-
-    &::after {
-      display: block;
-      margin: relative-size($base-line-height / 4) $gutter 0;
-      content: "";
-      border-bottom: 1px solid $color-border;
-
-      @include respond-to($breakpoint-medium) {
-        margin-bottom: relative-size($base-line-height / 2);
-      }
+    overflow: hidden;
+    
+    .cat-item {
+      float: left;
     }
 
-    @include padding($base-line-height / 4, $base-line-height / 4);
-
+    @include padding($base-line-height / 4, $base-line-height/2);
 
     @include respond-to($breakpoint-medium) {
       margin: 0 -15px;
+      @include padding(0, $base-line-height);
     }
 
     li > a {
@@ -36,6 +30,8 @@
       font-weight: $font-weight-regular; // Override
       @include size-and-leading(16, $base-line-height);
       padding: 4px 10px;
+      margin: 3px;
+      background: $color-background;
 
       @include respond-to($breakpoint-medium) {
         @include size-and-leading(18, $base-line-height);
@@ -54,6 +50,7 @@
     li > a:hover,
     li > a:active {
       color: $color-main;
+      background: $color-white;
 
       &::after {
         background-color: $color-main;
@@ -63,14 +60,18 @@
   }
 
   &--categories-single {
-      &::after {
-        margin: relative-size($base-line-height / 4) $gutter relative-size($base-line-height / 4);
+    li {
+      float: left;
+    }
+    
+    &::after {
+      margin: relative-size($base-line-height / 4) $gutter relative-size($base-line-height / 4);
 
-        @include respond-to($breakpoint-medium) {
-          width: calc(66.5666666667% - #{$gutter * 2});
-          margin-bottom: 0;
-        }
+      @include respond-to($breakpoint-medium) {
+        width: calc(66.5666666667% - #{$gutter * 2});
+        margin-bottom: 0;
       }
+    }
   }
 
   // Override and customize mixin for posts navigation (prev/next)
