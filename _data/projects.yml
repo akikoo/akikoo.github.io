@@ -2,74 +2,89 @@
   description: Helping several distributed international teams effectively deliver features and improvements for insurance products and services.
   image: 2025-trygg-hansa-se-s.jpg
   url: https://www.trygghansa.se/
+  client-url: https://www.trygghansa.se/
   year: 2025 <span class="middot" aria-hidden="true">&middot;</span> Malmö
 - name: Skatteverket
   description: Two new E-services for non-residents and foreign companies registering in Sweden; starting up the new Scrum development team and facilitating the work.
   image: 2020-skatteverket-se-s.png
   url: https://www.skatteverket.se/
+  client-url: https://www.skatteverket.se/
   year: 2022 <span class="middot" aria-hidden="true">&middot;</span> Malmö
 - name: Mobiam
-  description: New track & trace service (MVP) by Sony Mobile Communications for customers in transportation and logistics industry.
+  description: New track & trace service (<abbr title="Minimum Viable Product">MVP</abbr>) by Sony Mobile Communications for customers in transportation and logistics industry.
   image: 2019-mobiam-io-s.png
-  url: https://mobiam.io/
+  url: /work/mobiam/
+  client-url: https://mobiam.io/
   year: 2019 <span class="middot" aria-hidden="true">&middot;</span> Lund
 - name: Social Digital
   description: Accessible responsive redesign for non-profit providing digital solutions for people with specific needs.
   image: 2017-social-digital-dk-s.jpg
-  url: https://www.socialdigital.dk/
+  url: /work/social-digital/
+  client-url: https://www.socialdigital.dk/
   year: 2017 <span class="middot" aria-hidden="true">&middot;</span> Copenhagen
 - name: Bownty
   description: Deals aggregator for startup curating cool experiences for consumers in 1000+ cities in Europe.
   image: 2017-bownty-com-s.png
   url: http://bownty.com/
+  client-url: http://bownty.com/
   year: 2017 <span class="middot" aria-hidden="true">&middot;</span> Copenhagen
 - name: Beagle
   description: New cloud product for Citrix to help agencies create and reuse more compelling proposals, faster (discontinued).
   image: 2016-beagle-co-s.png
-  url: http://getbeagle.co/
+  url: /work/beagle/
+  client-url: http://getbeagle.co/
   year: 2015 <span class="middot" aria-hidden="true">&middot;</span> Copenhagen
 - name: Podio
   description: Product features and core improvements for cloud-based work and communication service by Citrix.
   image: 2015-podio-com-s.png
   url: https://podio.com/
+  client-url: https://podio.com/
   year: 2015 <span class="middot" aria-hidden="true">&middot;</span> Copenhagen
 - name: Etihad Airways
   description: Accessible front-end architecture and user interface for national airline of the United Arab Emirates.
   image: 2011-etihadairways-com-s.jpg
   url: http://www.etihadairways.com
+  client-url: http://www.etihadairways.com
   year: 2013 <span class="middot" aria-hidden="true">&middot;</span> Copenhagen
 - name: Kantor Group
   description: New website platform for management consultancy servicing governments, organisations and corporate clients.
   image: 2010-kantor-group-eu-s.png
   url: http://kantor-group.eu/
+  client-url: http://kantor-group.eu/
   year: 2010 <span class="middot" aria-hidden="true">&middot;</span> Brussels
 - name: EN RD
   description: Front-end architecture for European network for Rural Development, by European Commission's DG for Agriculture and Rural Development.
   image: 2009-enrd-ec-europa-eu-s.png
   url: http://enrd.ec.europa.eu/
+  client-url: http://enrd.ec.europa.eu/
   year: 2010 <span class="middot" aria-hidden="true">&middot;</span> Brussels
 - name: Euratom Energy
   description: New website for Energy Research Directorate of the European Commission's DG for Research and Innovation.
   image: 2009-energy-research-s.png
   url: http://ec.europa.eu/research/energy/euratom/index_en.cfm
+  client-url: http://ec.europa.eu/research/energy/euratom/index_en.cfm
   year: 2009 <span class="middot" aria-hidden="true">&middot;</span> Brussels
 - name: Wallonian region
   description: Website for the European network for Rural Development in Wallonia, Belgium.
   image: 2009-reseau-pwdr-be-s.jpg
   url: http://reseau-pwdr.be/
+  client-url: http://reseau-pwdr.be/
   year: 2009 <span class="middot" aria-hidden="true">&middot;</span> Brussels
 - name: Belgacom Skynet
   description: New front-end for one of the leading Belgian web portals for consumers and corporate customers.
   image: 2008-skynet-be-entertainment-s.png
   url: http://www.skynet.be/fr
+  client-url: http://www.skynet.be/fr
   year: 2008 <span class="middot" aria-hidden="true">&middot;</span> Brussels
 - name: ECA booklet (pdf)
   description: Booklet design for European Cockpit Association, representing 38 000+ European pilots at EU level, in 37 European states.
   image: 2007-eca-tna-booklet-s.png
   url: https://www.eurocockpit.be/sites/default/files/2017-04/Transnational%20Representation%20and%20Collective%20Bargaining%20in%20Europe%2C%20ECA%202007.pdf
+  client-url: https://www.eurocockpit.be/sites/default/files/2017-04/Transnational%20Representation%20and%20Collective%20Bargaining%20in%20Europe%2C%20ECA%202007.pdf
   year: 2007 <span class="middot" aria-hidden="true">&middot;</span> Brussels
 - name: Github Projects
   description: Some of my open source projects, focusing on accessibility, architecture and workflow.
   image: 2017-github-code-s.png
   url: https://github.com/akikoo
+  client-url: https://github.com/akikoo
   year: Ongoing

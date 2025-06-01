@@ -1,0 +1,12 @@
+{% assign matched = nil %}
+{% for project in site.data.projects %}
+  {% if project.name == include.name %}
+    {% assign matched = project %}
+  {% endif %}
+{% endfor %}
+
+{% if matched %}
+  {{ matched.description }}
+{% else %}
+  Description not found for '{{include.name}}'
+{% endif %}
