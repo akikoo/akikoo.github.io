@@ -1,11 +1,11 @@
 - name: Trygg-Hansa
-  description: Helping several distributed international teams effectively deliver features and improvements for insurance products and services.
+  description: A major Scandinavian insurer scaling its non-life insurance business through a new strategy, distributed agile teams, and a modernized tech stack.
   image: 2025-trygg-hansa-se-s.jpg
-  url: https://www.trygghansa.se/
+  url: /work/trygg-hansa/
   client-url: https://www.trygghansa.se/
   year: 2025 <span class="middot" aria-hidden="true">&middot;</span> Malmö
 - name: Skatteverket
-  description: Two new E-services for non-residents and foreign companies registering in Sweden; starting up the new Scrum development team and facilitating the work.
+  description: Kickstarted a new Scrum team and facilitated the development of two new e-services to support non-residents and foreign companies registering in Sweden.
   image: 2020-skatteverket-se-s.png
   url: https://www.skatteverket.se/
   client-url: https://www.skatteverket.se/
