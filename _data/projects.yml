@@ -7,7 +7,7 @@
 - name: Skatteverket
   description: Kickstarted a new Scrum team and facilitated the development of two new e-services to support non-residents and foreign companies registering in Sweden.
   image: 2020-skatteverket-se-s.png
-  url: https://www.skatteverket.se/
+  url: /work/skatteverket/
   client-url: https://www.skatteverket.se/
   year: 2022 <span class="middot" aria-hidden="true">&middot;</span> Malmö
 - name: Mobiam
