@@ -1,4 +1,9 @@
-- name: Generative AI 
+- name: Elements of AI
+  description: Elements of AI - Introduction to AI
+  image: certificate-elements-of-ai.png
+  url: https://certificates.mooc.fi/validate/8br4cuh4hnn
+  year: 2026 <span class="middot" aria-hidden="true">&middot;</span> University of Helsinki / MinnaLearn
+- name: Generative AI
   description: Career Essentials in Generative AI
   image: career_essentials_in_generative_ai.png
   url: https://www.linkedin.com/learning/certificates/b6677ab94d9a82e29aabfe7cc221282e9048932b77fc7bca126ca7b3a9e5d38a
