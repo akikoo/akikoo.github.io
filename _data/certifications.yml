@@ -1,7 +1,22 @@
+- name: Claude Cowork
+  description: Introduction to Claude Cowork
+  image: introduction-to-claude-cowork.png
+  url: https://verify.skilljar.com/c/y5q75s39u55o
+  year: 2026 <span class="middot" aria-hidden="true">&middot;</span> Anthropic Academy
 - name: AI Fluency
-  description: Claude 101 / Framework and Foundations / Capabilities and Limitations / Claude Cowork
-  image: anthropic-academy.jpg
-  url: /log/2026/06/10/ai-literacy-certificates-anthropic-academy/
+  description: Capabilities & Limitations
+  image: ai-fluency-capabilities-and-limitations.png
+  url: https://verify.skilljar.com/c/h32xgevh672r
+  year: 2026 <span class="middot" aria-hidden="true">&middot;</span> Anthropic Academy
+- name: AI Fluency
+  description: Framework & Foundations
+  image: ai-fluency-framework-and-foundations.png
+  url: https://verify.skilljar.com/c/xa4fwk4s2bux
+  year: 2026 <span class="middot" aria-hidden="true">&middot;</span> Anthropic Academy
+- name: Claude 101
+  description: 
+  image: claude101.png
+  url: https://verify.skilljar.com/c/djvinpawqjyi
   year: 2026 <span class="middot" aria-hidden="true">&middot;</span> Anthropic Academy
 - name: Elements of AI
   description: Elements of AI - Introduction to AI
