@@ -1,3 +1,8 @@
+- name: Net Zero 101
+  description: Net Zero 101 - What, Why and How
+  image: net-zero-101.png
+  url: https://unccelearn.org/course/view.php?id=185&page=overview&lang=en
+  year: 2026 <span class="middot" aria-hidden="true">&middot;</span> UN CC:Learn
 - name: Claude Cowork
   description: Introduction to Claude Cowork
   image: introduction-to-claude-cowork.png
