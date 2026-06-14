@@ -1,3 +1,8 @@
+- name: Claude Code 101
+  description: 
+  image: claude-code-101.png
+  url: https://verify.skilljar.com/c/eop7iacxizsy
+  year: 2026 <span class="middot" aria-hidden="true">&middot;</span> Anthropic Academy
 - name: Net Zero 101
   description: Net Zero 101 - What, Why and How
   image: net-zero-101.png
