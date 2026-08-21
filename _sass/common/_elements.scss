@@ -421,9 +421,22 @@ ol ul {
   margin: 0;
 }
 
+dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 1rem;
+  padding: 0 1rem;
+  border-left: 10px solid $color-background;
+}
+
 dt {
   font-weight: $font-weight-bold;
 }
+
+dd {
+  margin-inline-start: unset;
+  margin: 0;
+} 
 
 
 /* ==========================================================================
