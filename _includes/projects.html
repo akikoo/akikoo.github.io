@@ -9,7 +9,10 @@
         </h3>
         <p class="projects__text">{{item.description}}</p>
       </div>
-      <span class="projects__year"><span class="is-visuallyhidden">Delivered: </span> {{item.year}}</span>
+      <span class="projects__year">
+        <span class="is-visuallyhidden">Delivered: </span>{{item.year}} 
+        <span class="middot" aria-hidden="true">&middot;</span> {{item.location}}
+      </span>
       <a class="ga-github-project block-link__overlay-link" href="{{item.url}}" aria-hidden="true" tabindex="-1">{{item.name}}</a>
     </div>
   </li>
