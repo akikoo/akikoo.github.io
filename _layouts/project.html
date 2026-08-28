@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+{% assign project = site.data.projects | where: "url", page.url | first %}
+
+<!-- hAtom microformat -->
+<article class="h-entry hentry">
+  <div class="l-heading">
+    <div class="l-constrained">
+      <h1 class="p-name entry-title">{{project.name}}</h1>
+    </div>
+  </div>
+
+  <div class="e-content e-content--single entry-content l-constrained">
+    {% if project.description %}
+    <div class="l-row">
+      <div class="l-cell l-cell-8">
+        <p class="text-intro">{{project.description}}</p>
+      </div>
+    </div>
+    {% endif %}
+
+    {% if project.featured_image %}
+    <figure>
+      <img src="/assets/images/portfolio/{{project.featured_image}}" alt="" />
+      {% if project.featured_image_caption %}
+      <figcaption>
+        <p class="figcaption">{{project.featured_image_caption}}</p>
+      </figcaption>
+      {% endif %}
+    </figure>
+    {% endif %}
+
+    <div class="l-row">
+      <div class="l-cell l-cell-8">  
+        {{content}}
+        {% include project-details.html project=project %}
+        <p>Go back to <a href="/work/">My Work</a></p>
+      </div>
+    </div>
+  </div>
+</article>

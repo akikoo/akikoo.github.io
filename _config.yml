@@ -40,7 +40,7 @@ defaults:
       path: "pages/work" # All project pages
       type: pages
     values:
-      layout: "page"
+      layout: "project"
       permalink: /work/:basename/
   - scope:
       path: "" # an empty string here means all files in the project

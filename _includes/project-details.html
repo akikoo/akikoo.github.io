@@ -1,0 +1,26 @@
+{% assign project = include.project %}
+{% assign labels = "Company,URL,Role,Location,Year" | split: "," %}
+{% assign keys = "name,client-url,role,location,year" | split: "," %}
+
+{% capture details_html %}
+  {% for key in keys %}
+    {% assign value = project[key] %}
+    {% if value and value != "" %}
+      <dt>{{labels[forloop.index0]}}</dt>
+      {% if key == "client-url" %}
+        <dd><a href="{{value}}">{{value}}</a></dd>
+      {% else %}
+        <dd>{{value}}</dd>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endcapture %}
+
+{% assign details_html_stripped = details_html | strip %}
+
+{% if details_html_stripped != "" %}
+  <h2>Project details</h2>
+  <dl>
+    {{details_html}}
+  </dl>
+{% endif %}
